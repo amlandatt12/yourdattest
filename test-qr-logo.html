@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Logo Feature Test - FIXED VERSION</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .alert {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .alert.success {
+            background: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .alert.error {
+            background: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        .test-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        input[type="text"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border 0.3s;
+        }
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        input[type="color"] {
+            width: 100%;
+            height: 50px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        #result {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            border: 2px dashed #e0e0e0;
+            margin-top: 20px;
+        }
+        #result.hidden {
+            display: none;
+        }
+        #qr-canvas {
+            border: 3px solid #667eea;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            display: block;
+            max-width: 100%;
+        }
+        .download-btn {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
+            margin-top: 15px;
+            width: auto !important;
+            display: inline-block;
+            padding: 12px 30px;
+        }
+        .console-output {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        .console-output div {
+            margin-bottom: 5px;
+        }
+        .error {
+            color: #ff4444 !important;
+        }
+        .success {
+            color: #00ff00 !important;
+        }
+        .info {
+            color: #4da6ff !important;
+        }
+        .warning {
+            color: #ffaa00 !important;
+        }
+        .file-info {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .progress {
+            background: #e9ecef;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧</h1> QR Code Logo Feature Test</h1>
+        <p class="subtitle">Debug version with detailed logging - FIXED</p>
+
+        <div class="alert">
+            <strong>✅ This version includes all fixes!</strong><br>
+            Watch the console output below to see exactly what happens.
+        </div>
+
+        <div class="test-section">
+            <div class="form-group">
+                <label>📝 Content to Encode</label>
+                <input type="text" id="qrText" placeholder="Enter text or URL" value="https://www.example.com">
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>📏 QR Code Size</label>
+                    <select id="qrSize">
+                        <option value="256">Small (256x256)</option>
+                        <option value="384" selected>Medium (384x384)</option>
+                        <option value="512">Large (512x512)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>🎨 QR Code Color</label>
+                    <input type="color" id="qrForeground" value="#000000">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>🖼️ Background Color</label>
+                    <input type="color" id="qrBackground" value="#ffffff">
+                </div>
+                <div class="form-group">
+                    <label>📥 Upload Logo (Optional)</label>
+                    <input type="file" id="qrLogo" accept="image/*">
+                    <div class="file-info" id="fileInfo">No file selected</div>
+                </div>
+            </div>
+
+            <div class="progress" id="progressBar" style="display: none;">
+                <div class="progress-bar" id="progressBarInner">0%</div>
+            </div>
+
+            <button id="generateBtn" onclick="generateQRWithLogo()">🚀 Generate QR Code</button>
+        </div>
+
+        <div id="result" class="hidden">
+            <h3>Generated QR Code ✓</h3>
+            <div id="qr-output"></div>
+        </div>
+
+        <div class="console-output" id="console">
+            <div class="info">📊 Console Output - Watch here for debugging info:</div>
+            <div class="success">→ Ready to generate QR code...</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        const consoleDiv = document.getElementById('console');
+        const progressBar = document.getElementById('progressBar');
+        const progressBarInner = document.getElementById('progressBarInner');
+
+        function log(message, type = 'info') {
+            const div = document.createElement('div');
+            div.className = type;
+            const timestamp = new Date().toLocaleTimeString();
+            div.textContent = `[${timestamp}] ${message}`;
+            consoleDiv.appendChild(div);
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+            console.log(`[${type.toUpperCase()}]`, message);
+        }
+
+        function setProgress(percent, text) {
+            progressBar.style.display = 'block';
+            progressBarInner.style.width = percent + '%';
+            progressBarInner.textContent = text || percent + '%';
+        }
+
+        function hideProgress() {
+            setTimeout(() => {
+                progressBar.style.display = 'none';
+                progressBarInner.style.width = '0%';
+            }, 500);
+        }
+
+        document.getElementById('qrLogo').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                document.getElementById('fileInfo').textContent =
+                    `Selected: ${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+                log(`✓ Logo file selected: ${file.name}`, 'success');
+            } else {
+                document.getElementById('fileInfo').textContent = 'No file selected';
+            }
+        });
+
+        function generateQRWithLogo() {
+            log('═══════════════════════════════════════════════', 'info');
+            log('🚀 STARTING QR CODE GENERATION', 'info');
+            log('═══════════════════════════════════════════════', 'info');
+
+            const text = document.getElementById('qrText').value.trim();
+            const size = parseInt(document.getElementById('qrSize').value);
+            const foreground = document.getElementById('qrForeground').value;
+            const background = document.getElementById('qrBackground').value;
+            const logoInput = document.getElementById('qrLogo');
+            const generateBtn = document.getElementById('generateBtn');
+
+            if (!text) {
+                log('❌ ERROR: No content entered!', 'error');
+                alert('Please enter content to encode');
+                return;
+            }
+
+            generateBtn.disabled = true;
+            setProgress(10, 'Starting...');
+
+            log(`📝 Content: "${text}"`, 'info');
+            log(`📐 Size: ${size}x${size}px`, 'info');
+            log(`🎨 Colors: FG=${foreground}, BG=${background}`, 'info');
+
+            const hasLogo = logoInput.files && logoInput.files[0];
+            log(`🖼️ Logo selected: ${hasLogo ? 'YES ✓' : 'NO'}`, hasLogo ? 'success' : 'warning');
+
+            const resultDiv = document.getElementById('result');
+            const qrOutput = document.getElementById('qr-output');
+            qrOutput.innerHTML = '';
+            resultDiv.classList.add('hidden');
+
+            setProgress(20, 'Generating QR...');
+            log('🔄 Generating QR code table...', 'info');
+
+            const options = {
+                text: text,
+                width: size,
+                height: size,
+                colorDark: foreground,
+                colorLight: background,
+                correctLevel: QRCode.CorrectLevel.H
+            };
+
+            try {
+                const qrCode = new QRCode(qrOutput, options);
+                log('✓ QR code object created', 'success');
+                setProgress(40, 'QR created...');
+
+                // Wait for QR table to be ready
+                function waitForQRTable(callback, maxAttempts = 20) {
+                    let attempts = 0;
+                    log('⏳ Waiting for QR table to be generated...', 'info');
+
+                    const checkInterval = setInterval(() => {
+                        attempts++;
+                        const qrTable = qrOutput.querySelector('table');
+                        const qrImg = qrOutput.querySelector('img');
+
+                        log(`🔍 Attempt ${attempts}: Table=${qrTable ? '✓' : '✗'}, Img=${qrImg ? '✓' : '✗'}`, 'info');
+
+                        if (qrTable || qrImg) {
+                            clearInterval(checkInterval);
+                            log('✓ QR code generated successfully!', 'success');
+                            setProgress(60, 'QR ready!');
+                            callback(qrTable, qrImg);
+                        } else if (attempts >= maxAttempts) {
+                            clearInterval(checkInterval);
+                            log('❌ ERROR: QR table/image not found after ' + maxAttempts + ' attempts!', 'error');
+                            log('💡 This might be due to QRCode.js library not loading properly', 'warning');
+
+                            // Show error
+                            alert('Error: Could not generate QR code. Check console for details.');
+                            hideProgress();
+                            generateBtn.disabled = false;
+                        }
+                    }, 100);
+                }
+
+                if (hasLogo) {
+                    waitForQRTable((qrTable, qrImg) => {
+                        try {
+                            log('🖼️ Processing with logo overlay...', 'info');
+                            setProgress(70, 'Adding logo...');
+
+                            const canvas = document.createElement('canvas');
+                            const ctx = canvas.getContext('2d');
+                            canvas.width = size;
+                            canvas.height = size;
+                            canvas.id = 'qr-canvas';
+
+                            log(`📦 Canvas created: ${size}x${size}`, 'success');
+
+                            // Method 1: Use img if available
+                            if (qrImg && qrImg.complete && qrImg.src) {
+                                log('✓ Using QR image directly (faster method)', 'success');
+                                ctx.drawImage(qrImg, 0, 0, size, size);
+                                setProgress(80, 'Drawing logo...');
+                                overlayLogo(canvas, ctx);
+                            }
+                            // Method 2: Convert from table
+                            else if (qrTable) {
+                                log('✓ Converting from table (fallback method)', 'warning');
+                                ctx.fillStyle = background;
+                                ctx.fillRect(0, 0, size, size);
+
+                                const cells = qrTable.querySelectorAll('td');
+                                const n = Math.sqrt(cells.length);
+                                const cellSize = size / n;
+
+                                log(`📊 QR Matrix: ${n}x${n} cells (${cells.length} total)`, 'info');
+                                log(`📏 Cell size: ${cellSize.toFixed(2)}px`, 'info');
+
+                                let darkCells = 0;
+                                cells.forEach((cell, i) => {
+                                    const row = Math.floor(i / n);
+                                    const col = i % n;
+                                    const cellBg = cell.style.backgroundColor;
+
+                                    // Check if dark cell
+                                    if (cellBg && cellBg !== '' &&
+                                        cellBg !== 'white' &&
+                                        cellBg !== '#ffffff' &&
+                                        cellBg !== 'rgb(255, 255, 255)' &&
+                                        cellBg !== background) {
+
+                                        ctx.fillStyle = foreground;
+                                        ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
+                                        darkCells++;
+                                    }
+                                });
+
+                                log(`✓ Drew ${darkCells} dark cells out of ${cells.length} total`, 'success');
+                                setProgress(80, 'Drawing logo...');
+                                overlayLogo(canvas, ctx);
+                            } else {
+                                throw new Error('No QR table or image found!');
+                            }
+
+                            function overlayLogo(canvas, ctx) {
+                                log('📤 Reading logo file...', 'info');
+                                const reader = new FileReader();
+
+                                reader.onerror = function(error) {
+                                    log('❌ ERROR: Failed to read logo file - ' + error, 'error');
+                                    displayResult(canvas);
+                                };
+
+                                reader.onload = function(e) {
+                                    log('✓ Logo file read successfully', 'success');
+                                    const img = new Image();
+
+                                    img.onerror = function() {
+                                        log('❌ ERROR: Failed to load logo as image', 'error');
+                                        log('💡 Try a different image file format', 'warning');
+                                        displayResult(canvas);
+                                    };
+
+                                    img.onload = function() {
+                                        log(`✓ Logo image loaded: ${img.width}x${img.height}px`, 'success');
+                                        setProgress(90, 'Finalizing...');
+
+                                        const centerX = canvas.width / 2;
+                                        const centerY = canvas.height / 2;
+                                        const logoSize = Math.min(canvas.width * 0.2, 64);
+                                        const logoX = centerX - logoSize / 2;
+                                        const logoY = centerY - logoSize / 2;
+
+                                        log(`📍 Logo position: (${logoX.toFixed(0)}, ${logoY.toFixed(0)})`, 'info');
+                                        log(`📐 Logo size: ${logoSize.toFixed(0)}x${logoSize.toFixed(0)}px`, 'info');
+
+                                        // Draw white circle background
+                                        ctx.save();
+                                        ctx.beginPath();
+                                        ctx.arc(centerX, centerY, logoSize / 2 + 5, 0, 2 * Math.PI);
+                                        ctx.fillStyle = '#ffffff';
+                                        ctx.fill();
+                                        ctx.restore();
+                                        log('✓ White circle background drawn', 'success');
+
+                                        // Draw logo
+                                        ctx.drawImage(img, logoX, logoY, logoSize, logoSize);
+                                        log('✓ Logo drawn on canvas', 'success');
+
+                                        setProgress(100, 'Complete!');
+                                        log('═══════════════════════════════════════════════', 'success');
+                                        log('🎉 QR CODE WITH LOGO GENERATED SUCCESSFULLY!', 'success');
+                                        log('═══════════════════════════════════════════════', 'success');
+
+                                        displayResult(canvas);
+                                    };
+
+                                    img.src = e.target.result;
+                                };
+
+                                reader.readAsDataURL(logoInput.files[0]);
+                            }
+
+                            function displayResult(canvas) {
+                                qrOutput.innerHTML = '';
+                                qrOutput.appendChild(canvas);
+                                resultDiv.classList.remove('hidden');
+
+                                const downloadBtn = document.createElement('button');
+                                downloadBtn.textContent = '💾 Download QR Code';
+                                downloadBtn.className = 'download-btn';
+                                downloadBtn.onclick = function() {
+                                    const link = document.createElement('a');
+                                    link.download = 'qrcode-with-logo.png';
+                                    link.href = canvas.toDataURL('image/png');
+                                    link.click();
+                                    log('✓ QR code downloaded!', 'success');
+                                };
+                                qrOutput.appendChild(downloadBtn);
+
+                                hideProgress();
+                                generateBtn.disabled = false;
+                                log('✓ Result displayed with download button', 'success');
+                            }
+
+                        } catch (error) {
+                            log('❌ CRITICAL ERROR: ' + error.message, 'error');
+                            console.error(error);
+                            alert('Error: ' + error.message);
+                            hideProgress();
+                            generateBtn.disabled = false;
+                        }
+                    });
+                } else {
+                    // No logo - just show QR code
+                    waitForQRTable((qrTable, qrImg) => {
+                        log('✓ QR code generated (no logo)', 'success');
+                        setProgress(100, 'Complete!');
+                        resultDiv.classList.remove('hidden');
+
+                        const downloadBtn = document.createElement('button');
+                        downloadBtn.textContent = '💾 Download QR Code';
+                        downloadBtn.className = 'download-btn';
+                        downloadBtn.onclick = function() {
+                            // Convert to canvas for download
+                            const canvas = document.createElement('canvas');
+                            const ctx = canvas.getContext('2d');
+                            canvas.width = size;
+                            canvas.height = size;
+
+                            if (qrImg && qrImg.complete) {
+                                ctx.drawImage(qrImg, 0, 0, size, size);
+                            }
+
+                            const link = document.createElement('a');
+                            link.download = 'qrcode.png';
+                            link.href = canvas.toDataURL('image/png');
+                            link.click();
+                            log('✓ QR code downloaded!', 'success');
+                        };
+                        qrOutput.appendChild(downloadBtn);
+
+                        hideProgress();
+                        generateBtn.disabled = false;
+                        log('═══════════════════════════════════════════════', 'success');
+                        log('🎉 QR CODE GENERATED SUCCESSFULLY!', 'success');
+                        log('═══════════════════════════════════════════════', 'success');
+                    });
+                }
+
+            } catch (error) {
+                log('❌ FATAL ERROR: ' + error.message, 'error');
+                console.error(error);
+                alert('Fatal Error: ' + error.message);
+                hideProgress();
+                generateBtn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
