@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light only" />
+  <title>Free Online Power Calculator: Calculate Exponents Instantly | AllToolsOnline</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Calculate any number raised to a power with our free online power calculator. Supports positive/negative bases and exponents. Fast, accurate, no sign-up required." />
+  <meta name="keywords" content="power calculator, exponent calculator, online calculator, free tool, math calculator" />
+  <meta name="author" content="AllToolsOnline" />
+  <link rel="canonical" href="https://alltoolsonline.site/tools/calculators/power-calculator.html" />
+
+  <!-- JSON-LD Tool Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Power Calculator",
+    "description": "Free online power calculator for calculating exponents and powers. Supports decimal numbers, negative exponents, and large calculations.",
+    "url": "https://alltoolsonline.site/tools/calculators/power-calculator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an exponent and how does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An exponent indicates how many times a base number is multiplied by itself. For example, 2³ means 2 × 2 × 2 = 8. The base is the number being multiplied, and the exponent (superscript) shows the power."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate negative exponents?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Negative exponents represent fractions. For example, 2^(-3) = 1/(2³) = 1/8 = 0.125. Simply enter the negative number in the exponent field, and our calculator will handle the reciprocal calculation automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use decimal numbers and fractions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our calculator supports decimal bases (like 2.5) and fractional exponents (like 0.5 for square root). For example, 8^(0.5) = √8 ≈ 2.828. Use the decimal point for fractional inputs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the calculation limits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The calculator handles very large and small numbers using JavaScript's floating-point precision. Results may display in scientific notation for extremely large numbers. For most practical calculations, precision is excellent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate are the power calculations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our calculator uses JavaScript's Math.pow() function, which provides high precision for most calculations. For critical applications requiring extreme precision, consider using specialized mathematical software."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ7765FV');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NLEW4JXY4');
+  </script>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- Set theme IMMEDIATELY -->
+  <script>
+    (function() {
+      document.documentElement.setAttribute('data-theme', 'light'); document.body.setAttribute('data-theme', 'light'); localStorage.removeItem('theme');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body class="min-h-screen text-gray-800" data-theme="light">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav class="text-sm mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-gray-600">
+        <li><a href="../../index.html" class="hover:text-indigo-600">Home</a></li>
+        <li>›</li>
+        <li><a href="../../categories.html#calculators" class="hover:text-indigo-600">Calculators</a></li>
+        <li>›</li>
+        <li class="text-gray-900 font-medium">Power Calculator</li>
+      </ol>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Main Tool Area -->
+      <div class="lg:col-span-2">
+        <!-- Tool Header -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">⚡</span>
+            <h1 class="text-3xl font-bold">Free Online Power Calculator</h1>
+          </div>
+          <p class="text-gray-600">Calculate exponents and powers instantly with our free tool</p>
+        </div>
+
+        <!-- Tool Interface -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          
+<div class="space-y-4">
+    <div>
+        <label for="base" class="block text-sm font-medium mb-2">Base Number</label>
+        <input type="number" id="base" class="tool-input w-full" placeholder="Enter base number (e.g., 2)" step="any">
+    </div>
+    <div>
+        <label for="exponent" class="block text-sm font-medium mb-2">Exponent</label>
+        <input type="number" id="exponent" class="tool-input w-full" placeholder="Enter exponent (e.g., 3)" step="any">
+    </div>
+    <button onclick="calculatePower()" class="tool-button w-full">Calculate Power</button>
+    <div id="result" class="result-box hidden">
+        <p>Result will appear here</p>
+    </div>
+</div>
+
+        </div>
+
+        <!-- About Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">About Power Calculator</h2>
+          <div class="prose max-w-none">
+            <p class="text-gray-700 mb-4">A power calculator is an essential mathematical tool that helps you calculate exponents and powers with precision. In mathematics, when we say "raising a number to a power," we're essentially multiplying that number by itself a certain number of times. For example, 2³ (2 raised to the power of 3) equals 2 × 2 × 2 = 8. Our free online power calculator makes these calculations instantaneous and error-free.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Understanding Exponents and Powers</h3>
+            <p class="text-gray-700 mb-4">Exponents represent repeated multiplication of a base number. The exponent tells you how many times to multiply the base by itself. For instance:</p>
+            <ul class="list-disc pl-6 mb-4 text-gray-700">
+              <li>2² = 2 × 2 = 4</li>
+              <li>3⁴ = 3 × 3 × 3 × 3 = 81</li>
+              <li>5⁰ = 1 (any number raised to the power of 0 equals 1)</li>
+              <li>10⁻² = 1/(10²) = 1/100 = 0.01 (negative exponents)</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">How Our Power Calculator Works</h3>
+            <p class="text-gray-700 mb-4">Our power calculator uses JavaScript's built-in Math.pow() function, which provides accurate results for a wide range of calculations. Simply enter your base number and exponent, then click "Calculate Power" to get instant results. The calculator supports:</p>
+            <ul class="list-disc pl-6 mb-4 text-gray-700">
+              <li>Positive and negative base numbers</li>
+              <li>Integer and decimal exponents</li>
+              <li>Negative exponents (fractions)</li>
+              <li>Large numbers and scientific notation</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Practical Applications</h3>
+            <p class="text-gray-700 mb-4">Power calculations are fundamental in many fields:</p>
+            <ul class="list-disc pl-6 mb-4 text-gray-700">
+              <li><strong>Finance:</strong> Compound interest calculations (A = P(1+r)ⁿ)</li>
+              <li><strong>Physics:</strong> Force calculations, electrical power (P = V²/R)</li>
+              <li><strong>Computer Science:</strong> Algorithm complexity analysis</li>
+              <li><strong>Engineering:</strong> Stress calculations, signal processing</li>
+              <li><strong>Mathematics:</strong> Polynomial equations, logarithms</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Special Cases and Rules</h3>
+            <p class="text-gray-700 mb-4">Understanding power rules helps in complex calculations:</p>
+            <ul class="list-disc pl-6 mb-4 text-gray-700">
+              <li><strong>Product Rule:</strong> aᵐ × aⁿ = a^(m+n)</li>
+              <li><strong>Power Rule:</strong> (aᵐ)ⁿ = a^(m×n)</li>
+              <li><strong>Quotient Rule:</strong> aᵐ/aⁿ = a^(m-n)</li>
+              <li><strong>Zero Rule:</strong> a⁰ = 1 (for a ≠ 0)</li>
+              <li><strong>Negative Rule:</strong> a^(-n) = 1/aⁿ</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Examples of Power Calculations</h3>
+            <p class="text-gray-700 mb-4">Let's explore some practical examples:</p>
+            <div class="bg-gray-50 p-4 rounded-lg mb-4">
+              <p class="font-semibold">Example 1: Simple Powers</p>
+              <p>2³ = 8 (2 × 2 × 2)</p>
+              <p>5² = 25 (5 × 5)</p>
+              <p>10⁴ = 10,000 (10 × 10 × 10 × 10)</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg mb-4">
+              <p class="font-semibold">Example 2: Decimal Bases</p>
+              <p>1.5² = 2.25</p>
+              <p>2.5³ = 15.625</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg mb-4">
+              <p class="font-semibold">Example 3: Negative Exponents</p>
+              <p>2^(-2) = 1/4 = 0.25</p>
+              <p>10^(-3) = 1/1000 = 0.001</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg mb-4">
+              <p class="font-semibold">Example 4: Fractional Exponents</p>
+              <p>8^(1/3) = 2 (cube root of 8)</p>
+              <p>16^(1/2) = 4 (square root of 16)</p>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Why Choose Our Power Calculator?</h3>
+            <p class="text-gray-700 mb-4">Our power calculator stands out for several reasons:</p>
+            <ul class="list-disc pl-6 mb-4 text-gray-700">
+              <li><strong>Accuracy:</strong> Uses precise mathematical algorithms</li>
+              <li><strong>Speed:</strong> Instant calculations with no loading time</li>
+              <li><strong>Versatility:</strong> Handles various number types and ranges</li>
+              <li><strong>Free:</strong> No cost, no registration required</li>
+              <li><strong>Privacy:</strong> All calculations happen in your browser</li>
+              <li><strong>Responsive:</strong> Works on desktop, tablet, and mobile</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Tips for Using the Calculator</h3>
+            <p class="text-gray-700 mb-4">To get the most out of our power calculator:</p>
+            <ul class="list-disc pl-6 mb-4 text-gray-700">
+              <li>Enter numbers directly or use decimal points</li>
+              <li>For negative exponents, use the minus sign</li>
+              <li>Fractional exponents work for roots (e.g., 0.5 for square root)</li>
+              <li>Large results may display in scientific notation</li>
+              <li>Check your inputs before calculating</li>
+            </ul>
+
+            <p class="text-gray-700">Whether you're a student learning mathematics, a scientist performing complex calculations, or a professional needing quick power computations, our free online power calculator provides reliable results every time. Start calculating powers and exponents with confidence today!</p>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div class="bg-white rounded-2xl border border-gray-200 p-6">
+            
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is an exponent and how does it work?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>An exponent indicates how many times a base number is multiplied by itself. For example, 2³ means 2 × 2 × 2 = 8. The base is the number being multiplied, and the exponent (superscript) shows the power.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How do I calculate negative exponents?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Negative exponents represent fractions. For example, 2^(-3) = 1/(2³) = 1/8 = 0.125. Simply enter the negative number in the exponent field, and our calculator will handle the reciprocal calculation automatically.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Can I use decimal numbers and fractions?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, our calculator supports decimal bases (like 2.5) and fractional exponents (like 0.5 for square root). For example, 8^(0.5) = √8 ≈ 2.828. Use the decimal point for fractional inputs.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What are the calculation limits?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The calculator handles very large and small numbers using JavaScript's floating-point precision. Results may display in scientific notation for extremely large numbers. For most practical calculations, precision is excellent.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How accurate are the power calculations?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Our calculator uses JavaScript's Math.pow() function, which provides high precision for most calculations. For critical applications requiring extreme precision, consider using specialized mathematical software.</p>
+            </div>
+        </div>
+        
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <!-- Similar Tools -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20">
+          <h3 class="text-lg font-semibold mb-4">Similar Tools</h3>
+          <div class="space-y-3">
+            
+        <a href="percentage-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">%</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Percentage Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Quick percent calculations</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="age-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">🎂</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Age Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Calculate exact age from DOB</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="bmi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">⚖️</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">BMI Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Body Mass Index calculator</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="loan-emi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">🏦</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Loan EMI Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Monthly EMI estimates</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+          </div>
+          <a href="../../categories.html#calculators" class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium">
+            View all Calculators →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../../assets/js/common.js"></script>
+  <script>
+
+function calculatePower() {
+    const base = parseFloat(document.getElementById('base').value);
+    const exponent = parseFloat(document.getElementById('exponent').value);
+
+    if (isNaN(base) || isNaN(exponent)) {
+        showToast('Please enter valid numbers for both base and exponent.');
+        return;
+    }
+
+    const result = Math.pow(base, exponent);
+    const resultText = `${base}^${exponent} = ${result}`;
+
+    document.getElementById('result').innerHTML = `<p class="text-lg font-semibold text-green-600">${resultText}</p>`;
+    document.getElementById('result').classList.remove('hidden');
+}
+
+
+    // Show result box when there's content
+    document.addEventListener('DOMContentLoaded', function() {
+      const resultBox = document.getElementById('result');
+      if (resultBox) {
+        const observer = new MutationObserver(function(mutations) {
+          if (resultBox.innerHTML.trim() !== '') {
+            resultBox.classList.remove('hidden');
+          }
+        });
+        observer.observe(resultBox, { childList: true, subtree: true });
+      }
+    });
+  </script>
+</body>
+</html>

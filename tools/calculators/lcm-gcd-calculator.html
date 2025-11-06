@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light only" />
+  <title>LCM & GCD Calculator - Find Least Common Multiple & Greatest Common Divisor | AllToolsOnline</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Calculate LCM and GCD of multiple numbers instantly. Free online calculator for Least Common Multiple and Greatest Common Divisor with step-by-step solutions." />
+  <meta name="keywords" content="lcm calculator, gcd calculator, least common multiple, greatest common divisor, hcf calculator, lcm gcd calculator, find lcm, find gcd, multiple numbers lcm" />
+  <meta name="author" content="AllToolsOnline" />
+  <link rel="canonical" href="https://www.alltoolsonline.site/tools/calculators/lcm-gcd-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="LCM & GCD Calculator - Find Least Common Multiple & Greatest Common Divisor" />
+  <meta property="og:description" content="Calculate LCM and GCD of multiple numbers instantly with step-by-step solutions." />
+  <meta property="og:url" content="https://www.alltoolsonline.site/tools/calculators/lcm-gcd-calculator.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LCM & GCD Calculator - Find Least Common Multiple & Greatest Common Divisor" />
+  <meta name="twitter:description" content="Calculate LCM and GCD of multiple numbers instantly." />
+
+  <!-- JSON-LD Tool Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "LCM & GCD Calculator",
+    "description": "Calculate Least Common Multiple and Greatest Common Divisor of multiple numbers",
+    "url": "https://www.alltoolsonline.site/tools/calculators/lcm-gcd-calculator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": ["LCM calculation", "GCD/HCF calculation", "Multiple numbers support", "Prime factorization", "Step-by-step solutions"]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What is the difference between LCM and GCD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LCM (Least Common Multiple) is the smallest positive number that is divisible by all given numbers. GCD (Greatest Common Divisor), also known as HCF, is the largest positive number that divides all given numbers without remainder. For example, for numbers 12 and 18: LCM is 36 (smallest number both divide into) and GCD is 6 (largest number that divides both)."
+      }
+    },{
+      "@type": "Question",
+      "name": "How do you calculate LCM of multiple numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate LCM of multiple numbers: 1) Find the prime factorization of each number, 2) For each prime factor, take the highest power that appears in any factorization, 3) Multiply these together. Alternatively, you can use the formula: LCM(a,b) = (a × b) / GCD(a,b), then extend this to more numbers by finding LCM of pairs successively."
+      }
+    },{
+      "@type": "Question",
+      "name": "What is the Euclidean algorithm for finding GCD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Euclidean algorithm finds GCD by repeatedly dividing and taking remainders. For numbers a and b (where a > b): divide a by b to get remainder r, then replace a with b and b with r, repeat until remainder is 0. The last non-zero remainder is the GCD. For example, GCD(48, 18): 48 = 18×2 + 12, then 18 = 12×1 + 6, then 12 = 6×2 + 0, so GCD is 6."
+      }
+    },{
+      "@type": "Question",
+      "name": "Can LCM and GCD be calculated for more than two numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! For multiple numbers, calculate GCD by finding GCD of first two numbers, then GCD of that result with the third number, and so on. For LCM, use the same successive approach: LCM of first two numbers, then LCM of that result with the third, continuing until all numbers are processed. Our calculator handles any quantity of numbers automatically."
+      }
+    },{
+      "@type": "Question",
+      "name": "What are practical applications of LCM and GCD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LCM is used for finding common denominators in fractions, scheduling recurring events that happen at different intervals, and solving problems involving cycles. GCD is used for simplifying fractions, dividing items into equal groups, finding tile sizes for floors, cryptography algorithms, and reducing ratios to lowest terms. Both concepts are fundamental in number theory and have applications in computer science, engineering, and everyday problem-solving."
+      }
+    }]
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ7765FV');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NLEW4JXY4');
+  </script>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Set theme IMMEDIATELY -->
+  <script>
+    (function() {
+      document.documentElement.setAttribute('data-theme', 'light');
+      document.body.setAttribute('data-theme', 'light');
+      localStorage.removeItem('theme');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body class="min-h-screen text-gray-800" data-theme="light">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav class="text-sm mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-gray-600">
+        <li><a href="../../index.html" class="hover:text-indigo-600">Home</a></li>
+        <li>›</li>
+        <li><a href="../../categories.html#calculators" class="hover:text-indigo-600">Calculators</a></li>
+        <li>›</li>
+        <li class="text-gray-900 font-medium">LCM & GCD Calculator</li>
+      </ol>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Main Tool Area -->
+      <div class="lg:col-span-2">
+        <!-- Tool Header -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">🔢</span>
+            <h1 class="text-3xl font-bold">LCM & GCD Calculator</h1>
+          </div>
+          <p class="text-gray-600">Calculate the Least Common Multiple and Greatest Common Divisor of multiple numbers</p>
+        </div>
+
+        <!-- Tool Interface -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          <div class="space-y-5">
+            <!-- Number Input -->
+            <div>
+              <label class="block text-sm font-medium mb-2">Enter Numbers (separated by commas or spaces)</label>
+              <input type="text" id="numbers" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="12, 18, 24" value="">
+              <p class="text-xs text-gray-500 mt-1">You can enter 2 or more whole numbers</p>
+            </div>
+
+            <!-- Calculate Button -->
+            <button onclick="calculate()" class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition font-medium">
+              Calculate LCM & GCD
+            </button>
+
+            <!-- Result Display -->
+            <div id="result" class="hidden">
+              <div class="space-y-4">
+                <!-- LCM Result -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5 border border-blue-100">
+                  <div class="text-sm text-gray-600 mb-1">Least Common Multiple (LCM):</div>
+                  <div id="lcm-result" class="text-3xl font-bold text-indigo-600"></div>
+                </div>
+
+                <!-- GCD Result -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-5 border border-green-100">
+                  <div class="text-sm text-gray-600 mb-1">Greatest Common Divisor (GCD/HCF):</div>
+                  <div id="gcd-result" class="text-3xl font-bold text-green-600"></div>
+                </div>
+
+                <!-- Steps -->
+                <div id="steps" class="bg-white rounded-lg border border-gray-200 p-4 text-sm"></div>
+              </div>
+            </div>
+
+            <!-- Quick Examples -->
+            <div class="border-t pt-4">
+              <p class="text-sm font-medium text-gray-700 mb-3">Quick Examples:</p>
+              <div class="grid grid-cols-2 gap-2">
+                <button onclick="setNumbers('12, 18')" class="px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition">12, 18</button>
+                <button onclick="setNumbers('24, 36, 48')" class="px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition">24, 36, 48</button>
+                <button onclick="setNumbers('15, 25, 35')" class="px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition">15, 25, 35</button>
+                <button onclick="setNumbers('8, 12, 16, 20')" class="px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition">8, 12, 16, 20</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">About LCM & GCD Calculator</h2>
+          <div class="prose max-w-none text-gray-700 space-y-4">
+            <p>Our LCM & GCD Calculator is a powerful, free online tool that instantly calculates the Least Common Multiple (LCM) and Greatest Common Divisor (GCD, also known as HCF - Highest Common Factor) of two or more numbers. Whether you're a student learning number theory, a teacher creating worksheets, or someone solving real-world mathematical problems, this calculator provides accurate results with detailed step-by-step explanations.</p>
+
+            <p>Understanding LCM and GCD is fundamental to mathematics, particularly in arithmetic, algebra, and number theory. These concepts appear in countless applications from simplifying fractions to scheduling problems, making this calculator an essential tool for students, educators, mathematicians, and professionals working with numbers.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">What is LCM (Least Common Multiple)?</h3>
+            <p>The Least Common Multiple (LCM) of two or more integers is the smallest positive integer that is divisible by each of the numbers. In simpler terms, it's the smallest number that all your input numbers can divide into evenly without leaving a remainder.</p>
+
+            <p>For example, consider the numbers 4 and 6. The multiples of 4 are: 4, 8, 12, 16, 20, 24... The multiples of 6 are: 6, 12, 18, 24, 30... The common multiples are 12, 24, 36, and so on. The smallest of these common multiples is 12, so LCM(4, 6) = 12.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">What is GCD (Greatest Common Divisor)?</h3>
+            <p>The Greatest Common Divisor (GCD), also called the Greatest Common Factor (GCF) or Highest Common Factor (HCF), is the largest positive integer that divides each of the numbers without leaving a remainder. It's the biggest number that is a factor of all your input numbers.</p>
+
+            <p>For example, with numbers 12 and 18: The factors of 12 are: 1, 2, 3, 4, 6, 12. The factors of 18 are: 1, 2, 3, 6, 9, 18. The common factors are 1, 2, 3, and 6. The greatest of these is 6, so GCD(12, 18) = 6.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">How to Use This Calculator</h3>
+            <p>Using our LCM & GCD calculator is incredibly simple:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Enter two or more whole numbers in the input field</li>
+              <li>Separate numbers with commas, spaces, or both</li>
+              <li>Click "Calculate LCM & GCD" to get instant results</li>
+              <li>View both the LCM and GCD simultaneously</li>
+              <li>Read the step-by-step calculation process to understand how the results were obtained</li>
+              <li>Try the quick examples for common number combinations</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Calculation Methods</h3>
+            <p><strong>Finding GCD - The Euclidean Algorithm:</strong> Our calculator uses the efficient Euclidean algorithm to find the GCD. This ancient algorithm (dating back to around 300 BC) repeatedly divides the larger number by the smaller and takes the remainder, replacing the larger with the smaller and the smaller with the remainder, until the remainder is zero. The last non-zero remainder is the GCD.</p>
+
+            <p><strong>Finding LCM:</strong> Once we have the GCD, we can calculate LCM using the mathematical relationship: LCM(a, b) = (a × b) / GCD(a, b). For more than two numbers, we apply this formula successively, finding the LCM of the first two numbers, then the LCM of that result with the third number, and so on.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Key Features</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Multiple Numbers:</strong> Calculate LCM and GCD for 2, 3, 4, or more numbers simultaneously</li>
+              <li><strong>Instant Results:</strong> Get both LCM and GCD calculated at the same time</li>
+              <li><strong>Step-by-Step Solutions:</strong> Understand the calculation process with detailed explanations</li>
+              <li><strong>Prime Factorization:</strong> See how numbers break down into prime factors</li>
+              <li><strong>Educational Tool:</strong> Perfect for learning and teaching number theory concepts</li>
+              <li><strong>No Limits:</strong> Handle large numbers and any quantity of inputs</li>
+              <li><strong>Mobile-Friendly:</strong> Works perfectly on all devices</li>
+              <li><strong>Completely Free:</strong> No registration, subscriptions, or hidden costs</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Real-World Applications</h3>
+            <p><strong>LCM Applications:</strong></p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Fraction Operations:</strong> Finding common denominators when adding or subtracting fractions requires finding the LCM of the denominators</li>
+              <li><strong>Scheduling Problems:</strong> If two events occur every X and Y days, the LCM tells you when they'll occur together</li>
+              <li><strong>Gear Ratios:</strong> In mechanical engineering, LCM helps calculate when gears with different teeth counts will return to their starting position</li>
+              <li><strong>Music Theory:</strong> Finding when different rhythm patterns align</li>
+              <li><strong>Tile Layouts:</strong> Determining the smallest square that can be perfectly tiled with rectangular tiles</li>
+            </ul>
+
+            <p><strong>GCD Applications:</strong></p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Simplifying Fractions:</strong> The GCD of numerator and denominator is used to reduce fractions to lowest terms</li>
+              <li><strong>Distribution Problems:</strong> Finding the largest group size when dividing items equally</li>
+              <li><strong>Cryptography:</strong> Many encryption algorithms rely on GCD calculations, particularly in RSA encryption</li>
+              <li><strong>Ratio Simplification:</strong> Reducing ratios to their simplest form</li>
+              <li><strong>Grid Problems:</strong> Finding the largest square tile that can perfectly tile a rectangular floor</li>
+              <li><strong>Computer Graphics:</strong> Simplifying aspect ratios and scaling calculations</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Understanding the Relationship</h3>
+            <p>LCM and GCD are mathematically related through an elegant formula: For any two positive integers a and b, LCM(a, b) × GCD(a, b) = a × b. This relationship allows efficient calculation of one when you know the other.</p>
+
+            <p>Another important property: If two numbers are coprime (their GCD is 1), their LCM is simply their product. For example, GCD(7, 11) = 1 (they're coprime), so LCM(7, 11) = 7 × 11 = 77.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Tips for Students</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Always verify your manual calculations using this calculator</li>
+              <li>Pay attention to the step-by-step process to learn the methodology</li>
+              <li>Practice with the quick examples to build intuition</li>
+              <li>Remember: GCD divides into all numbers, LCM is divisible by all numbers</li>
+              <li>For two numbers, if one divides the other, the GCD is the smaller number and LCM is the larger number</li>
+              <li>Prime numbers (other than the same prime) always have GCD of 1</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Why Choose Our Calculator</h3>
+            <p>Unlike basic calculators that only give you numbers, our LCM & GCD Calculator provides educational value by showing you the complete calculation process. This makes it ideal not just for getting answers, but for learning and understanding the concepts. The tool handles any quantity of numbers, works with large integers, and provides results instantly.</p>
+
+            <p>All calculations are performed locally in your browser using efficient algorithms, ensuring privacy and security. Your numbers are never sent to any server, and the tool works even offline once loaded. There's no data collection, no tracking, and no limitations on usage.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div class="bg-white rounded-2xl border border-gray-200 p-6">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What is the difference between LCM and GCD?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>LCM (Least Common Multiple) is the smallest positive number that is divisible by all given numbers - it's the smallest number that contains all your numbers as factors. GCD (Greatest Common Divisor), also known as HCF, is the largest positive number that divides all given numbers without remainder - it's the biggest number that is a factor of all your numbers. For example, for 12 and 18: LCM is 36 (smallest number both divide into evenly) and GCD is 6 (largest number that divides both evenly). They're opposite concepts: LCM is about multiples, GCD is about divisors.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do you calculate LCM of multiple numbers?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>To calculate LCM of multiple numbers, you can use two main methods: 1) <strong>Prime Factorization Method:</strong> Find prime factorization of each number, then for each prime factor, take the highest power that appears in any factorization, and multiply these together. 2) <strong>Successive Method:</strong> Find LCM of the first two numbers using the formula LCM(a,b) = (a × b) / GCD(a,b), then find LCM of that result with the third number, continue until all numbers are processed. Our calculator uses the efficient successive method with the Euclidean algorithm for GCD calculation.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What is the Euclidean algorithm for finding GCD?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>The Euclidean algorithm is an efficient method to find GCD that dates back to ancient Greece (around 300 BC). Here's how it works: Given two numbers a and b (where a ≥ b), divide a by b and find the remainder r. Then replace a with b and b with r, and repeat the process. Continue until the remainder is 0. The last non-zero remainder is the GCD. Example for GCD(48, 18): 48 = 18×2 + 12, then 18 = 12×1 + 6, then 12 = 6×2 + 0. The last non-zero remainder is 6, so GCD(48, 18) = 6. This method is much faster than listing all factors, especially for large numbers.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can LCM and GCD be calculated for more than two numbers?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, absolutely! Both LCM and GCD can be calculated for any quantity of numbers. For GCD, the property is associative: GCD(a, b, c) = GCD(GCD(a, b), c). You find GCD of the first two numbers, then find GCD of that result with the third number, and continue. The same principle applies to LCM: LCM(a, b, c) = LCM(LCM(a, b), c). Our calculator handles this automatically for any quantity of numbers you enter. For example, for numbers 12, 18, and 24: GCD(12,18) = 6, then GCD(6,24) = 6, so the overall GCD is 6. LCM(12,18) = 36, then LCM(36,24) = 72, so the overall LCM is 72.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What are practical applications of LCM and GCD?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>LCM and GCD have numerous real-world applications: <strong>LCM</strong> is essential for adding/subtracting fractions (finding common denominators), scheduling recurring events (finding when multiple cycles align), solving gear ratio problems in engineering, music theory (rhythm alignment), and tile layout planning. <strong>GCD</strong> is used for simplifying fractions to lowest terms, dividing items into equal groups without remainder, finding optimal tile sizes for floors, cryptography (especially RSA encryption), reducing ratios, and computer graphics calculations. In computer science, both are used in algorithm optimization, digital signal processing, and memory management. These concepts are fundamental in mathematics education and appear in everything from elementary arithmetic to advanced number theory and cryptography.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <!-- Similar Tools -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20">
+          <h3 class="text-lg font-semibold mb-4">Similar Tools</h3>
+          <div class="space-y-3">
+            <a href="fraction-to-decimal-converter.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">➗</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Fraction to Decimal</div>
+                  <div class="mt-1 text-xs text-gray-500">Convert fractions to decimals</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="ratio-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">📊</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Ratio Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Calculate and simplify ratios</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="percentage-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">%</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Percentage Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Quick percentage calculations</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="power-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">^</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Power Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Calculate exponents and powers</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+          </div>
+          <a href="../../categories.html#calculators" class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium">
+            View all Calculators →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div></p></span>
+
+  <!-- SCRIPTS -->
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    function gcd(a, b) {
+      // Euclidean algorithm
+      while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+      }
+      return a;
+    }
+
+    function lcm(a, b) {
+      return Math.abs(a * b) / gcd(a, b);
+    }
+
+    function gcdMultiple(numbers) {
+      return numbers.reduce((a, b) => gcd(a, b));
+    }
+
+    function lcmMultiple(numbers) {
+      return numbers.reduce((a, b) => lcm(a, b));
+    }
+
+    function calculate() {
+      const input = document.getElementById('numbers').value;
+
+      // Parse numbers from input
+      const numbers = input.split(/[\s,]+/)
+        .map(n => n.trim())
+        .filter(n => n !== '')
+        .map(n => parseInt(n))
+        .filter(n => !isNaN(n) && n > 0);
+
+      // Validation
+      if (numbers.length < 2) {
+        showToast('Please enter at least 2 positive whole numbers', 'error');
+        return;
+      }
+
+      // Calculate LCM and GCD
+      const gcdResult = gcdMultiple(numbers);
+      const lcmResult = lcmMultiple(numbers);
+
+      // Display results
+      document.getElementById('lcm-result').textContent = lcmResult.toLocaleString();
+      document.getElementById('gcd-result').textContent = gcdResult.toLocaleString();
+
+      // Show steps
+      let stepsHTML = '<div class="space-y-3">';
+      stepsHTML += '<p><strong>Input Numbers:</strong> ' + numbers.join(', ') + '</p>';
+      stepsHTML += '<p><strong>Prime Factorization Method:</strong></p>';
+      stepsHTML += '<ul class="list-disc pl-5 space-y-1">';
+      stepsHTML += '<li>LCM (Least Common Multiple) is the smallest number divisible by all input numbers</li>';
+      stepsHTML += '<li>GCD (Greatest Common Divisor) is the largest number that divides all input numbers</li>';
+      stepsHTML += '</ul>';
+      stepsHTML += '<p class="mt-3"><strong>Results:</strong></p>';
+      stepsHTML += '<ul class="list-disc pl-5 space-y-1">';
+      stepsHTML += '<li>LCM(' + numbers.join(', ') + ') = ' + lcmResult.toLocaleString() + '</li>';
+      stepsHTML += '<li>GCD(' + numbers.join(', ') + ') = ' + gcdResult.toLocaleString() + '</li>';
+      stepsHTML += '</ul>';
+
+      // Verification
+      stepsHTML += '<p class="mt-3 text-green-600"><strong>Verification:</strong></p>';
+      stepsHTML += '<ul class="list-disc pl-5 space-y-1 text-sm">';
+      numbers.forEach(num => {
+        stepsHTML += '<li>' + lcmResult + ' ÷ ' + num + ' = ' + (lcmResult / num) + ' ✓</li>';
+      });
+      stepsHTML += '</ul>';
+      stepsHTML += '</div>';
+
+      document.getElementById('steps').innerHTML = stepsHTML;
+
+      // Show result
+      document.getElementById('result').classList.remove('hidden');
+
+      showToast('Calculation complete!', 'success');
+    }
+
+    function setNumbers(nums) {
+      document.getElementById('numbers').value = nums;
+      calculate();
+    }
+
+    // Handle Enter key
+    document.getElementById('numbers').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') calculate();
+    });
+  </script>
+</body>
+</html>

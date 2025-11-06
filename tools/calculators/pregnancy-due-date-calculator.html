@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light only" />
+  <title>Free Pregnancy Due Date Calculator: Estimate Your Baby's Arrival Date | AllToolsOnline</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Calculate your estimated due date based on your last menstrual period. Our free online pregnancy due date calculator provides accurate estimates for expecting parents." />
+  <meta name="keywords" content="pregnancy due date calculator, due date calculator, LMP calculator, pregnancy calculator, baby due date" />
+  <meta name="author" content="AllToolsOnline" />
+  <link rel="canonical" href="https://alltoolsonline.site/tools/calculators/pregnancy-due-date-calculator.html" />
+
+  <!-- JSON-LD Tool Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Pregnancy Due Date Calculator",
+    "description": "Free online pregnancy due date calculator that estimates your baby's arrival date based on last menstrual period using Naegele's rule.",
+    "url": "https://alltoolsonline.site/tools/calculators/pregnancy-due-date-calculator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How accurate is the due date calculation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The calculator uses Naegele's rule, which is accurate for about 80% of pregnancies. However, only 5% of babies are born exactly on their due date. Actual delivery can occur anywhere from 37-42 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the LMP and why is it important?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LMP stands for Last Menstrual Period - the first day of your last period before pregnancy. It's used as the starting point for due date calculations because it's usually easier to remember than conception date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use this instead of seeing a doctor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, this calculator provides only an estimate. Always consult your healthcare provider for accurate due date determination, especially if you have irregular periods or other complicating factors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I know my conception date instead?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you know your exact conception date, add approximately 266 days for a more accurate estimate. However, LMP-based calculations are more commonly used by healthcare providers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What factors can change my actual due date?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Maternal age, previous pregnancies, baby's gender, multiple pregnancies, and maternal health conditions can all influence when you actually deliver. Your doctor may adjust your due date based on ultrasound measurements."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ7765FV');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NLEW4JXY4');
+  </script>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- Set theme IMMEDIATELY -->
+  <script>
+    (function() {
+      document.documentElement.setAttribute('data-theme', 'light'); document.body.setAttribute('data-theme', 'light'); localStorage.removeItem('theme');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body class="min-h-screen text-gray-800" data-theme="light">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav class="text-sm mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-gray-600">
+        <li><a href="../../index.html" class="hover:text-indigo-600">Home</a></li>
+        <li>›</li>
+        <li><a href="../../categories.html#calculators" class="hover:text-indigo-600">Calculators</a></li>
+        <li>›</li>
+        <li class="text-gray-900 font-medium">Pregnancy Due Date Calculator</li>
+      </ol>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Main Tool Area -->
+      <div class="lg:col-span-2">
+        <!-- Tool Header -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">🤰</span>
+            <h1 class="text-3xl font-bold">Free Pregnancy Due Date Calculator</h1>
+          </div>
+          <p class="text-gray-600">Estimate your baby's arrival date with our accurate calculator</p>
+        </div>
+
+        <!-- Tool Interface -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          
+<div class="space-y-4">
+    <div>
+        <label for="lmp" class="block text-sm font-medium mb-2">Last Menstrual Period (LMP) Date</label>
+        <input type="date" id="lmp" class="tool-input w-full" required>
+        <p class="text-xs text-gray-500 mt-1">Enter the first day of your last menstrual period</p>
+    </div>
+    <button onclick="calculateDueDate()" class="tool-button w-full">Calculate Due Date</button>
+    <div id="result" class="result-box hidden">
+        <p>Result will appear here</p>
+    </div>
+</div>
+
+        </div>
+
+        <!-- About Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">About Pregnancy Due Date Calculator</h2>
+          <div class="prose max-w-none">
+            <p class="text-gray-700 mb-4">Our free pregnancy due date calculator helps expecting parents estimate when their baby might arrive. Based on the widely-used Naegele's rule, this calculator provides an estimated due date by adding 280 days (40 weeks) to the first day of your last menstrual period. While this method gives a good approximation, remember that only about 5% of babies are born exactly on their due date.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Understanding Due Date Calculations</h3>
+            <p class="text-gray-700 mb-4">The most common method for calculating due dates is Naegele's rule, developed by German obstetrician Franz Naegele in 1812. This rule assumes a typical pregnancy lasts 266 days from conception, but since conception usually occurs about 14 days after the first day of the last menstrual period, the total becomes approximately 280 days from LMP.</p>
+            <ul class="list-disc pl-6 mb-4 text-gray-700">
+              <li><strong>Standard pregnancy length:</strong> 40 weeks from LMP</li>
+              <li><strong>From conception:</strong> Approximately 38 weeks</li>
+              <li><strong>Full term:</strong> 37-42 weeks from LMP</li>
+              <li><strong>Preterm:</strong> Before 37 weeks</li>
+              <li><strong>Post-term:</strong> After 42 weeks</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">How Our Calculator Works</h3>
+            <p class="text-gray-700 mb-4">Simply enter the date of the first day of your last menstrual period, and our calculator will:</p>
+            <ul class="list-disc pl-6 mb-4 text-gray-700">
+              <li>Add 280 days to calculate the estimated due date</li>
+              <li>Display the result in a clear, readable format</li>
+              <li>Show additional information about pregnancy weeks</li>
+              <li>Provide important disclaimers about due date accuracy</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Factors Affecting Due Dates</h3>
+            <p class="text-gray-700 mb-4">Several factors can influence when your baby actually arrives:</p>
+            <ul class="list-disc pl-6 mb-4 text-gray-700">
+              <li><strong>Maternal age:</strong> Older mothers may deliver earlier</li>
+              <li><strong>Previous pregnancies:</strong> Second-time mothers often deliver earlier</li>
+              <li><strong>Baby's gender:</strong> Boy babies tend to arrive later</li>
+              <li><strong>Multiple pregnancies:</strong> Twins usually arrive earlier</li>
+              <li><strong>Maternal health:</strong> Certain conditions can affect timing</li>
+              <li><strong>Genetic factors:</strong> Family history plays a role</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">When to See a Healthcare Provider</h3>
+            <p class="text-gray-700 mb-4">While our calculator provides a good estimate, it's essential to consult with a healthcare professional for accurate pregnancy dating. Ultrasound measurements taken between 8-12 weeks are the most accurate method for determining gestational age. Always seek medical advice for:</p>
+            <ul class="list-disc pl-6 mb-4 text-gray-700">
+              <li>Confirming your pregnancy</li>
+              <li>Establishing an accurate due date</li>
+              <li>Monitoring fetal development</li>
+              <li>Planning prenatal care</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Pregnancy Milestones</h3>
+            <p class="text-gray-700 mb-4">Understanding pregnancy stages can help you prepare for what's ahead:</p>
+            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+              <p class="font-semibold">First Trimester (Weeks 1-12)</p>
+              <p>Major organ development, morning sickness common, fatigue</p>
+            </div>
+            <div class="bg-green-50 p-4 rounded-lg mb-4">
+              <p class="font-semibold">Second Trimester (Weeks 13-26)</p>
+              <p>"Honey moon" phase, energy returns, baby movements felt</p>
+            </div>
+            <div class="bg-orange-50 p-4 rounded-lg mb-4">
+              <p class="font-semibold">Third Trimester (Weeks 27-40+)</p>
+              <p>Preparation for birth, discomfort increases, nesting instinct</p>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Important Disclaimers</h3>
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+              <p class="text-yellow-800"><strong>Medical Disclaimer:</strong> This calculator is for informational purposes only and should not replace professional medical advice. Due dates are estimates, and actual delivery dates can vary significantly. Always consult with your healthcare provider for personalized pregnancy care and accurate due date determination.</p>
+            </div>
+
+            <p class="text-gray-700">Our pregnancy due date calculator is designed to give you a general idea of when to expect your baby, but remember that every pregnancy is unique. Use this tool as a starting point, but rely on your healthcare provider for the most accurate information about your pregnancy timeline.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div class="bg-white rounded-2xl border border-gray-200 p-6">
+            
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How accurate is the due date calculation?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The calculator uses Naegele's rule, which is accurate for about 80% of pregnancies. However, only 5% of babies are born exactly on their due date. Actual delivery can occur anywhere from 37-42 weeks.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is the LMP and why is it important?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>LMP stands for Last Menstrual Period - the first day of your last period before pregnancy. It's used as the starting point for due date calculations because it's usually easier to remember than conception date.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Should I use this instead of seeing a doctor?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>No, this calculator provides only an estimate. Always consult your healthcare provider for accurate due date determination, especially if you have irregular periods or other complicating factors.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What if I know my conception date instead?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>If you know your exact conception date, add approximately 266 days for a more accurate estimate. However, LMP-based calculations are more commonly used by healthcare providers.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What factors can change my actual due date?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Maternal age, previous pregnancies, baby's gender, multiple pregnancies, and maternal health conditions can all influence when you actually deliver. Your doctor may adjust your due date based on ultrasound measurements.</p>
+            </div>
+        </div>
+        
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <!-- Similar Tools -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20">
+          <h3 class="text-lg font-semibold mb-4">Similar Tools</h3>
+          <div class="space-y-3">
+            
+        <a href="percentage-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">%</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Percentage Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Quick percent calculations</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="age-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">🎂</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Age Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Calculate exact age from DOB</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="bmi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">⚖️</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">BMI Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Body Mass Index calculator</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="loan-emi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">🏦</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Loan EMI Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Monthly EMI estimates</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+          </div>
+          <a href="../../categories.html#calculators" class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium">
+            View all Calculators →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    
+function calculateDueDate() {
+    const lmpInput = document.getElementById('lmp').value;
+
+    if (!lmpInput) {
+        showToast('Please select your last menstrual period date.');
+        return;
+    }
+
+    const lmpDate = new Date(lmpInput);
+    const dueDate = new Date(lmpDate);
+    dueDate.setDate(dueDate.getDate() + 280); // Add 280 days
+
+    // Calculate weeks and days
+    const today = new Date();
+    const diffTime = dueDate - lmpDate;
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const weeks = Math.floor(diffDays / 7);
+    const remainingDays = diffDays % 7;
+
+    // Format dates
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const dueDateFormatted = dueDate.toLocaleDateString('en-US', options);
+
+    let resultHtml = `<div class="space-y-3">
+        <p class="text-lg font-semibold text-green-600">Estimated Due Date: ${dueDateFormatted}</p>
+        <p><strong>Pregnancy Duration:</strong> ${weeks} weeks and ${remainingDays} days from LMP</p>
+        <p><strong>Full Term Range:</strong> ${new Date(lmpDate.getTime() + (37 * 7 * 24 * 60 * 60 * 1000)).toLocaleDateString()} - ${new Date(lmpDate.getTime() + (42 * 7 * 24 * 60 * 60 * 1000)).toLocaleDateString()}</p>
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 mt-4">
+            <p class="text-sm text-yellow-800"><strong>Important:</strong> This is an estimate only. Consult your healthcare provider for accurate due date determination.</p>
+        </div>
+    </div>`;
+
+    document.getElementById('result').innerHTML = resultHtml;
+    document.getElementById('result').classList.remove('hidden');
+}
+
+    
+    // Show result box when there's content
+    document.addEventListener('DOMContentLoaded', function() {
+      const resultBox = document.getElementById('result');
+      if (resultBox) {
+        const observer = new MutationObserver(function(mutations) {
+          if (resultBox.innerHTML.trim() !== '') {
+            resultBox.classList.remove('hidden');
+          }
+        });
+        observer.observe(resultBox, { childList: true, subtree: true });
+      }
+    });
+  </script>
+</body>
+</html>
+

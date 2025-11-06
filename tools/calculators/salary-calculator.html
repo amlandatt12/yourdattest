@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light only" />
+  <title>Free Salary Calculator: Convert Hourly, Weekly, Monthly Pay | AllToolsOnline</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Calculate your annual salary from hourly, weekly, or monthly pay rates. Free online salary calculator with tax estimates and overtime calculations." />
+  <meta name="keywords" content="salary calculator, hourly to annual, pay calculator, wage calculator, income calculator" />
+  <meta name="author" content="AllToolsOnline" />
+  <link rel="canonical" href="https://alltoolsonline.site/tools/calculators/salary-calculator.html" />
+
+  <!-- JSON-LD Tool Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Salary Calculator",
+    "description": "Free online salary calculator for converting between hourly, weekly, monthly, and annual pay rates with overtime and tax calculations.",
+    "url": "https://alltoolsonline.site/tools/calculators/salary-calculator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ7765FV');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NLEW4JXY4');
+  </script>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- Set theme IMMEDIATELY -->
+  <script>
+    (function() {
+      document.documentElement.setAttribute('data-theme', 'light'); document.body.setAttribute('data-theme', 'light'); localStorage.removeItem('theme');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body class="min-h-screen text-gray-800" data-theme="light">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav class="text-sm mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-gray-600">
+        <li><a href="../../index.html" class="hover:text-indigo-600">Home</a></li>
+        <li>›</li>
+        <li><a href="../../categories.html#calculators" class="hover:text-indigo-600">Calculators</a></li>
+        <li>›</li>
+        <li class="text-gray-900 font-medium">Salary Calculator</li>
+      </ol>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Main Tool Area -->
+      <div class="lg:col-span-2">
+        <!-- Tool Header -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">💼</span>
+            <h1 class="text-3xl font-bold">Free Salary Calculator</h1>
+          </div>
+          <p class="text-gray-600">Convert between hourly, weekly, monthly, and annual pay rates</p>
+        </div>
+
+        <!-- Tool Interface -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          
+<div class="space-y-4">
+    <div class="grid grid-cols-2 gap-4">
+        <div>
+            <label for="hourlyRate" class="block text-sm font-medium mb-2">Hourly Rate ($)</label>
+            <input type="number" id="hourlyRate" class="tool-input w-full" placeholder="25.00" step="0.01" min="0">
+        </div>
+        <div>
+            <label for="hoursPerWeek" class="block text-sm font-medium mb-2">Hours per Week</label>
+            <input type="number" id="hoursPerWeek" class="tool-input w-full" placeholder="40" min="1" max="168">
+        </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+        <div>
+            <label for="weeksPerYear" class="block text-sm font-medium mb-2">Weeks per Year</label>
+            <input type="number" id="weeksPerYear" class="tool-input w-full" placeholder="52" min="1" max="52">
+        </div>
+        <div>
+            <label for="overtimeHours" class="block text-sm font-medium mb-2">Overtime Hours (optional)</label>
+            <input type="number" id="overtimeHours" class="tool-input w-full" placeholder="0" min="0">
+        </div>
+    </div>
+    <button onclick="calculateSalary()" class="tool-button w-full">Calculate Salary</button>
+    <div id="result" class="result-box hidden">
+        <p>Result will appear here</p>
+    </div>
+</div>
+
+        </div>
+
+        <!-- About Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">About Salary Calculator</h2>
+          <div class="prose max-w-none">
+            <p class="text-gray-700 mb-4">Our comprehensive Salary Calculator is a powerful online tool designed to help employees, employers, and job seekers understand their compensation in various formats. Whether you're negotiating a new job offer, planning your budget, or comparing different pay structures, this calculator provides instant conversions between hourly, weekly, monthly, and annual salaries, including overtime calculations.</p>
+
+            <p class="text-gray-700 mb-4">Understanding your salary across different time periods is crucial for financial planning. Many job postings advertise annual salaries, but hourly workers need to understand their weekly or monthly take-home pay. Our calculator bridges this gap, providing clear breakdowns that help you make informed decisions about your career and finances.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">How the Salary Calculator Works</h3>
+            <p class="text-gray-700 mb-4">The calculator uses standard payroll formulas to convert between different pay periods. Simply enter your hourly rate, hours worked per week, weeks worked per year, and any overtime hours. The tool automatically calculates:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li><strong>Annual Salary:</strong> Total earnings for a full year</li>
+              <li><strong>Monthly Pay:</strong> Average earnings per month</li>
+              <li><strong>Bi-weekly Pay:</strong> Earnings every two weeks (common payroll cycle)</li>
+              <li><strong>Weekly Pay:</strong> Earnings per week including overtime</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Understanding Overtime Calculations</h3>
+            <p class="text-gray-700 mb-4">Overtime pay is automatically calculated at 1.5 times the regular hourly rate for hours worked beyond 40 per week. This follows the Fair Labor Standards Act (FLSA) standards in the United States. The calculator distinguishes between regular overtime (hours over 40 per week) and additional overtime hours you can specify separately.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Key Features</h3>
+            <ol class="list-decimal list-inside text-gray-700 mb-4">
+              <li><strong>Multiple Pay Period Conversions:</strong> Instantly convert between hourly, weekly, monthly, and annual rates</li>
+              <li><strong>Overtime Support:</strong> Automatic calculation of overtime pay at 1.5x regular rate</li>
+              <li><strong>Flexible Input:</strong> Customize hours per week and weeks per year for different work schedules</li>
+              <li><strong>Precise Calculations:</strong> High-precision math with proper rounding for financial accuracy</li>
+              <li><strong>Real-time Results:</strong> Instant calculations as you type</li>
+            </ol>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Common Salary Conversion Scenarios</h3>
+            <p class="text-gray-700 mb-4">This calculator is useful for various situations:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li><strong>Job Offers:</strong> Compare offers with different pay structures</li>
+              <li><strong>Contract Work:</strong> Calculate earnings for freelance or contract positions</li>
+              <li><strong>Part-time Work:</strong> Understand earnings for non-standard schedules</li>
+              <li><strong>Salary Negotiations:</strong> Convert between different compensation formats</li>
+              <li><strong>Budget Planning:</strong> Plan monthly expenses based on hourly wages</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Understanding Different Pay Periods</h3>
+            <p class="text-gray-700 mb-4">Different employers use different pay periods:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li><strong>Hourly:</strong> Paid for each hour worked, common in retail, hospitality, and hourly positions</li>
+              <li><strong>Weekly:</strong> Paid every week, often for part-time or temporary workers</li>
+              <li><strong>Bi-weekly:</strong> Paid every two weeks, most common payroll cycle in the US</li>
+              <li><strong>Semi-monthly:</strong> Paid twice per month (15th and last day)</li>
+              <li><strong>Monthly:</strong> Paid once per month, common for salaried positions</li>
+              <li><strong>Annual:</strong> Total compensation for a year, used for executive and professional positions</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Tax Considerations</h3>
+            <p class="text-gray-700 mb-4">Remember that the figures shown are gross pay (before taxes). Your take-home pay will be less after deductions for income tax, Social Security, Medicare, and other withholdings. Use our tax calculators for more detailed estimates of net pay.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Tips for Using the Calculator</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li>Use the standard 40 hours/week and 52 weeks/year for full-time positions</li>
+              <li>Adjust weeks per year for positions with paid time off (e.g., 50 weeks for 2 weeks vacation)</li>
+              <li>Include overtime hours separately if they exceed regular weekly overtime</li>
+              <li>Consider using average hours if your schedule varies</li>
+            </ul>
+
+            <p class="text-gray-700 mb-4">Whether you're a job seeker evaluating offers, an employee understanding your compensation, or an employer calculating payroll costs, our Salary Calculator provides the clarity you need to make informed financial decisions.</p>
+
+            <p class="text-gray-700">Start calculating your salary conversions today and gain better control over your financial future!</p>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div class="bg-white rounded-2xl border border-gray-200 p-6">
+            
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How does the salary calculator handle overtime?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The calculator automatically calculates overtime at 1.5 times your regular hourly rate for hours worked beyond 40 per week, following FLSA standards.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is the difference between bi-weekly and semi-monthly pay?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Bi-weekly pay occurs every two weeks (26 pay periods per year), while semi-monthly pay happens twice per month (24 pay periods per year).</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How do I calculate salary for part-time work?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Enter your hourly rate, actual hours worked per week (less than 40), and weeks per year. The calculator will adjust all pay periods accordingly.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Does the calculator include taxes?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>No, the calculator shows gross pay before taxes. Use our tax calculators to estimate take-home pay after deductions.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How many weeks should I use per year?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Use 52 for no paid time off, 50 for 2 weeks vacation, or 48 for 4 weeks off. Adjust based on your employer's PTO policy.</p>
+            </div>
+        </div>
+        
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <!-- Similar Tools -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20">
+          <h3 class="text-lg font-semibold mb-4">Similar Tools</h3>
+          <div class="space-y-3">
+            
+        <a href="percentage-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">%</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Percentage Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Quick percent calculations</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="age-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">🎂</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Age Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Calculate exact age from DOB</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="bmi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">⚖️</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">BMI Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Body Mass Index calculator</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="loan-emi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">🏦</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Loan EMI Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Monthly EMI estimates</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+          </div>
+          <a href="../../categories.html#calculators" class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium">
+            View all Calculators →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    
+function calculateSalary() {
+    const hourlyRate = parseFloat(document.getElementById('hourlyRate').value);
+    const hoursPerWeek = parseFloat(document.getElementById('hoursPerWeek').value);
+    const weeksPerYear = parseFloat(document.getElementById('weeksPerYear').value);
+    const overtimeHours = parseFloat(document.getElementById('overtimeHours').value) || 0;
+
+    if (isNaN(hourlyRate) || isNaN(hoursPerWeek) || isNaN(weeksPerYear) || hourlyRate < 0 || hoursPerWeek < 0 || weeksPerYear < 0) {
+        showToast('Please enter valid positive numbers for all required fields.');
+        return;
+    }
+
+    // Calculate regular hours (assuming 40 hours/week is regular)
+    const regularHoursPerWeek = Math.min(hoursPerWeek, 40);
+    const overtimeHoursPerWeek = Math.max(hoursPerWeek - 40, 0) + overtimeHours;
+
+    // Weekly pay
+    const regularWeeklyPay = regularHoursPerWeek * hourlyRate;
+    const overtimeWeeklyPay = overtimeHoursPerWeek * hourlyRate * 1.5;
+    const totalWeeklyPay = regularWeeklyPay + overtimeWeeklyPay;
+
+    // Annual pay
+    const annualPay = totalWeeklyPay * weeksPerYear;
+
+    // Monthly pay (approximate)
+    const monthlyPay = annualPay / 12;
+
+    // Bi-weekly pay
+    const biWeeklyPay = totalWeeklyPay * 2;
+
+    const resultHtml = `
+        <div class="space-y-3">
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="font-semibold">Annual Salary:</p>
+                    <p class="text-lg text-green-600">$${annualPay.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
+                </div>
+                <div>
+                    <p class="font-semibold">Monthly Pay:</p>
+                    <p class="text-lg text-green-600">$${monthlyPay.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
+                </div>
+                <div>
+                    <p class="font-semibold">Bi-weekly Pay:</p>
+                    <p class="text-lg text-green-600">$${biWeeklyPay.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
+                </div>
+                <div>
+                    <p class="font-semibold">Weekly Pay:</p>
+                    <p class="text-lg text-green-600">$${totalWeeklyPay.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
+                </div>
+            </div>
+            ${overtimeHoursPerWeek > 0 ? `<p class="text-sm text-gray-600 mt-2">Includes $${overtimeWeeklyPay.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} in overtime pay</p>` : ''}
+        </div>
+    `;
+
+    document.getElementById('result').innerHTML = resultHtml;
+    document.getElementById('result').classList.remove('hidden');
+}
+
+    
+    // Show result box when there's content
+    document.addEventListener('DOMContentLoaded', function() {
+      const resultBox = document.getElementById('result');
+      if (resultBox) {
+        const observer = new MutationObserver(function(mutations) {
+          if (resultBox.innerHTML.trim() !== '') {
+            resultBox.classList.remove('hidden');
+          }
+        });
+        observer.observe(resultBox, { childList: true, subtree: true });
+      }
+    });
+  </script>
+</body>
+</html>
+

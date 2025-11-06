@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light only" />
+  <title>Advanced Electricity Bill Estimator - Calculate Monthly Power Costs | AllToolsOnline</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Calculate electricity bill costs instantly with our advanced estimator. Input appliance usage, rates, and get accurate monthly estimates. Free online tool with energy-saving tips." />
+  <meta name="keywords" content="electricity bill estimator, electricity bill calculator, power bill calculator, energy cost calculator, monthly electricity bill, electricity consumption calculator, utility bill estimator" />
+  <meta name="author" content="AllToolsOnline" />
+  <link rel="canonical" href="https://www.alltoolsonline.site/tools/calculators/electricity-bill-estimator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Advanced Electricity Bill Estimator - Calculate Monthly Power Costs | AllToolsOnline" />
+  <meta property="og:description" content="Calculate electricity bill costs instantly with our advanced estimator. Input appliance usage, rates, and get accurate monthly estimates. Free online tool with energy-saving tips." />
+  <meta property="og:image" content="https://www.alltoolsonline.site/assets/images/electricity-bill-estimator-og.jpg" />
+  <meta property="og:url" content="https://www.alltoolsonline.site/tools/calculators/electricity-bill-estimator.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Advanced Electricity Bill Estimator - Calculate Monthly Power Costs | AllToolsOnline" />
+  <meta name="twitter:description" content="Calculate electricity bill costs instantly with our advanced estimator. Input appliance usage, rates, and get accurate monthly estimates. Free online tool with energy-saving tips." />
+  <meta name="twitter:image" content="https://www.alltoolsonline.site/assets/images/electricity-bill-estimator-twitter.png" />
+
+  <!-- Additional SEO -->
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+
+  <!-- JSON-LD Schemas -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Advanced Electricity Bill Estimator",
+    "description": "Calculate electricity bill costs with appliance usage tracking and energy-saving recommendations",
+    "url": "https://www.alltoolsonline.site/tools/calculators/electricity-bill-estimator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Electricity Bill Calculation",
+      "Appliance Usage Tracking",
+      "Energy Cost Estimation",
+      "Monthly Bill Projection",
+      "Energy Saving Tips",
+      "Multiple Currency Support"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AllToolsOnline",
+    "url": "https://www.alltoolsonline.site",
+    "logo": "https://www.alltoolsonline.site/assets/images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/alltoolsonline",
+      "https://www.twitter.com/alltoolsonline"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.alltoolsonline.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculators",
+        "item": "https://www.alltoolsonline.site/categories.html#calculators"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Electricity Bill Estimator",
+        "item": "https://www.alltoolsonline.site/tools/calculators/electricity-bill-estimator.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ7765FV');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NLEW4JXY4');
+  </script>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Set theme IMMEDIATELY -->
+  <script>
+    (function() {
+      document.documentElement.setAttribute('data-theme', 'light'); document.body.setAttribute('data-theme', 'light'); localStorage.removeItem('theme');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+
+  <style>
+    .appliance-item {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .appliance-item input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.375rem;
+      font-size: 0.875rem;
+    }
+    .appliance-item input:focus {
+      outline: none;
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+    .remove-appliance {
+      background: #ef4444;
+      color: white;
+      border: none;
+      border-radius: 0.375rem;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .remove-appliance:hover {
+      background: #dc2626;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen text-gray-800" data-theme="light">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav class="text-sm mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-gray-600">
+        <li><a href="../../index.html" class="hover:text-indigo-600">Home</a></li>
+        <li>›</li>
+        <li><a href="../../categories.html#calculators" class="hover:text-indigo-600">Calculators</a></li>
+        <li>›</li>
+        <li class="text-gray-900 font-medium">Electricity Bill Estimator</li>
+      </ol>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Main Tool Area -->
+      <div class="lg:col-span-2">
+        <!-- Tool Header -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">💡</span>
+            <h1 class="text-3xl font-bold">Advanced Electricity Bill Estimator</h1>
+          </div>
+          <p class="text-gray-600">Calculate your monthly electricity costs with detailed appliance usage tracking and energy-saving recommendations</p>
+        </div>
+
+        <!-- Tool Interface -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          <!-- Rate Input -->
+          <div class="mb-6">
+            <label class="block text-sm font-medium mb-2">Electricity Rate (per kWh)</label>
+            <div class="flex gap-2">
+              <input type="number" id="rate" class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="0.12" step="0.01" min="0">
+              <select id="currency" class="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                <option value="USD">$ USD</option>
+                <option value="EUR">€ EUR</option>
+                <option value="GBP">£ GBP</option>
+                <option value="INR">₹ INR</option>
+                <option value="JPY">¥ JPY</option>
+              </select>
+            </div>
+            <p class="text-xs text-gray-500 mt-1">Enter your local electricity rate per kilowatt-hour</p>
+          </div>
+
+          <!-- Appliance Management -->
+          <div class="mb-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-lg font-semibold">Appliances</h3>
+              <button onclick="addAppliance()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 text-sm">Add Appliance</button>
+            </div>
+
+            <div id="appliances-list">
+              <!-- Appliances will be added here -->
+            </div>
+          </div>
+
+          <!-- Calculate Button -->
+          <button onclick="calculateBill()" class="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 font-medium transition-colors mb-6">
+            Calculate Electricity Bill
+          </button>
+
+          <!-- Results -->
+          <div id="results" class="hidden space-y-4">
+            <div class="bg-gray-50 rounded-lg p-4">
+              <h3 class="text-lg font-semibold mb-3">Monthly Electricity Bill Estimate</h3>
+
+              <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div class="bg-white p-4 rounded border">
+                  <div class="text-sm text-gray-600">Total Monthly Cost</div>
+                  <div class="text-2xl font-bold text-indigo-600" id="total-cost">$0.00</div>
+                </div>
+                <div class="bg-white p-4 rounded border">
+                  <div class="text-sm text-gray-600">Monthly Consumption</div>
+                  <div class="text-2xl font-bold text-green-600" id="total-kwh">0 kWh</div>
+                </div>
+              </div>
+
+              <div class="bg-white p-4 rounded border">
+                <h4 class="font-semibold mb-3">Appliance Breakdown</h4>
+                <div id="breakdown-list" class="space-y-2"></div>
+              </div>
+            </div>
+
+            <!-- Energy Saving Tips -->
+            <div class="bg-blue-50 rounded-lg p-4">
+              <h3 class="text-lg font-semibold mb-3 text-blue-900">Energy Saving Recommendations</h3>
+              <div id="saving-tips" class="space-y-2 text-sm text-blue-800"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">Understanding Electricity Bills and Energy Consumption</h2>
+          <div class="prose max-w-none text-gray-700">
+            <p class="mb-4">Electricity bills can be confusing and expensive, but understanding your energy consumption is the first step toward reducing costs and living more sustainably. Our advanced Electricity Bill Estimator helps you track appliance usage, calculate costs, and discover energy-saving opportunities.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">How Electricity Bills Work</h3>
+
+            <h4 class="text-lg font-semibold mb-2">Kilowatt-Hours (kWh)</h4>
+            <p class="mb-3">Electricity consumption is measured in kilowatt-hours. One kWh equals 1,000 watts used for one hour. Your bill shows total kWh used multiplied by your rate per kWh.</p>
+
+            <h4 class="text-lg font-semibold mb-2">Rate Structures</h4>
+            <p class="mb-3">Electricity rates vary by location and provider. Some utilities charge different rates for different times of day (time-of-use pricing), while others have tiered rates that increase as you use more electricity.</p>
+
+            <h4 class="text-lg font-semibold mb-2">Additional Charges</h4>
+            <p class="mb-3">Beyond the energy charge, bills often include delivery charges, taxes, and fees. These can add 20-50% to your total bill depending on your location.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Common Appliance Power Ratings</h3>
+            <p class="mb-4">Knowing typical power consumption helps estimate usage:</p>
+
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+              <div class="bg-white p-4 rounded border">
+                <h5 class="font-semibold mb-2">Kitchen Appliances</h5>
+                <ul class="text-sm space-y-1">
+                  <li>Refrigerator: 100-200W (running)</li>
+                  <li>Microwave: 600-1200W</li>
+                  <li>Toaster: 800-1500W</li>
+                  <li>Coffee Maker: 600-1200W</li>
+                  <li>Dishwasher: 1200-1500W</li>
+                </ul>
+              </div>
+              <div class="bg-white p-4 rounded border">
+                <h5 class="font-semibold mb-2">Entertainment & Office</h5>
+                <ul class="text-sm space-y-1">
+                  <li>TV (LCD): 50-150W</li>
+                  <li>Computer: 200-400W</li>
+                  <li>Router: 5-15W</li>
+                  <li>Printer: 20-50W (printing)</li>
+                  <li>Gaming Console: 100-200W</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Energy Efficiency Tips</h3>
+            <p class="mb-3">Small changes can significantly reduce your electricity costs:</p>
+            <ul class="list-disc pl-6 mb-4">
+              <li><strong>Unplug devices:</strong> Electronics consume power even when off (standby mode)</li>
+              <li><strong>Use LED bulbs:</strong> Replace incandescent bulbs with LED alternatives</li>
+              <li><strong>Adjust thermostat:</strong> Lower by 1°C in winter, raise by 1°C in summer</li>
+              <li><strong>Smart appliances:</strong> Use energy-efficient models with good Energy Star ratings</li>
+              <li><strong>Time usage:</strong> Run major appliances during off-peak hours if available</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Understanding Your Bill</h3>
+            <p class="mb-3">Reading your electricity bill can help you understand and control costs:</p>
+            <ul class="list-disc pl-6 mb-4">
+              <li><strong>Usage history:</strong> Compare current usage to previous months</li>
+              <li><strong>Rate changes:</strong> Monitor for rate increases or changes</li>
+              <li><strong>Seasonal patterns:</strong> Higher usage in summer (AC) and winter (heating)</li>
+              <li><strong>Comparative analysis:</strong> How your usage compares to similar households</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Renewable Energy Options</h3>
+            <p class="mb-3">Consider switching to renewable energy sources:</p>
+            <ul class="list-disc pl-6 mb-4">
+              <li><strong>Solar panels:</strong> Generate your own electricity with photovoltaic systems</li>
+              <li><strong>Wind power:</strong> Community wind farms in suitable areas</li>
+              <li><strong>Green tariffs:</strong> Purchase electricity from renewable sources</li>
+              <li><strong>Net metering:</strong> Sell excess solar power back to the grid</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Why Choose Our Calculator?</h3>
+            <p class="mb-3">Our advanced electricity bill estimator offers:</p>
+            <ul class="list-disc pl-6 mb-4">
+              <li>Multiple appliance tracking with custom power ratings</li>
+              <li>Real-time cost calculations with different currencies</li>
+              <li>Energy-saving recommendations based on usage patterns</li>
+              <li>Detailed breakdown by appliance for better understanding</li>
+              <li>Privacy-focused calculations performed locally in your browser</li>
+              <li>Comprehensive educational content about energy consumption</li>
+            </ul>
+
+            <p class="mb-4">Understanding and controlling your electricity usage not only saves money but also reduces your environmental impact. Start with our calculator to gain insights into your energy consumption patterns and discover opportunities for savings. Small changes in energy habits can lead to significant cost reductions over time!</p>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div class="bg-white rounded-2xl border border-gray-200 p-6">
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How accurate is the electricity bill estimator?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>The calculator provides estimates based on the information you provide. Accuracy depends on correct appliance power ratings and usage times. For precise billing, always refer to your utility company's meter readings and rates. The tool is designed for planning and awareness, not official billing.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What if I don't know the power rating of my appliances?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>You can find power ratings on appliance labels, user manuals, or manufacturer websites. For estimates, use the common ratings provided in our educational section. Many smart plugs and energy monitors can measure actual power consumption for greater accuracy.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do I find my electricity rate?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Check your recent electricity bill for the rate per kWh. You can also contact your utility company or check their website. Rates vary by location, time of day, and season. Some areas have different rates for summer/winter or peak/off-peak hours.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Does the calculator include additional fees and taxes?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>The calculator focuses on energy charges (kWh × rate). Additional fees like delivery charges, taxes, and surcharges are not included as they vary widely by location and utility. Add these manually to get a complete bill estimate.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How can I reduce my electricity bill?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Unplug unused electronics, use LED bulbs, adjust your thermostat, run appliances during off-peak hours, maintain appliances properly, and consider energy-efficient upgrades. Small changes like these can reduce bills by 10-30% annually.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What are smart meters and how do they help?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Smart meters provide real-time usage data and can support time-of-use pricing. They help you understand consumption patterns and make informed decisions about energy usage. Many utilities offer smart meter installation programs.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can I use this calculator for commercial properties?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, the calculator works for any scale of electricity usage. For commercial properties, you'll need to account for all equipment, lighting, and operational hours. Consider consulting with energy auditors for large commercial installations.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Is my electricity usage data secure?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Absolutely. All calculations are performed locally in your web browser. Your appliance data, usage patterns, and cost information never leave your device or get transmitted to any servers. We prioritize your privacy and data security.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How often should I calculate my electricity costs?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Calculate monthly to track changes, or whenever you add new appliances, change usage habits, or notice bill increases. Regular monitoring helps identify problems early and ensures you're getting the best rates available.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What are the most energy-efficient appliances?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Look for Energy Star certified appliances. LED bulbs, Energy Star refrigerators, efficient air conditioners, and heat pump water heaters typically offer the best energy efficiency. Consider the total cost of ownership, not just purchase price.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <!-- Similar Tools -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20">
+          <h3 class="text-lg font-semibold mb-4">Similar Tools</h3>
+          <div class="space-y-3">
+
+            <a href="fuel-cost-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">⛽</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Fuel Cost Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Calculate fuel expenses</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="loan-emi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">🏦</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Loan EMI Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Monthly EMI estimates</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="percentage-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">%</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Percentage Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Quick percent calculations</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="bmi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">⚖️</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">BMI Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Body Mass Index calculator</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+          </div>
+          <a href="../../categories.html#calculators" class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium">
+            View all Calculators →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    let applianceCount = 0;
+
+    // Add a new appliance input
+    function addAppliance() {
+      applianceCount++;
+      const appliancesList = document.getElementById('appliances-list');
+
+      const applianceDiv = document.createElement('div');
+      applianceDiv.className = 'appliance-item';
+      applianceDiv.id = `appliance-${applianceCount}`;
+
+      applianceDiv.innerHTML = `
+        <div class="flex justify-between items-center mb-2">
+          <span class="font-medium">Appliance ${applianceCount}</span>
+          <button onclick="removeAppliance(${applianceCount})" class="remove-appliance">Remove</button>
+        </div>
+        <div class="grid md:grid-cols-3 gap-2">
+          <input type="text" placeholder="Appliance name" id="name-${applianceCount}">
+          <input type="number" placeholder="Power (W)" id="power-${applianceCount}" min="0" step="0.1">
+          <input type="number" placeholder="Hours/day" id="hours-${applianceCount}" min="0" max="24" step="0.1">
+        </div>
+      `;
+
+      appliancesList.appendChild(applianceDiv);
+    }
+
+    // Remove an appliance
+    function removeAppliance(id) {
+      const applianceDiv = document.getElementById(`appliance-${id}`);
+      if (applianceDiv) {
+        applianceDiv.remove();
+      }
+    }
+
+    // Calculate electricity bill
+    function calculateBill() {
+      const rate = parseFloat(document.getElementById('rate').value);
+      const currency = document.getElementById('currency').value;
+
+      if (!rate || rate <= 0) {
+        showToast('Please enter a valid electricity rate');
+        return;
+      }
+
+      let totalKwh = 0;
+      let totalCost = 0;
+      const breakdown = [];
+      const tips = [];
+
+      // Calculate for each appliance
+      for (let i = 1; i <= applianceCount; i++) {
+        const nameInput = document.getElementById(`name-${i}`);
+        const powerInput = document.getElementById(`power-${i}`);
+        const hoursInput = document.getElementById(`hours-${i}`);
+
+        if (!nameInput || !powerInput || !hoursInput) continue;
+
+        const name = nameInput.value.trim();
+        const power = parseFloat(powerInput.value);
+        const hours = parseFloat(hoursInput.value);
+
+        if (name && power > 0 && hours > 0) {
+          const dailyKwh = (power * hours) / 1000;
+          const monthlyKwh = dailyKwh * 30.44; // Average days in month
+          const monthlyCost = monthlyKwh * rate;
+
+          totalKwh += monthlyKwh;
+          totalCost += monthlyCost;
+
+          breakdown.push({
+            name: name,
+            kwh: monthlyKwh,
+            cost: monthlyCost
+          });
+
+          // Generate saving tips
+          if (hours > 8) {
+            tips.push(`Consider reducing usage time for ${name} to save energy`);
+          }
+          if (power > 1000) {
+            tips.push(`Look for energy-efficient alternatives for ${name}`);
+          }
+        }
+      }
+
+      if (totalKwh === 0) {
+        showToast('Please add at least one appliance with valid data');
+        return;
+      }
+
+      // Display results
+      displayResults(totalCost, totalKwh, currency, breakdown, tips);
+    }
+
+    // Display calculation results
+    function displayResults(totalCost, totalKwh, currency, breakdown, tips) {
+      const currencySymbols = {
+        'USD': '$',
+        'EUR': '€',
+        'GBP': '£',
+        'INR': '₹',
+        'JPY': '¥'
+      };
+
+      const symbol = currencySymbols[currency] || '$';
+
+      document.getElementById('total-cost').textContent = `${symbol}${totalCost.toLocaleString('en-US', {maximumFractionDigits: 2})}`;
+      document.getElementById('total-kwh').textContent = `${totalKwh.toLocaleString('en-US', {maximumFractionDigits: 1})} kWh`;
+
+      // Appliance breakdown
+      const breakdownList = document.getElementById('breakdown-list');
+      breakdownList.innerHTML = '';
+
+      breakdown.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'flex justify-between items-center py-1 border-b border-gray-100 last:border-b-0';
+        itemDiv.innerHTML = `
+          <span class="font-medium">${item.name}</span>
+          <span class="text-sm text-gray-600">${item.kwh.toFixed(1)} kWh - ${symbol}${item.cost.toFixed(2)}</span>
+        `;
+        breakdownList.appendChild(itemDiv);
+      });
+
+      // Energy saving tips
+      const tipsDiv = document.getElementById('saving-tips');
+      tipsDiv.innerHTML = '';
+
+      if (tips.length === 0) {
+        tipsDiv.innerHTML = '<p>Your usage patterns look efficient! Keep up the good work.</p>';
+      } else {
+        tips.forEach(tip => {
+          const tipP = document.createElement('p');
+          tipP.innerHTML = `• ${tip}`;
+          tipsDiv.appendChild(tipP);
+        });
+      }
+
+      document.getElementById('results').classList.remove('hidden');
+      showToast('Electricity bill calculated successfully!');
+    }
+
+    // Initialize FAQ functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+          const answer = this.nextElementSibling;
+          const icon = this.querySelector('.faq-icon');
+
+          if (answer.classList.contains('hidden')) {
+            answer.classList.remove('hidden');
+            icon.textContent = '−';
+          } else {
+            answer.classList.add('hidden');
+            icon.textContent = '+';
+          }
+        });
+      });
+
+      // Add one appliance by default
+      addAppliance();
+    });
+  </script>
+</body>
+</html>

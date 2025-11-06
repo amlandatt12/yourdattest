@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light only" />
+  <title>Tip Calculator - Free Online Tool | AllToolsOnline</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Split tips and bills. Free online tip calculator with instant results. No sign-up required." />
+  <meta name="keywords" content="tip calculator, online tip calculator, free tip calculator, calculators" />
+  <meta name="author" content="AllToolsOnline" />
+  <link rel="canonical" href="https://www.alltoolsonline.example/tools/calculators/tip-calculator.html" />
+
+  <!-- JSON-LD Tool Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Tip Calculator",
+    "description": "Split tips and bills",
+    "url": "https://www.alltoolsonline.example/tools/calculators/tip-calculator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ7765FV');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NLEW4JXY4');
+  </script>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- Set theme IMMEDIATELY -->
+  <script>
+    (function() {
+      document.documentElement.setAttribute('data-theme', 'light'); document.body.setAttribute('data-theme', 'light'); localStorage.removeItem('theme');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body class="min-h-screen text-gray-800" data-theme="light">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav class="text-sm mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-gray-600">
+        <li><a href="../../index.html" class="hover:text-indigo-600">Home</a></li>
+        <li>›</li>
+        <li><a href="../../categories.html#calculators" class="hover:text-indigo-600">Calculators</a></li>
+        <li>›</li>
+        <li class="text-gray-900 font-medium">Tip Calculator</li>
+      </ol>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Main Tool Area -->
+      <div class="lg:col-span-2">
+        <!-- Tool Header -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">🍽️</span>
+            <h1 class="text-3xl font-bold">Tip Calculator</h1>
+          </div>
+          <p class="text-gray-600">Split tips and bills</p>
+        </div>
+
+        <!-- Tool Interface -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          
+<div class="space-y-4">
+    <div>
+        <label for="billAmount" class="block text-sm font-medium mb-2">Bill Amount ($)</label>
+        <input type="number" id="billAmount" class="tool-input w-full" placeholder="0.00" step="0.01" min="0">
+    </div>
+    <div>
+        <label for="tipPercentage" class="block text-sm font-medium mb-2">Tip Percentage (%)</label>
+        <input type="number" id="tipPercentage" class="tool-input w-full" placeholder="15" step="0.1" min="0" value="15">
+    </div>
+    <div>
+        <label for="numPeople" class="block text-sm font-medium mb-2">Number of People</label>
+        <input type="number" id="numPeople" class="tool-input w-full" placeholder="1" min="1" value="1">
+    </div>
+    <button onclick="calculateTip()" class="tool-button w-full">Calculate Tip</button>
+    <div id="result" class="result-box hidden">
+        <div id="tip-results" class="space-y-2"></div>
+    </div>
+</div>
+
+        </div>
+
+        <!-- About Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">About Tip Calculator</h2>
+          <div class="prose max-w-none">
+            <p class="text-gray-700 mb-4">Tipping is a common practice in service industries worldwide, but calculating the right tip amount can sometimes be confusing, especially when splitting bills among multiple people. Our Tip Calculator simplifies this process, providing instant calculations for tip amounts, total bills, and per-person shares.</p>
+
+            <p class="text-gray-700 mb-4">Whether you're dining out, getting a haircut, taking a taxi, or using any service where tipping is customary, this calculator ensures you tip appropriately and split costs fairly. No more mental math or awkward moments at the table!</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">How the Tip Calculator Works</h3>
+            <p class="text-gray-700 mb-4">The calculator uses simple percentage-based calculations to determine tip amounts. Enter your bill total, desired tip percentage, and number of people splitting the bill. The tool instantly calculates:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li><strong>Total Tip Amount:</strong> The full tip based on the bill and percentage</li>
+              <li><strong>Grand Total:</strong> Bill amount plus tip</li>
+              <li><strong>Tip Per Person:</strong> How much each person should contribute for the tip</li>
+              <li><strong>Total Per Person:</strong> Each person's share of the entire bill including tip</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Understanding Tip Percentages</h3>
+            <p class="text-gray-700 mb-4">Tip percentages vary by country, service type, and personal preference:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li><strong>10%:</strong> Minimal service or dissatisfaction</li>
+              <li><strong>15%:</strong> Standard tipping for good service</li>
+              <li><strong>18-20%:</strong> Excellent service or high-end establishments</li>
+              <li><strong>25%+:</strong> Exceptional service or luxury experiences</li>
+            </ul>
+            <p class="text-gray-700 mb-4">Always consider local customs and service quality when determining your tip percentage.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Benefits of Using Our Calculator</h3>
+            <ol class="list-decimal list-inside text-gray-700 mb-4">
+              <li><strong>Accuracy:</strong> Eliminates calculation errors in fast-paced situations</li>
+              <li><strong>Fair Splitting:</strong> Ensures everyone pays their fair share</li>
+              <li><strong>Time-Saving:</strong> Instant results without mental math</li>
+              <li><strong>Customizable:</strong> Adjust percentages and group sizes as needed</li>
+              <li><strong>Educational:</strong> Helps understand proper tipping etiquette</li>
+            </ol>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Tipping Etiquette Around the World</h3>
+            <p class="text-gray-700 mb-4">Tipping customs vary significantly by country:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li><strong>United States:</strong> 15-20% for restaurants, discretionary for other services</li>
+              <li><strong>United Kingdom:</strong> 10-15% for restaurants, rounding up for taxis</li>
+              <li><strong>Japan:</strong> Tipping is not customary and can be considered rude</li>
+              <li><strong>France:</strong> Service charge often included, small additional tip optional</li>
+              <li><strong>Australia:</strong> 10% for good service, rounding up common</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">When to Use the Tip Calculator</h3>
+            <p class="text-gray-700 mb-4">This calculator is perfect for:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li><strong>Restaurant Bills:</strong> Split checks among dining companions</li>
+              <li><strong>Group Outings:</strong> Calculate fair contributions for group expenses</li>
+              <li><strong>Service Industry:</strong> Determine appropriate tips for various services</li>
+              <li><strong>Travel:</strong> Calculate tips in foreign currencies and customs</li>
+              <li><strong>Business Expenses:</strong> Track and calculate gratuities for expense reports</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Tips for Better Tipping</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li>Consider service quality when choosing tip percentage</li>
+              <li>Check if gratuity is already included in the bill</li>
+              <li>Round up for excellent service</li>
+              <li>Use cash for small tips when possible</li>
+              <li>Be aware of local tipping customs when traveling</li>
+            </ul>
+
+            <p class="text-gray-700 mb-4">Our Tip Calculator ensures that tipping is stress-free and accurate, allowing you to focus on enjoying the service rather than worrying about the math. Whether you're a generous tipper or prefer to keep it modest, this tool helps you calculate the perfect amount every time.</p>
+
+            <p class="text-gray-700">Start calculating your tips with confidence today!</p>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div class="bg-white rounded-2xl border border-gray-200 p-6">
+            
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is a good tip percentage?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>15% is standard for good service in restaurants. Use 18-20% for excellent service, 10% for minimal service. Always consider local customs and service quality.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How do I split the tip among multiple people?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Enter the number of people in the calculator. It will show both the total tip amount and how much each person should contribute for both the tip and the total bill.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What if gratuity is already included in the bill?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>If the bill already includes a service charge or gratuity, you may not need to add an additional tip. Check the bill carefully before calculating.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Do I tip on the tax amount?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Generally, tip is calculated on the pre-tax amount. However, some people tip on the total including tax. The calculator uses the bill amount you enter as the base.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How do tipping customs vary by country?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Tipping varies widely: 15-20% in the US, 10-15% in the UK, not customary in Japan, and often included in France. Research local customs when traveling.</p>
+            </div>
+        </div>
+        
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <!-- Similar Tools -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20">
+          <h3 class="text-lg font-semibold mb-4">Similar Tools</h3>
+          <div class="space-y-3">
+            
+        <a href="percentage-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">%</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Percentage Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Quick percent calculations</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="age-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">🎂</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Age Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Calculate exact age from DOB</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="bmi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">⚖️</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">BMI Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Body Mass Index calculator</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="loan-emi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">🏦</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Loan EMI Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Monthly EMI estimates</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+          </div>
+          <a href="../../categories.html#calculators" class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium">
+            View all Calculators →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    
+function calculateTip() {
+    const billAmount = parseFloat(document.getElementById('billAmount').value);
+    const tipPercentage = parseFloat(document.getElementById('tipPercentage').value);
+    const numPeople = parseInt(document.getElementById('numPeople').value);
+
+    if (isNaN(billAmount) || isNaN(tipPercentage) || isNaN(numPeople) || billAmount < 0 || tipPercentage < 0 || numPeople < 1) {
+        showToast('Please enter valid positive numbers for all fields.');
+        return;
+    }
+
+    const tipAmount = (billAmount * tipPercentage) / 100;
+    const totalAmount = billAmount + tipAmount;
+    const tipPerPerson = tipAmount / numPeople;
+    const totalPerPerson = totalAmount / numPeople;
+
+    const resultsHtml = `
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <p class="font-semibold">Tip Amount:</p>
+                <p class="text-lg text-green-600">$${tipAmount.toFixed(2)}</p>
+            </div>
+            <div>
+                <p class="font-semibold">Total Amount:</p>
+                <p class="text-lg text-green-600">$${totalAmount.toFixed(2)}</p>
+            </div>
+            <div>
+                <p class="font-semibold">Tip per Person:</p>
+                <p class="text-lg text-blue-600">$${tipPerPerson.toFixed(2)}</p>
+            </div>
+            <div>
+                <p class="font-semibold">Total per Person:</p>
+                <p class="text-lg text-blue-600">$${totalPerPerson.toFixed(2)}</p>
+            </div>
+        </div>
+    `;
+
+    document.getElementById('tip-results').innerHTML = resultsHtml;
+    document.getElementById('result').classList.remove('hidden');
+}
+
+    
+    // Show result box when there's content
+    document.addEventListener('DOMContentLoaded', function() {
+      const resultBox = document.getElementById('result');
+      if (resultBox) {
+        const observer = new MutationObserver(function(mutations) {
+          if (resultBox.innerHTML.trim() !== '') {
+            resultBox.classList.remove('hidden');
+          }
+        });
+        observer.observe(resultBox, { childList: true, subtree: true });
+      }
+    });
+  </script>
+</body>
+</html>

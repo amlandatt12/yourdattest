@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light only" />
+  <title>Fuel Cost Calculator - Trip Cost Estimator | AllToolsOnline</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Calculate fuel costs for your trips instantly. Free fuel cost calculator with distance, fuel efficiency, and price per gallon/liter. Plan your road trip budget now!" />
+  <meta name="keywords" content="fuel cost calculator, gas cost calculator, trip fuel cost, fuel expense calculator, road trip cost, mpg calculator, fuel consumption calculator, travel cost estimator" />
+  <meta name="author" content="AllToolsOnline" />
+  <link rel="canonical" href="https://www.alltoolsonline.site/tools/calculators/fuel-cost-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fuel Cost Calculator - Trip Cost Estimator | AllToolsOnline" />
+  <meta property="og:description" content="Calculate fuel costs for your trips instantly. Free calculator with distance, fuel efficiency, and price estimates." />
+  <meta property="og:url" content="https://www.alltoolsonline.site/tools/calculators/fuel-cost-calculator.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fuel Cost Calculator - Trip Cost Estimator | AllToolsOnline" />
+  <meta name="twitter:description" content="Calculate fuel costs for your trips instantly with our free online calculator." />
+
+  <!-- JSON-LD Tool Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Fuel Cost Calculator",
+    "description": "Calculate fuel costs for trips based on distance, fuel efficiency, and fuel price",
+    "url": "https://www.alltoolsonline.site/tools/calculators/fuel-cost-calculator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": ["Trip cost estimation", "MPG/L per 100km support", "Miles/Kilometers", "Round trip calculation", "Multiple vehicle comparison"]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "How do you calculate fuel cost for a trip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate fuel cost, divide the total distance by your vehicle's fuel efficiency (MPG or L/100km) to get fuel needed, then multiply by the price per unit. Formula: (Distance ÷ Fuel Efficiency) × Fuel Price = Total Cost. Our calculator handles all unit conversions automatically."
+      }
+    },{
+      "@type": "Question",
+      "name": "What is the difference between MPG and L/100km?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MPG (Miles Per Gallon) measures how many miles you can travel on one gallon of fuel - higher is better. L/100km (Liters per 100 kilometers) measures how many liters you need for 100km - lower is better. They're inverse measurements used in different regions."
+      }
+    },{
+      "@type": "Question",
+      "name": "How can I improve my vehicle's fuel efficiency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Improve fuel efficiency by: maintaining proper tire pressure, removing excess weight, driving at steady speeds, avoiding rapid acceleration, regular vehicle maintenance, using cruise control on highways, and reducing idle time. These can improve efficiency by 10-25%."
+      }
+    },{
+      "@type": "Question",
+      "name": "Should I calculate one-way or round trip fuel costs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For complete trip budgeting, calculate round trip costs by doubling the one-way distance. This gives you the total fuel expense. Our calculator has a round trip option that automatically doubles the distance for accurate budgeting."
+      }
+    },{
+      "@type": "Question",
+      "name": "How accurate is the fuel cost calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our calculator provides estimates based on the inputs you provide. Actual costs may vary due to driving conditions, weather, terrain, traffic, vehicle load, and driving habits. For best accuracy, use your vehicle's actual MPG from recent trips rather than manufacturer estimates."
+      }
+    }]
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ7765FV');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NLEW4JXY4');
+  </script>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Set theme IMMEDIATELY -->
+  <script>
+    (function() {
+      document.documentElement.setAttribute('data-theme', 'light');
+      document.body.setAttribute('data-theme', 'light');
+      localStorage.removeItem('theme');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body class="min-h-screen text-gray-800" data-theme="light">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav class="text-sm mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-gray-600">
+        <li><a href="../../index.html" class="hover:text-indigo-600">Home</a></li>
+        <li>›</li>
+        <li><a href="../../categories.html#calculators" class="hover:text-indigo-600">Calculators</a></li>
+        <li>›</li>
+        <li class="text-gray-900 font-medium">Fuel Cost Calculator</li>
+      </ol>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Main Tool Area -->
+      <div class="lg:col-span-2">
+        <!-- Tool Header -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">⛽</span>
+            <h1 class="text-3xl font-bold">Fuel Cost Calculator</h1>
+          </div>
+          <p class="text-gray-600">Calculate trip fuel costs based on distance, fuel efficiency, and fuel price</p>
+        </div>
+
+        <!-- Tool Interface -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          <div class="space-y-5">
+            <!-- Trip Type -->
+            <div>
+              <label class="block text-sm font-medium mb-2">Trip Type</label>
+              <div class="flex gap-4">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="tripType" value="oneway" checked class="w-4 h-4 text-indigo-600">
+                  <span>One-way</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="tripType" value="roundtrip" class="w-4 h-4 text-indigo-600">
+                  <span>Round Trip</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Distance -->
+            <div>
+              <label class="block text-sm font-medium mb-2">Distance</label>
+              <div class="flex gap-2">
+                <input type="number" id="distance" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="100" step="0.1">
+                <select id="distanceUnit" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                  <option value="miles">Miles</option>
+                  <option value="km">Kilometers</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Fuel Efficiency -->
+            <div>
+              <label class="block text-sm font-medium mb-2">Fuel Efficiency</label>
+              <div class="flex gap-2">
+                <input type="number" id="fuelEfficiency" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="25" step="0.1">
+                <select id="efficiencyUnit" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                  <option value="mpg">MPG (US)</option>
+                  <option value="mpg-uk">MPG (UK)</option>
+                  <option value="l100km">L/100km</option>
+                  <option value="kmpl">km/L</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Fuel Price -->
+            <div>
+              <label class="block text-sm font-medium mb-2">Fuel Price</label>
+              <div class="flex gap-2">
+                <input type="number" id="fuelPrice" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="3.50" step="0.01">
+                <select id="priceUnit" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                  <option value="gallon">per Gallon</option>
+                  <option value="liter">per Liter</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button onclick="calculateFuelCost()" class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition font-medium">
+              Calculate Fuel Cost
+            </button>
+
+            <!-- Result Display -->
+            <div id="result" class="hidden">
+              <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100">
+                <div class="text-sm text-gray-600 mb-2">Total Fuel Cost:</div>
+                <div id="totalCost" class="text-4xl font-bold text-green-600 mb-4"></div>
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                  <div class="bg-white rounded-lg p-3">
+                    <div class="text-gray-600">Fuel Needed</div>
+                    <div id="fuelNeeded" class="text-lg font-semibold text-gray-900"></div>
+                  </div>
+                  <div class="bg-white rounded-lg p-3">
+                    <div class="text-gray-600">Total Distance</div>
+                    <div id="totalDistance" class="text-lg font-semibold text-gray-900"></div>
+                  </div>
+                </div>
+                <div id="breakdown" class="mt-4 text-sm text-gray-700 bg-white rounded-lg p-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">About Fuel Cost Calculator</h2>
+          <div class="prose max-w-none text-gray-700 space-y-4">
+            <p>Our Fuel Cost Calculator is a comprehensive, free online tool designed to help drivers, travelers, and fleet managers estimate fuel expenses for trips of any distance. Whether you're planning a weekend road trip, calculating commute costs, or managing business vehicle expenses, this calculator provides accurate fuel cost estimates in seconds.</p>
+
+            <p>Understanding fuel costs is essential for budgeting travel expenses, comparing transportation options, and making informed decisions about route planning. With fluctuating fuel prices and varying vehicle fuel efficiency ratings, having a reliable calculator that accounts for all these variables is invaluable for both personal and professional use.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">How to Use the Fuel Cost Calculator</h3>
+            <p>Using</p> our calculator is straightforward and requires just four pieces of information:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Trip Type:</strong> Choose between one-way or round trip. Round trip automatically doubles your distance for complete trip budgeting.</li>
+              <li><strong>Distance:</strong> Enter your total travel distance in miles or kilometers. You can use mapping services to get accurate distances.</li>
+              <li><strong>Fuel Efficiency:</strong> Input your vehicle's fuel economy. You can use MPG (US or UK), L/100km, or km/L depending on your preference and region.</li>
+              <li><strong>Fuel Price:</strong> Enter the current price per gallon or liter in your area. Check local gas stations for the most accurate pricing.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Understanding Fuel Efficiency Metrics</h3>
+            <p>Different regions use different fuel efficiency measurements, and our calculator supports all major formats:</p>
+            <p></p><strong>MPG (Miles Per Gallon):</strong> Used primarily in the United States, this measures how many miles you can drive on one gallon of fuel. Higher numbers indicate better efficiency. The US gallon (3.785 liters) differs from the UK gallon (4.546 liters), so make sure to select the correct option.</p>
+            <p><strong>L/100km (Liters per 100 Kilometers):</strong> Common in Europe, Canada, and many other countries, this measures how many liters of fuel you need to travel 100 kilometers. Unlike MPG, lower numbers indicate better efficiency.</p>
+            <p><strong>km/L (Kilometers per Liter):</strong> Used in some Asian countries, this measures how many kilometers you can travel on one liter of fuel. Higher numbers mean better efficiency.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Key Features of Our Calculator</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Multiple Unit Support:</strong> Works with miles/kilometers, MPG/L/100km/km/L, and various currency formats</li>
+              <li><strong>Round Trip Calculation:</strong> Automatically doubles distance for accurate round trip cost estimates</li>
+              <li><strong>Detailed Breakdown:</strong> Shows fuel needed, total distance, and cost breakdown</li>
+              <li><strong>Instant Results:</strong> Calculate fuel costs in real-time as you adjust inputs</li>
+              <li><strong>Mobile-Friendly:</strong> Use on any device - smartphone, tablet, or desktop</li>
+              <li><strong>No Registration:</strong> Start calculating immediately without creating an account</li>
+              <li><strong>Privacy-Focused:</strong> All calculations happen in your browser - no data stored or transmitted</li>
+              <li><strong>Free Forever:</strong> No subscriptions, hidden fees, or usage limits</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Practical Applications</h3>
+            <p><strong>Road Trip Planning:</strong> Budget accurately for vacation road trips by calculating fuel costs beforehand. Compare different routes to find the most economical option. Factor in fuel costs when deciding between driving and flying.</p>
+            <p><strong>Commute Cost Analysis:</strong> Calculate your daily, weekly, or monthly commute fuel expenses. Use this information to evaluate job offers, consider remote work options, or decide if relocating closer to work makes financial sense.</p>
+            <p><strong>Business Expense Tracking:</strong> Fleet managers and business owners can estimate fuel costs for deliveries, client visits, or employee travel. Compare fuel efficiency across different vehicles when making purchasing decisions.</p>
+            <p><strong>Vehicle Comparison:</strong> When shopping for a new or used vehicle, calculate the fuel cost difference between models with different MPG ratings. Sometimes paying more for a fuel-efficient vehicle saves money in the long run.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Tips for Reducing Fuel Costs</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Maintain Proper Tire Pressure:</strong> Under-inflated tires increase rolling resistance and reduce fuel efficiency by up to 3%</li>
+              <li><strong>Drive Smoothly:</strong> Aggressive acceleration and braking can reduce fuel economy by 15-30% on highways and 10-40% in city driving</li>
+              <li><strong>Reduce Speed:</strong> Gas mileage typically decreases rapidly above 50 mph. Each 5 mph over 50 is like paying an additional $0.20 per gallon</li>
+              <li><strong>Remove Excess Weight:</strong> Every 100 pounds of extra weight reduces MPG by about 1-2%</li>
+              <li><strong>Use Cruise Control:</strong> Maintaining constant speed on highways improves fuel efficiency</li>
+              <li><strong>Combine Trips:</strong> Several short trips from a cold start can use twice as much fuel as one longer multi-purpose trip</li>
+              <li><strong>Regular Maintenance:</strong> Keep your engine tuned, replace air filters, and use the recommended grade of motor oil</li>
+              <li><strong>Avoid Excessive Idling:</strong> Idling wastes fuel - turn off your engine if you'll be stopped for more than a minute</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Understanding Calculation Accuracy</h3>
+            <p>Our calculator provides estimates based on the information you provide. Actual fuel consumption and costs can vary due to several factors including driving conditions (city vs. highway), weather (temperature and wind), terrain (hills vs. flat roads), vehicle load, tire pressure, driving habits, and vehicle condition.</p>
+            <p>For the most accurate estimates, use your vehicle's actual fuel efficiency from recent trips rather than manufacturer estimates, which are typically derived from ideal testing conditions. Track your MPG over several fill-ups to get a reliable average.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Why Fuel Cost Calculation Matters</h3>
+            <p>Transportation costs, particularly fuel expenses, represent a significant portion of household and business budgets. According to the U.S. Bureau of Labor Statistics, the average American household spends over $2,000 annually on gasoline. By accurately calculating and tracking fuel costs, you can make informed decisions about travel, vehicle purchases, and transportation alternatives.</p>
+
+            <p>Understanding your fuel costs also helps with environmental awareness. Vehicles with better fuel efficiency produce fewer carbon emissions per mile traveled. By calculating and optimizing your fuel consumption, you're not only saving money but also reducing your environmental impact.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div class="bg-white rounded-2xl border border-gray-200 p-6">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do you</span> calculate fuel cost for a trip?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>To calculate fuel cost, divide the total distance by your vehicle's fuel efficiency to determine how much fuel you'll need, then multiply by the price per unit. Formula: (Distance ÷ Fuel Efficiency) × Fuel Price = Total Cost. For example, a 300-mile trip in a vehicle that gets 25 MPG with gas at $3.50/gallon costs: (300 ÷ 25) × 3.50 = $42. Our calculator handles all conversions automatically regardless of which units you use.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What is the difference between MPG and L/100km?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>MPG (Miles Per Gallon) measures how many miles you can travel on one gallon of fuel - higher numbers mean better efficiency. L/100km (Liters per 100 kilometers) measures how many liters you need to travel 100km - lower numbers mean better efficiency. They're inverse measurements: a vehicle with 25 MPG equals approximately 9.4 L/100km. The systems are used in different regions, with MPG common in the US and L/100km standard in Europe and most other countries.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How can I improve my vehicle's fuel efficiency?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Improve fuel efficiency by: maintaining proper tire pressure (can improve MPG by up to 3%), removing excess weight, driving at steady speeds, avoiding rapid acceleration and hard braking, keeping up with regular vehicle maintenance (tune-ups, oil changes, air filters), using cruise control on highways, reducing idle time, and driving at moderate speeds (fuel economy decreases rapidly above 50 mph). These practices combined can improve your fuel efficiency by 10-25%, resulting in significant cost savings over time.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Should I calculate one-way or round trip fuel costs?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>For complete trip budgeting, always calculate round trip costs if you're planning to return to your starting point. Our calculator has a round trip option that automatically doubles the one-way distance for accurate total cost estimation. This is especially important for vacation planning, where fuel costs need to include the return journey. For one-way trips like relocations or one-way rentals, use the one-way option.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How accurate is the fuel cost calculator?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Our calculator provides highly accurate estimates based on the inputs you provide. However, actual costs may vary by 10-20% due to real-world factors including driving conditions (stop-and-go city traffic vs. highway), weather (temperature affects engine efficiency and aerodynamics), terrain (hills require more fuel), vehicle load (passengers and cargo add weight), and driving habits (aggressive vs. smooth driving). For best accuracy, use your vehicle's actual MPG from recent trips rather than manufacturer estimates, and update fuel prices regularly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <!-- Similar Tools -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20">
+          <h3 class="text-lg font-semibold mb-4">Similar Tools</h3>
+          <div class="space-y-3">
+            <a href="tip-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">💵</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Tip Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Calculate tips and split bills</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="loan-emi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">🏦</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Loan EMI Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Calculate monthly loan payments</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="currency-converter.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">💱</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Currency Converter</div>
+                  <div class="mt-1 text-xs text-gray-500">Convert between currencies</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="unit-converter.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">📏</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Unit Converter</div>
+                  <div class="mt-1 text-xs text-gray-500">Convert measurements</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+          </div>
+          <a href="../../categories.html#calculators" class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium">
+            View all Calculators →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    function calculateFuelCost() {
+      // Get input values
+      const tripType = document.querySelector('input[name="tripType"]:checked').value;
+      let distance = parseFloat(document.getElementById('distance').value);
+      const distanceUnit = document.getElementById('distanceUnit').value;
+      let fuelEfficiency = parseFloat(document.getElementById('fuelEfficiency').value);
+      const efficiencyUnit = document.getElementById('efficiencyUnit').value;
+      let fuelPrice = parseFloat(document.getElementById('fuelPrice').value);
+      const priceUnit = document.getElementById('priceUnit').value;
+
+      // Validation
+      if (isNaN(distance) || distance <= 0) {
+        showToast('Please enter a valid distance', 'error');
+        return;
+      }
+      if (isNaN(fuelEfficiency) || fuelEfficiency <= 0) {
+        showToast('Please enter a valid fuel efficiency', 'error');
+        return;
+      }
+      if (isNaN(fuelPrice) || fuelPrice <= 0) {
+        showToast('Please enter a valid fuel price', 'error');
+        return;
+      }
+
+      // Apply round trip multiplier
+      const originalDistance = distance;
+      if (tripType === 'roundtrip') {
+        distance *= 2;
+      }
+
+      // Convert everything to miles and gallons (US) for calculation
+      let distanceInMiles = distanceUnit === 'km' ? distance / 1.60934 : distance;
+
+      // Convert fuel efficiency to MPG (US)
+      let mpg;
+      switch(efficiencyUnit) {
+        case 'mpg':
+          mpg = fuelEfficiency;
+          break;
+        case 'mpg-uk':
+          mpg = fuelEfficiency * 0.832674; // UK gallon to US gallon
+          break;
+        case 'l100km':
+          mpg = 235.214 / fuelEfficiency; // L/100km to MPG
+          break;
+        case 'kmpl':
+          mpg = fuelEfficiency * 2.35214; // km/L to MPG
+          break;
+      }
+
+      // Calculate fuel needed in gallons
+      let fuelNeededGallons = distanceInMiles / mpg;
+
+      // Convert fuel price to per gallon if needed
+      let pricePerGallon = priceUnit === 'liter' ? fuelPrice * 3.78541 : fuelPrice;
+
+      // Calculate total cost
+      const totalCost = fuelNeededGallons * pricePerGallon;
+
+      // Display results
+      document.getElementById('totalCost').textContent = '$' + totalCost.toFixed(2);
+
+      // Fuel needed display
+      const fuelDisplay = priceUnit === 'liter'
+        ? (fuelNeededGallons * 3.78541).toFixed(2) + ' liters'
+        : fuelNeededGallons.toFixed(2) + ' gallons';
+
+      document.getElementById('fuelNeeded').textContent = fuelDisplay;
+
+      // Total distance display
+      const distanceDisplay = distanceUnit === 'km'
+        ? distance.toFixed(1) + ' km'
+        : distance.toFixed(1) + ' miles';
+
+      document.getElementById('totalDistance').textContent = distanceDisplay;
+
+      // Breakdown
+      let breakdownHTML = '<div class="space-y-1">';
+      breakdownHTML += `<p><strong>Calculation:</strong></p>`;
+      breakdownHTML += `<p>Distance: ${originalDistance.toFixed(1)} ${distanceUnit} ${tripType === 'roundtrip' ? '× 2 (round trip)' : ''} = ${distance.toFixed(1)} ${distanceUnit}</p>`;
+      breakdownHTML += `<p>Fuel efficiency: ${fuelEfficiency.toFixed(2)} ${efficiencyUnit.toUpperCase()}</p>`;
+      breakdownHTML += `<p>Fuel price: $${fuelPrice.toFixed(2)} per ${priceUnit}</p>`;
+      breakdownHTML += `<p class="pt-2 border-t">Total fuel cost: <strong>$${totalCost.toFixed(2)}</strong></p>`;
+      breakdownHTML += '</div>';
+
+      document.getElementById('breakdown').innerHTML = breakdownHTML;
+
+      // Show result
+      document.getElementById('result').classList.remove('hidden');
+
+      showToast('Fuel cost calculated successfully!', 'success');
+    }
+
+    // Handle Enter key
+    document.getElementById('distance').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') calculateFuelCost();
+    });
+    document.getElementById('fuelEfficiency').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') calculateFuelCost();
+    });
+    document.getElementById('fuelPrice').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') calculateFuelCost();
+    });

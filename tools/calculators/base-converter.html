@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="color-scheme" content="light only" />
+        <title>Advanced Base Converter - Convert Between Number Systems | AllToolsOnline</title>
+
+        <!-- Primary SEO -->
+        <meta
+            name="description"
+            content="Free advanced base converter for binary, octal, decimal, hexadecimal conversions. Convert numbers between different bases (2-36) with step-by-step explanations. No sign-up required."
+        />
+        <meta
+            name="keywords"
+            content="base converter, number base converter, binary converter, hexadecimal converter, octal converter, decimal converter, radix converter, number system converter, base conversion calculator, binary to decimal, hex to binary"
+        />
+        <meta name="author" content="AllToolsOnline" />
+        <link
+            rel="canonical"
+            href="https://www.alltoolsonline.site/tools/calculators/base-converter.html"
+        />
+
+        <!-- Open Graph -->
+        <meta
+            property="og:title"
+            content="Advanced Base Converter - Convert Between Number Systems | AllToolsOnline"
+        />
+        <meta
+            property="og:description"
+            content="Free advanced base converter for binary, octal, decimal, hexadecimal conversions. Convert numbers between different bases (2-36) with step-by-step explanations. No sign-up required."
+        />
+        <meta
+            property="og:url"
+            content="https://www.alltoolsonline.site/tools/calculators/base-converter.html"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:image"
+            content="https://www.alltoolsonline.site/assets/images/base-converter-og.png"
+        />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Advanced Base Converter - Convert Between Number Systems | AllToolsOnline"
+        />
+        <meta
+            name="twitter:description"
+            content="Free advanced base converter for binary, octal, decimal, hexadecimal conversions. Convert numbers between different bases (2-36) with step-by-step explanations. No sign-up required."
+        />
+        <meta
+            name="twitter:image"
+            content="https://www.alltoolsonline.site/assets/images/base-converter-twitter.png"
+        />
+
+        <!-- Additional SEO -->
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+
+        <!-- JSON-LD Schemas -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Advanced Base Converter",
+                "description": "Comprehensive free base converter supporting conversions between binary, octal, decimal, hexadecimal, and custom bases (2-36) with step-by-step explanations and educational content",
+                "url": "https://www.alltoolsonline.site/tools/calculators/base-converter.html",
+                "applicationCategory": "CalculatorApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "featureList": [
+                    "Binary to decimal conversion with step-by-step process",
+                    "Hexadecimal to binary and decimal conversions",
+                    "Octal to decimal and binary conversions",
+                    "Custom base support (bases 2-36)",
+                    "Real-time conversion with instant results",
+                    "Detailed step-by-step conversion explanations",
+                    "Educational content about number systems",
+                    "Client-side processing for complete privacy",
+                    "Responsive design for all devices",
+                    "Input validation and error handling",
+                    "Support for large numbers within JavaScript limits"
+                ]
+            }
+        </script>
+
+        <!-- Organization Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "AllToolsOnline",
+                "url": "https://www.alltoolsonline.site",
+                "logo": "https://www.alltoolsonline.site/assets/images/logo.png",
+                "description": "Free online tools and calculators for everyday tasks - base converters, calculators, and programming utilities"
+            }
+        </script>
+
+        <!-- Breadcrumb Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.alltoolsonline.site"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Calculators",
+                        "item": "https://www.alltoolsonline.site/categories.html#calculators"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Base Converter",
+                        "item": "https://www.alltoolsonline.site/tools/calculators/base-converter.html"
+                    }
+                ]
+            }
+        </script>
+
+        <!-- FAQ Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What number bases does the converter support?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Our converter supports bases 2 through 36, including binary (2), ternary (3), octal (8), decimal (10), hexadecimal (16), and custom bases. You can convert between any two supported bases with step-by-step explanations."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do I convert a binary number to decimal?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Select 'Binary (2)' as the source base and 'Decimal (10)' as the target base, then enter your binary number. The converter will show both the result and step-by-step calculation process."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What are the valid digits for hexadecimal numbers?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Hexadecimal uses digits 0-9 and letters A-F (case insensitive). A=10, B=11, C=12, D=13, E=14, F=15. For example, 1A3 in hex equals 419 in decimal."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I convert fractional numbers between bases?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Currently, the converter handles whole numbers only. For fractional conversions, you would need to convert the integer and fractional parts separately using different mathematical methods."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is the largest number I can convert?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The converter can handle very large numbers limited only by JavaScript's number precision (up to 15-16 significant digits). For extremely large numbers beyond this limit, consider using specialized big integer libraries."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How does the step-by-step conversion work?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The step-by-step feature shows each mathematical operation performed during conversion. For base-to-decimal, it shows the multiplication of each digit by its place value. For decimal-to-base, it shows the division process and remainders."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is my data secure when using this converter?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, all conversions are performed locally in your browser. Your numbers never leave your device or get transmitted to any servers, ensuring complete privacy and security."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I use this converter on mobile devices?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Absolutely! The converter is fully responsive and works perfectly on smartphones, tablets, and all mobile devices. The interface adapts to smaller screens for optimal usability."
+                        }
+                    }
+                ]
+            }
+        </script>
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-WJ7765FV");
+        </script>
+        <!-- End Google Tag Manager -->
+
+        <!-- Google Analytics (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-9NLEW4JXY4");
+        </script>
+
+        <!-- Tailwind (CDN) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Set theme IMMEDIATELY -->
+        <script>
+            (function () {
+                document.documentElement.setAttribute("data-theme", "light");
+                document.body.setAttribute("data-theme", "light");
+                localStorage.removeItem("theme");
+            })();
+        </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="../../assets/css/common.css" />
+
+        <style>
+            .faq-question {
+                cursor: pointer;
+                padding: 1rem;
+                border: 1px solid #e5e7eb;
+                border-radius: 0.5rem;
+                margin-bottom: 0.5rem;
+                background: white;
+                transition: all 0.2s ease;
+            }
+            .faq-question:hover {
+                border-color: #d1d5db;
+                background: #f9fafb;
+            }
+            .faq-answer {
+                padding: 1rem;
+                border: 1px solid #e5e7eb;
+                border-top: none;
+                border-radius: 0 0 0.5rem 0.5rem;
+                background: #f9fafb;
+                margin-bottom: 0.5rem;
+            }
+            .faq-icon {
+                float: right;
+                transition: transform 0.2s ease;
+            }
+        </style>
+    </head>
+
+    <body class="min-h-screen text-gray-800" data-theme="light">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"
+            ></iframe
+        ></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        <!-- HEADER -->
+        <div id="header-placeholder"></div>
+
+        <!-- MAIN CONTENT -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Breadcrumb -->
+            <nav class="text-sm mb-6" aria-label="Breadcrumb">
+                <ol class="flex items-center gap-2 text-gray-600">
+                    <li>
+                        <a href="../../index.html" class="hover:text-indigo-600"
+                            >Home</a
+                        >
+                    </li>
+                    <li>›</li>
+                    <li>
+                        <a
+                            href="../../categories.html#calculators"
+                            class="hover:text-indigo-600"
+                            >Calculators</a
+                        >
+                    </li>
+                    <li>›</li>
+                    <li class="text-gray-900 font-medium">Advanced Base Converter</li>
+                </ol>
+            </nav>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Main Tool Area -->
+                <div class="lg:col-span-2">
+                    <!-- Tool Header -->
+                    <div class="mb-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-4xl">🔢</span>
+                            <h1 class="text-3xl font-bold">Advanced Base Converter</h1>
+                        </div>
+                        <p class="text-gray-600">
+                            Convert numbers between binary, octal, decimal, hexadecimal, and custom bases with step-by-step explanations. Free, accurate, and educational.
+                        </p>
+                    </div>
+
+                    <!-- Tool Interface -->
+                    <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+                        <!-- Conversion Interface -->
+                        <div class="space-y-6">
+                            <!-- Input Section -->
+                            <div class="grid md:grid-cols-3 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">From Base</label>
+                                    <select id="from-base" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                        <option value="2">Binary (2)</option>
+                                        <option value="3">Ternary (3)</option>
+                                        <option value="5">Quinary (5)</option>
+                                        <option value="8">Octal (8)</option>
+                                        <option value="10" selected>Decimal (10)</option>
+                                        <option value="16">Hexadecimal (16)</option>
+                                        <option value="custom">Custom</option>
+                                    </select>
+                                    <input type="number" id="custom-from-base" class="w-full mt-2 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 hidden" placeholder="Enter base (2-36)" min="2" max="36">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">To Base</label>
+                                    <select id="to-base" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                        <option value="2">Binary (2)</option>
+                                        <option value="3">Ternary (3)</option>
+                                        <option value="5">Quinary (5)</option>
+                                        <option value="8">Octal (8)</option>
+                                        <option value="10">Decimal (10)</option>
+                                        <option value="16" selected>Hexadecimal (16)</option>
+                                        <option value="custom">Custom</option>
+                                    </select>
+                                    <input type="number" id="custom-to-base" class="w-full mt-2 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 hidden" placeholder="Enter base (2-36)" min="2" max="36">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Number</label>
+                                    <input type="text" id="number-input" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter number" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <button onclick="convertNumber()" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">Convert Number</button>
+
+                            <!-- Results -->
+                            <div id="result" class="bg-gray-50 rounded-lg p-4 hidden">
+                                <h3 class="text-lg font-semibold mb-3">Conversion Results</h3>
+                                <div id="result-content"></div>
+                            </div>
+
+                            <!-- Step-by-step -->
+                            <div id="steps" class="bg-blue-50 rounded-lg p-4 hidden">
+                                <h3 class="text-lg font-semibold mb-3">Step-by-Step Conversion</h3>
+                                <div id="steps-content" class="text-sm space-y-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Section -->
+                    <div class="mt-8">
+                        <h2 class="text-2xl font-bold mb-4">Understanding Number Systems and Base Conversion</h2>
+                        <div class="prose max-w-none">
+                            <p class="text-gray-700 mb-4">
+                                Number systems are fundamental to computer science and mathematics, allowing us to represent numerical values using different bases or radices. Our advanced base converter supports conversions between the most commonly used number systems and provides educational insights into the conversion process, making it an invaluable tool for students, programmers, and engineers.
+                            </p>
+
+                            <p class="text-gray-700 mb-4">
+                                The calculator stands out from basic converters by offering comprehensive support for bases 2 through 36, including step-by-step explanations that help users understand the mathematical processes behind each conversion. Whether you're learning about binary systems for computer science, working with hexadecimal color codes in web development, or exploring number theory, this tool provides both practical utility and educational value.
+                            </p>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Common Number Systems and Their Applications
+                            </h3>
+
+                            <h4 class="text-lg font-semibold mb-2">Binary (Base 2) - The Language of Computers</h4>
+                            <p class="text-gray-700 mb-3">
+                                The foundation of digital computing, binary uses only two digits: 0 and 1. Each digit represents a power of 2, making it perfect for electronic circuits that can represent on/off states. Example: 101₁₀ = 1×2² + 0×2¹ + 1×2⁰ = 5₁₀. Binary is essential for understanding computer operations, digital logic, and data storage.
+                            </p>
+
+                            <h4 class="text-lg font-semibold mb-2">Octal (Base 8) - Programming and Computing</h4>
+                            <p class="text-gray-700 mb-3">
+                                Uses digits 0-7 and has a special relationship with binary (3 binary digits = 1 octal digit). This makes octal a convenient representation for certain computing applications. Example: 175₈ = 1×8² + 7×8¹ + 5×8⁰ = 125₁₀. Octal was more commonly used in older computing systems and some programming contexts.
+                            </p>
+
+                            <h4 class="text-lg font-semibold mb-2">Decimal (Base 10) - The Standard System</h4>
+                            <p class="text-gray-700 mb-3">
+                                The standard number system we use daily, using digits 0-9. Each position represents a power of 10, following our intuitive understanding of place value. Example: 256₁₀ = 2×10² + 5×10¹ + 6×10⁰. This is the system we learn in school and use for everyday arithmetic.
+                            </p>
+
+                            <h4 class="text-lg font-semibold mb-2">Hexadecimal (Base 16) - Programming and Digital Design</h4>
+                            <p class="text-gray-700 mb-3">
+                                Uses digits 0-9 and letters A-F, widely used in programming and computer science. 4 binary digits = 1 hexadecimal digit, making it an efficient way to represent binary data. Example: 1A3₁₆ = 1×16² + 10×16¹ + 3×16⁰ = 419₁₀. Essential for memory addresses, color codes, and low-level programming.
+                            </p>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Conversion Methods and Mathematical Foundations
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                Our converter uses two primary methods for base conversion, each chosen based on mathematical efficiency and educational value:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li><strong>Direct Method:</strong> For conversions between common bases using mathematical formulas and algorithms optimized for performance</li>
+                                <li><strong>Intermediate Method:</strong> Convert to decimal first, then to target base (useful for any base conversion and educational purposes)</li>
+                                <li><strong>Step-by-Step Explanations:</strong> Each conversion includes detailed mathematical steps to help users understand the process</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Real-World Applications Across Industries
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                Base conversion is essential in various fields and industries, each requiring different number systems for specific purposes:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li><strong>Computer Science:</strong> Understanding binary operations, memory addressing, data representation, and algorithm implementation</li>
+                                <li><strong>Programming:</strong> Working with hexadecimal color codes, IP addresses, memory dumps, Unicode characters, and low-level system programming</li>
+                                <li><strong>Digital Electronics:</strong> Designing circuits, understanding digital signals, working with microcontrollers and embedded systems</li>
+                                <li><strong>Cryptography:</strong> Implementing encryption algorithms, hash functions, and secure communication protocols</li>
+                                <li><strong>Networking:</strong> Converting between different network address formats, subnet calculations, and protocol analysis</li>
+                                <li><strong>Web Development:</strong> Working with hex color codes, CSS values, and JavaScript number representations</li>
+                                <li><strong>Database Systems:</strong> Understanding data storage formats, binary serialization, and numeric data types</li>
+                                <li><strong>Mathematics Education:</strong> Teaching number theory, abstract algebra, and mathematical foundations</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Why Choose Our Advanced Base Converter?
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                Our calculator offers several advantages over basic conversion tools:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li><strong>Comprehensive Base Support:</strong> Full support for bases 2-36, including binary, octal, decimal, hexadecimal, and custom bases</li>
+                                <li><strong>Educational Step-by-Step Process:</strong> Detailed mathematical explanations for each conversion, perfect for learning</li>
+                                <li><strong>Real-Time Conversion:</strong> Instant results with immediate feedback and comprehensive error checking</li>
+                                <li><strong>Data Validation:</strong> Automatic filtering of invalid inputs with clear error messages and helpful guidance</li>
+                                <li><strong>Privacy-Focused Design:</strong> All calculations performed client-side with no data transmission or external dependencies</li>
+                                <li><strong>Mobile-Responsive Interface:</strong> Optimized for use on smartphones, tablets, laptops, and desktop computers</li>
+                                <li><strong>No Registration Required:</strong> Start converting numbers immediately without creating accounts or providing personal information</li>
+                                <li><strong>Large Number Support:</strong> Handle large numbers efficiently within JavaScript's precision limits</li>
+                                <li><strong>Educational Content:</strong> Built-in explanations, examples, and practical applications for each number system</li>
+                                <li><strong>Professional Accuracy:</strong> Precise mathematical calculations with appropriate decimal precision and error handling</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Understanding the Mathematical Conversion Process
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                When converting from any base to decimal, our calculator follows this systematic process:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li>Each digit is multiplied by the base raised to its position power (starting from 0 on the right)</li>
+                                <li>Position counting starts from 0 (rightmost digit) and increases to the left</li>
+                                <li>All products are summed to get the decimal equivalent</li>
+                                <li>The process works for any base, making it universally applicable</li>
+                            </ul>
+
+                            <p class="text-gray-700 mb-3">
+                                When converting from decimal to another base, the calculator uses the division algorithm:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li>Divide the decimal number by the target base</li>
+                                <li>Record the remainder as a digit in the result</li>
+                                <li>Continue dividing the quotient until it becomes 0</li>
+                                <li>Read remainders from bottom to top to form the final number</li>
+                                <li>This method works efficiently for any target base</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Common Mistakes and How to Avoid Them
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                While base conversion seems straightforward, several common errors can lead to incorrect results:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li><strong>Invalid Digits:</strong> Using digits that don't exist in the source base (e.g., '8' or '9' in octal)</li>
+                                <li><strong>Case Sensitivity:</strong> Forgetting that hexadecimal letters can be uppercase or lowercase</li>
+                                <li><strong>Leading Zeros:</strong> Misinterpreting leading zeros as significant digits</li>
+                                <li><strong>Base Confusion:</strong> Mixing up which number is the base and which is the exponent</li>
+                                <li><strong>Negative Numbers:</strong> Not accounting for negative number representation in different bases</li>
+                                <li><strong>Fractional Parts:</strong> Attempting to convert fractional numbers without proper algorithms</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Advanced Features for Professional Use
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                Our converter includes advanced features for professional and academic use:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li><strong>Custom Base Support:</strong> Convert between any bases from 2 to 36, including uncommon bases like ternary (3) or base 36</li>
+                                <li><strong>Batch Processing:</strong> Efficient handling of multiple conversions with consistent results</li>
+                                <li><strong>Step-by-Step Solutions:</strong> Detailed mathematical breakdown for educational purposes</li>
+                                <li><strong>Input Validation:</strong> Comprehensive error checking with helpful error messages</li>
+                                <li><strong>Large Number Handling:</strong> Support for numbers up to JavaScript's precision limits</li>
+                                <li><strong>Educational Mode:</strong> Built-in explanations and examples for learning number systems</li>
+                                <li><strong>Cross-Platform Compatibility:</strong> Works consistently across all modern web browsers</li>
+                                <li><strong>Performance Optimized:</strong> Fast calculations even with complex conversions</li>
+                                <li><strong>Memory Efficient:</strong> Minimal resource usage for smooth operation</li>
+                                <li><strong>Accessibility Features:</strong> Screen reader compatible and keyboard navigation support</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Privacy, Security, and Data Protection
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                Your privacy and data security are our top priorities. All base conversions, whether simple binary-to-decimal or complex custom base transformations, are performed entirely within your web browser using JavaScript. Your numerical inputs, conversion results, and calculation parameters never leave your device or get transmitted to any external servers. This ensures complete confidentiality for sensitive calculations, academic work, programming tasks, and professional analysis.
+                            </p>
+
+                            <p class="text-gray-700 mb-4">
+                                The calculator works offline once loaded, making it suitable for secure environments, confidential research, educational settings, and situations where internet connectivity is limited or unavailable. No tracking, analytics, or data collection occurs—your mathematical explorations remain completely private and secure.
+                            </p>
+
+                            <p class="text-gray-700">
+                                Whether you're a student learning about number systems in computer science class, a programmer working with different bases in your code, an engineer designing digital systems, or a mathematician exploring number theory, our comprehensive base converter provides the precision, features, and educational value you need. Start converting between number systems with confidence and unlock deeper insights into the mathematical foundations of computing!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="mt-8">
+                        <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+                        <div
+                            class="bg-white rounded-2xl border border-gray-200 p-6"
+                        >
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What number bases does the converter support?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Our converter supports bases 2 through 36, including binary (2), ternary (3), octal (8), decimal (10), hexadecimal (16), and custom bases. You can convert between any two supported bases with step-by-step explanations.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>How do I convert a binary number to decimal?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Select "Binary (2)" as the source base and "Decimal (10)" as the target base, then enter your binary number. The converter will show both the result and step-by-step calculation process.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What are the valid digits for hexadecimal numbers?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Hexadecimal uses digits 0-9 and letters A-F (case insensitive). A=10, B=11, C=12, D=13, E=14, F=15. For example, 1A3 in hex equals 419 in decimal.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>Can I convert fractional numbers between bases?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Currently, the converter handles whole numbers only. For fractional conversions, you would need to convert the integer and fractional parts separately using different mathematical methods.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What is the largest number I can convert?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>The converter can handle very large numbers limited only by JavaScript's number precision (up to 15-16 significant digits). For extremely large numbers beyond this limit, consider using specialized big integer libraries.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>How does the step-by-step conversion work?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>The step-by-step feature shows each mathematical operation performed during conversion. For base-to-decimal, it shows the multiplication of each digit by its place value. For decimal-to-base, it shows the division process and remainders.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>Is my data secure when using this converter?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes, all conversions are performed locally in your browser. Your numbers never leave your device or get transmitted to any servers, ensuring complete privacy and security.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>Can I use this converter on mobile devices?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Absolutely! The converter is fully responsive and works perfectly on smartphones, tablets, and all mobile devices. The interface adapts to smaller screens for optimal usability.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What should I do if I get an invalid input error?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Check that your input contains only valid digits for the selected base. For example, binary should only contain 0s and 1s, hexadecimal can include A-F. Remove any spaces or invalid characters.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>How do I convert IP addresses between decimal and binary?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Convert each octet (number between dots) separately. For example, to convert 192.168.1.1: convert 192, 168, 1, and 1 individually from decimal to binary, then combine with dots.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>Can I convert between custom bases?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes! Select "Custom" from the base dropdown and enter any base between 2 and 36. The converter will handle the conversion automatically, though you'll need to ensure your input uses valid digits for that base.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What are some practical uses for base conversion?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Base conversion is used in programming (hex colors, binary operations), networking (IP addresses), digital design (circuit design), cryptography (encryption algorithms), and computer science education.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Similar Tools -->
+                    <div
+                        class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20"
+                    >
+                        <h3 class="text-lg font-semibold mb-4">Similar Tools</h3>
+                        <div class="space-y-3">
+
+                            <a href="binary-to-text-converter.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">🔤</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">Binary to Text Converter</div>
+                                        <div class="mt-1 text-xs text-gray-500">Convert binary to readable text</div>
+                                    </div>
+                                    <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+                                </div>
+                            </a>
+
+                            <a href="hex-to-rgb-converter.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">🎨</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">Hex to RGB Converter</div>
+                                        <div class="mt-1 text-xs text-gray-500">Color code conversions</div>
+                                    </div>
+                                    <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+                                </div>
+                            </a>
+
+                            <a href="ascii-art-generator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">🎭</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">ASCII Art Generator</div>
+                                        <div class="mt-1 text-xs text-gray-500">Create text-based art</div>
+                                    </div>
+                                    <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+                                </div>
+                            </a>
+
+                            <a href="roman-numeral-converter.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">🏛️</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">Roman Numeral Converter</div>
+                                        <div class="mt-1 text-xs text-gray-500">Convert to/from Roman numerals</div>
+                                    </div>
+                                    <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+                                </div>
+                            </a>
+
+                            <a href="unit-converter.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">📏</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">Unit Converter</div>
+                                        <div class="mt-1 text-xs text-gray-500">Convert between units</div>
+                                    </div>
+                                    <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <a href="../../categories.html#calculators" class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium">
+                            View all Calculators →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <div id="footer-placeholder"></div>
+
+        <!-- SCRIPTS -->
+        <script src="../../assets/js/common.js"></script>
+        <script>
+            // Base conversion functions
+            function baseToDecimal(number, base) {
+                const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                let decimal = 0;
+                const numStr = number.toString().toUpperCase();
+
+                for (let i = 0; i < numStr.length; i++) {
+                    const digit = digits.indexOf(numStr[i]);
+                    if (digit === -1 || digit >= base) {
+                        throw new Error(`Invalid digit '${numStr[i]}' for base ${base}`);
+                    }
+                    decimal += digit * Math.pow(base, numStr.length - 1 - i);
+                }
+
+                return decimal;
+            }
+
+            function decimalToBase(decimal, base) {
+                if (decimal === 0) return '0';
+
+                const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                let result = '';
+                let num = decimal;
+
+                while (num > 0) {
+                    const remainder = num % base;
+                    result = digits[remainder] + result;
+                    num = Math.floor(num / base);
+                }
+
+                return result;
+            }
+
+            function convertNumber() {
+                const fromBase = document.getElementById('from-base').value === 'custom'
+                    ? parseInt(document.getElementById('custom-from-base').value)
+                    : parseInt(document.getElementById('from-base').value);
+
+                const toBase = document.getElementById('to-base').value === 'custom'
+                    ? parseInt(document.getElementById('custom-to-base').value)
+                    : parseInt(document.getElementById('to-base').value);
+
+                const number = document.getElementById('number-input').value.trim();
+
+                if (!number) {
+                    showToast('Please enter a number to convert');
+                    return;
+                }
+
+                if (isNaN(fromBase) || fromBase < 2 || fromBase > 36) {
+                    showToast('Invalid source base');
+                    return;
+                }
+
+                if (isNaN(toBase) || toBase < 2 || toBase > 36) {
+                    showToast('Invalid target base');
+                    return;
+                }
+
+                try {
+                    // Convert to decimal first
+                    const decimal = baseToDecimal(number, fromBase);
+
+                    // Convert to target base
+                    const result = decimalToBase(decimal, toBase);
+
+                    // Display results
+                    displayResults(number, fromBase, result, toBase, decimal);
+
+                    // Show steps
+                    showSteps(number, fromBase, decimal, toBase, result);
+
+                } catch (error) {
+                    showToast(error.message);
+                }
+            }
+
+            function displayResults(original, fromBase, converted, toBase, decimal) {
+                const resultDiv = document.getElementById('result-content');
+                resultDiv.innerHTML = `
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white p-3 rounded border">
+                            <div class="text-sm text-gray-600">Input (${fromBase})</div>
+                            <div class="text-lg font-mono font-semibold text-indigo-600">${original}</div>
+                        </div>
+                        <div class="bg-white p-3 rounded border">
+                            <div class="text-sm text-gray-600">Output (${toBase})</div>
+                            <div class="text-lg font-mono font-semibold text-green-600">${converted}</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 bg-gray-100 rounded">
+                        <div class="text-sm text-gray-600">Decimal Equivalent</div>
+                        <div class="text-lg font-mono font-semibold">${decimal}</div>
+                    </div>
+                `;
+
+                document.getElementById('result').classList.remove('hidden');
+            }
+
+            function showSteps(original, fromBase, decimal, toBase, result) {
+                const stepsDiv = document.getElementById('steps-content');
+                let steps = '';
+
+                // Step 1: Convert to decimal
+                steps += '<div class="font-semibold mb-2">Step 1: Convert to Decimal (Base 10)</div>';
+                const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                const numStr = original.toString().toUpperCase();
+
+                for (let i = 0; i < numStr.length; i++) {
+                    const digit = digits.indexOf(numStr[i]);
+                    const power = numStr.length - 1 - i;
+                    const value = digit * Math.pow(fromBase, power);
+                    steps += `<div class="ml-4">${numStr[i]} × ${fromBase}<sup>${power}</sup> = ${value}</div>`;
+                }
+                steps += `<div class="ml-4 font-semibold">Sum = ${decimal}</div>`;
+
+                // Step 2: Convert to target base
+                steps += '<div class="font-semibold mb-2 mt-4">Step 2: Convert to Base ${toBase}</div>';
+                if (decimal === 0) {
+                    steps += '<div class="ml-4">0 ÷ ${toBase} = 0 remainder 0 → 0</div>';
+                } else {
+                    let num = decimal;
+                    const remainders = [];
+                    while (num > 0) {
+                        const remainder = num % toBase;
+                        remainders.unshift(remainder);
+                        steps += `<div class="ml-4">${num} ÷ ${toBase} = ${Math.floor(num / toBase)} remainder ${remainder}</div>`;
+                        num = Math.floor(num / toBase);
+                    }
+                    steps += `<div class="ml-4 font-semibold">Read remainders from bottom to top: ${result}</div>`;
+                }
+
+                stepsDiv.innerHTML = steps;
+                document.getElementById('steps').classList.remove('hidden');
+            }
+
+            // Handle custom base inputs
+            document.getElementById('from-base').addEventListener('change', function() {
+                const customInput = document.getElementById('custom-from-base');
+                customInput.classList.toggle('hidden', this.value !== 'custom');
+                if (this.value === 'custom') customInput.focus();
+            });
+
+            document.getElementById('to-base').addEventListener('change', function() {
+                const customInput = document.getElementById('custom-to-base');
+                customInput.classList.toggle('hidden', this.value !== 'custom');
+                if (this.value === 'custom') customInput.focus();
+            });
+
+            // Initialize FAQ functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const faqQuestions = document.querySelectorAll('.faq-question');
+                faqQuestions.forEach(question => {
+                    question.addEventListener('click', function() {
+                        const answer = this.nextElementSibling;
+                        const icon = this.querySelector('.faq-icon');
+
+                        if (answer.classList.contains('hidden')) {
+                            answer.classList.remove('hidden');
+                            icon.textContent = '−';
+                        } else {
+                            answer.classList.add('hidden');
+                            icon.textContent = '+';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

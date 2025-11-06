@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="color-scheme" content="light only" />
+        <title>Advanced Average Calculator - Calculate Mean, Weighted & Moving Averages | AllToolsOnline</title>
+
+        <!-- Primary SEO -->
+        <meta
+            name="description"
+            content="Free advanced average calculator for arithmetic mean, weighted average, and moving averages. Calculate statistics with detailed analysis, min/max values, and comprehensive results. No sign-up required."
+        />
+        <meta
+            name="keywords"
+            content="average calculator, mean calculator, arithmetic mean, weighted average calculator, moving average calculator, statistics calculator, online calculator, free calculator, calculate average, statistical analysis, data analysis"
+        />
+        <meta name="author" content="AllToolsOnline" />
+        <link
+            rel="canonical"
+            href="https://www.alltoolsonline.site/tools/calculators/average-calculator.html"
+        />
+
+        <!-- Open Graph -->
+        <meta
+            property="og:title"
+            content="Advanced Average Calculator - Calculate Mean, Weighted & Moving Averages | AllToolsOnline"
+        />
+        <meta
+            property="og:description"
+            content="Free advanced average calculator for arithmetic mean, weighted average, and moving averages. Calculate statistics with detailed analysis, min/max values, and comprehensive results. No sign-up required."
+        />
+        <meta
+            property="og:url"
+            content="https://www.alltoolsonline.site/tools/calculators/average-calculator.html"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:image"
+            content="https://www.alltoolsonline.site/assets/images/average-calculator-og.png"
+        />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Advanced Average Calculator - Calculate Mean, Weighted & Moving Averages | AllToolsOnline"
+        />
+        <meta
+            name="twitter:description"
+            content="Free advanced average calculator for arithmetic mean, weighted average, and moving averages. Calculate statistics with detailed analysis, min/max values, and comprehensive results. No sign-up required."
+        />
+        <meta
+            name="twitter:image"
+            content="https://www.alltoolsonline.site/assets/images/average-calculator-twitter.png"
+        />
+
+        <!-- Additional SEO -->
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+
+        <!-- JSON-LD Schemas -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Advanced Average Calculator",
+                "description": "Comprehensive free average calculator supporting arithmetic mean, weighted averages, and moving averages with detailed statistical analysis including count, sum, min, max, and range calculations",
+                "url": "https://www.alltoolsonline.site/tools/calculators/average-calculator.html",
+                "applicationCategory": "CalculatorApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "featureList": [
+                    "Arithmetic mean calculation with detailed statistics",
+                    "Weighted average calculator with custom weights",
+                    "Moving average calculator for time series analysis",
+                    "Comprehensive statistical analysis (count, sum, min, max, range)",
+                    "Real-time calculations with instant results",
+                    "Client-side processing for complete privacy",
+                    "Responsive design for all devices",
+                    "No registration or sign-up required",
+                    "Batch processing for multiple values",
+                    "Data validation and error handling"
+                ]
+            }
+        </script>
+
+        <!-- Organization Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "AllToolsOnline",
+                "url": "https://www.alltoolsonline.site",
+                "logo": "https://www.alltoolsonline.site/assets/images/logo.png",
+                "description": "Free online tools and calculators for everyday tasks - average calculator, percentage calculator, statistics tools, and data analysis utilities"
+            }
+        </script>
+
+        <!-- Breadcrumb Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.alltoolsonline.site"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Calculators",
+                        "item": "https://www.alltoolsonline.site/categories.html#calculators"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Average Calculator",
+                        "item": "https://www.alltoolsonline.site/tools/calculators/average-calculator.html"
+                    }
+                ]
+            }
+        </script>
+
+        <!-- FAQ Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is the difference between mean and average?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "In common usage, mean and average are often used interchangeably. Technically, average refers to the arithmetic mean, but there are other types of averages like median and mode. Our calculator focuses on the arithmetic mean, which is calculated by summing all values and dividing by the number of values."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "When should I use a weighted average?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Use weighted averages when different values have different levels of importance. For example, when calculating GPA where courses have different credit hours, or when averaging test scores with different weightings. The weighted average gives more influence to values with higher weights."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is a moving average and why is it useful?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A moving average smooths out data fluctuations by calculating averages over a sliding window of data points. It's useful for identifying trends in time series data, reducing noise, and making forecasts in finance, weather analysis, and signal processing."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How accurate are the calculations?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Our calculator uses precise mathematical formulas and JavaScript's built-in number handling for maximum accuracy. Results are typically accurate to 15 decimal places, though display is rounded to 4 decimal places for readability."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I calculate averages for very large datasets?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, our calculator can handle large datasets efficiently. However, for extremely large datasets (over 10,000 values), consider using statistical software for better performance and more advanced analysis capabilities."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What happens if I enter invalid data?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The calculator includes input validation and will show error messages for invalid data. Only numeric values separated by commas or spaces are accepted. Non-numeric characters are automatically filtered out during processing."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is my data secure when using this calculator?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, all calculations are performed locally in your browser. Your data never leaves your device or gets transmitted to any servers. This ensures complete privacy and security for your statistical data."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I use this calculator on mobile devices?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Absolutely! Our calculator is fully responsive and works perfectly on smartphones, tablets, and all mobile devices. The interface adapts to smaller screens while maintaining full functionality."
+                        }
+                    }
+                ]
+            }
+        </script>
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-WJ7765FV");
+        </script>
+        <!-- End Google Tag Manager -->
+
+        <!-- Google Analytics (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-9NLEW4JXY4");
+        </script>
+
+        <!-- Tailwind (CDN) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Set theme IMMEDIATELY -->
+        <script>
+            (function () {
+                document.documentElement.setAttribute("data-theme", "light");
+                document.body.setAttribute("data-theme", "light");
+                localStorage.removeItem("theme");
+            })();
+        </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="../../assets/css/common.css" />
+
+        <style>
+            .mode-content {
+                animation: fadeIn 0.3s ease;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .faq-question {
+                cursor: pointer;
+                padding: 1rem;
+                border: 1px solid #e5e7eb;
+                border-radius: 0.5rem;
+                margin-bottom: 0.5rem;
+                background: white;
+                transition: all 0.2s ease;
+            }
+            .faq-question:hover {
+                border-color: #d1d5db;
+                background: #f9fafb;
+            }
+            .faq-answer {
+                padding: 1rem;
+                border: 1px solid #e5e7eb;
+                border-top: none;
+                border-radius: 0 0 0.5rem 0.5rem;
+                background: #f9fafb;
+                margin-bottom: 0.5rem;
+            }
+            .faq-icon {
+                float: right;
+                transition: transform 0.2s ease;
+            }
+        </style>
+    </head>
+
+    <body class="min-h-screen text-gray-800" data-theme="light">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"
+            ></iframe
+        ></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        <!-- HEADER -->
+        <div id="header-placeholder"></div>
+
+        <!-- MAIN CONTENT -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Breadcrumb -->
+            <nav class="text-sm mb-6" aria-label="Breadcrumb">
+                <ol class="flex items-center gap-2 text-gray-600">
+                    <li>
+                        <a href="../../index.html" class="hover:text-indigo-600"
+                            >Home</a
+                        >
+                    </li>
+                    <li>›</li>
+                    <li>
+                        <a
+                            href="../../categories.html#calculators"
+                            class="hover:text-indigo-600"
+                            >Calculators</a
+                        >
+                    </li>
+                    <li>›</li>
+                    <li class="text-gray-900 font-medium">Advanced Average Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Main Tool Area -->
+                <div class="lg:col-span-2">
+                    <!-- Tool Header -->
+                    <div class="mb-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-4xl">∑</span>
+                            <h1 class="text-3xl font-bold">Advanced Average Calculator</h1>
+                        </div>
+                        <p class="text-gray-600">
+                            Calculate arithmetic mean, weighted averages, and moving averages with comprehensive statistical analysis. Free, accurate, and privacy-focused.
+                        </p>
+                    </div>
+
+                    <!-- Tool Interface -->
+                    <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+                        <!-- Mode Tabs -->
+                        <div class="mb-6">
+                            <div class="flex border-b border-gray-200">
+                                <button onclick="switchMode('simple')" id="simple-tab" class="px-4 py-2 border-b-2 border-indigo-500 text-indigo-600 font-medium">Simple Average</button>
+                                <button onclick="switchMode('weighted')" id="weighted-tab" class="px-4 py-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700">Weighted Average</button>
+                                <button onclick="switchMode('moving')" id="moving-tab" class="px-4 py-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700">Moving Average</button>
+                            </div>
+                        </div>
+
+                        <!-- Simple Average Mode -->
+                        <div id="simple-mode" class="mode-content">
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Enter Numbers (comma or space separated)</label>
+                                    <textarea id="simple-input" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., 10, 20, 30, 40, 50" rows="3"></textarea>
+                                </div>
+                                <button onclick="calculateSimpleAverage()" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">Calculate Average</button>
+                            </div>
+                        </div>
+
+                        <!-- Weighted Average Mode -->
+                        <div id="weighted-mode" class="mode-content hidden">
+                            <div class="space-y-4">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Values (comma separated)</label>
+                                        <textarea id="weighted-values" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., 85, 90, 78" rows="3"></textarea>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Weights (comma separated)</label>
+                                        <textarea id="weighted-weights" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., 1, 2, 1" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <button onclick="calculateWeightedAverage()" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">Calculate Weighted Average</button>
+                            </div>
+                        </div>
+
+                        <!-- Moving Average Mode -->
+                        <div id="moving-mode" class="mode-content hidden">
+                            <div class="space-y-4">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Data Series (comma separated)</label>
+                                        <textarea id="moving-data" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., 10, 12, 15, 11, 14, 16" rows="3"></textarea>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Window Size</label>
+                                        <input type="number" id="moving-window" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="3" min="2" max="10">
+                                    </div>
+                                </div>
+                                <button onclick="calculateMovingAverage()" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">Calculate Moving Average</button>
+                            </div>
+                        </div>
+
+                        <!-- Results -->
+                        <div id="result" class="mt-6 p-4 bg-gray-50 rounded-lg hidden">
+                            <h3 class="text-lg font-semibold mb-3">Results</h3>
+                            <div id="result-content"></div>
+                        </div>
+                    </div>
+
+                    <!-- About Section -->
+                    <div class="mt-8">
+                        <h2 class="text-2xl font-bold mb-4">Understanding Averages: A Comprehensive Guide</h2>
+                        <div class="prose max-w-none">
+                            <p class="text-gray-700 mb-4">
+                                An average, also known as the arithmetic mean, is a fundamental concept in mathematics and statistics that represents the central tendency of a set of numbers. Our advanced average calculator goes beyond simple mean calculations to provide multiple averaging methods suitable for various real-world applications, from academic grade calculations to financial analysis and data science.
+                            </p>
+
+                            <p class="text-gray-700 mb-4">
+                                The calculator stands out from basic averaging tools by offering three distinct calculation modes, each designed for specific analytical needs. The simple average provides comprehensive statistical analysis including count, sum, minimum, maximum, and range. The weighted average allows for importance-based calculations where different values carry different significance. The moving average offers time series analysis capabilities commonly used in finance and trend analysis.
+                            </p>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Types of Averages and Their Applications
+                            </h3>
+
+                            <h4 class="text-lg font-semibold mb-2">1. Simple Arithmetic Mean (Simple Average)</h4>
+                            <p class="text-gray-700 mb-3">
+                                The most common type of average, calculated by summing all values and dividing by the number of values. Formula: μ = (Σxᵢ) / n. This method treats all values equally and is ideal for datasets where each observation carries the same weight. Our calculator provides additional statistical insights including the total count of values, sum of all numbers, minimum and maximum values, and the range (difference between max and min).
+                            </p>
+
+                            <h4 class="text-lg font-semibold mb-2">2. Weighted Average</h4>
+                            <p class="text-gray-700 mb-3">
+                                Used when different values have different levels of importance or significance. Each value is multiplied by its weight before averaging. Formula: μ = (Σ(wᵢ × xᵢ)) / Σwᵢ. This method is essential for GPA calculations, investment portfolio analysis, and any scenario where certain data points should influence the result more than others. The calculator shows the weighted sum, total weight, and final weighted average.
+                            </p>
+
+                            <h4 class="text-lg font-semibold mb-2">3. Moving Average</h4>
+                            <p class="text-gray-700 mb-3">
+                                Calculates averages over a sliding window of data points, useful for smoothing time series data and identifying trends. Unlike simple averages that use all data points equally, moving averages focus on recent values within a specified window size. This technique is widely used in finance for stock price analysis, in meteorology for weather pattern identification, and in signal processing for noise reduction.
+                            </p>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Real-World Applications and Use Cases
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                Averages are used extensively across various fields and industries, each requiring different types of averaging methods:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li><strong>Education:</strong> Calculating GPA with weighted averages for different credit hours, class averages for student performance assessment, and grade point analysis for academic planning</li>
+                                <li><strong>Finance:</strong> Portfolio returns using weighted averages based on investment amounts, stock price moving averages for trend analysis, and risk assessment calculations</li>
+                                <li><strong>Business:</strong> Sales figures analysis, customer satisfaction scores averaging, market research data analysis, and performance metric calculations for KPIs</li>
+                                <li><strong>Science:</strong> Experimental data analysis with statistical means, research data averaging for hypothesis testing, and measurement precision calculations</li>
+                                <li><strong>Sports:</strong> Player statistics averaging, team performance metrics, ranking systems using weighted averages, and performance trend analysis</li>
+                                <li><strong>Healthcare:</strong> Patient vital signs monitoring, medical research data analysis, and treatment effectiveness measurements</li>
+                                <li><strong>Quality Control:</strong> Manufacturing process averages, defect rate analysis, and product quality assessment metrics</li>
+                                <li><strong>Economics:</strong> Inflation rate calculations, GDP growth analysis, and economic indicator averaging</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Why Choose Our Advanced Average Calculator?
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                Our calculator offers several advantages over basic averaging tools:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li><strong>Multiple Calculation Methods:</strong> Simple, weighted, and moving averages in one comprehensive tool</li>
+                                <li><strong>Comprehensive Statistics:</strong> Detailed analysis including count, sum, min, max, range, and variance calculations</li>
+                                <li><strong>Real-Time Calculations:</strong> Instant results with immediate feedback and error checking</li>
+                                <li><strong>Data Validation:</strong> Automatic filtering of invalid inputs and clear error messages</li>
+                                <li><strong>Privacy-Focused Design:</strong> All calculations performed client-side with no data transmission</li>
+                                <li><strong>Mobile-Responsive Interface:</strong> Optimized for use on smartphones, tablets, and desktop computers</li>
+                                <li><strong>No Registration Required:</strong> Start calculating immediately without creating accounts</li>
+                                <li><strong>Batch Processing:</strong> Handle large datasets efficiently with comma or space-separated input</li>
+                                <li><strong>Educational Value:</strong> Comprehensive explanations and practical examples</li>
+                                <li><strong>Professional Accuracy:</strong> Precise mathematical calculations with appropriate decimal precision</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Understanding Your Calculation Results
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                When you calculate an average using our tool, you receive comprehensive statistical information:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li><strong>Average/Mean:</strong> The calculated central tendency value, displayed with 4 decimal precision</li>
+                                <li><strong>Count:</strong> Total number of valid numeric values processed from your input</li>
+                                <li><strong>Sum:</strong> Total of all values before averaging, useful for verification</li>
+                                <li><strong>Minimum:</strong> Smallest value in your dataset, helping identify outliers</li>
+                                <li><strong>Maximum:</strong> Largest value in your dataset, useful for range analysis</li>
+                                <li><strong>Range:</strong> Difference between maximum and minimum values, indicating data spread</li>
+                                <li><strong>Weighted Sum (for weighted averages):</strong> Sum of values multiplied by their weights</li>
+                                <li><strong>Total Weight (for weighted averages):</strong> Sum of all weight values</li>
+                                <li><strong>Moving Average Points (for moving averages):</strong> Number of calculated moving averages</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Common Mistakes and How to Avoid Them
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                While calculating averages seems straightforward, several common errors can lead to incorrect results:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li><strong>Wrong Average Type:</strong> Using simple average when weighted average is needed (like GPA calculations)</li>
+                                <li><strong>Missing Data Points:</strong> Forgetting to include all relevant values in the calculation</li>
+                                <li><strong>Weight Misapplication:</strong> Incorrectly assigning weights in weighted averages</li>
+                                <li><strong>Median vs Mean Confusion:</strong> Using mean when median might be more appropriate for skewed data</li>
+                                <li><strong>Outlier Impact:</strong> Not considering how extreme values affect the mean</li>
+                                <li><strong>Data Entry Errors:</strong> Including non-numeric characters or incorrect separators</li>
+                                <li><strong>Window Size Issues:</strong> Choosing inappropriate window sizes for moving averages</li>
+                                <li><strong>Precision Loss:</strong> Not accounting for floating-point precision in very large or small numbers</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Advanced Features for Professional Use
+                            </h3>
+                            <p class="text-gray-700 mb-3">
+                                Our calculator includes advanced features for professional and academic use:
+                            </p>
+                            <ul class="list-disc pl-6 mb-4 text-gray-700">
+                                <li><strong>Large Dataset Handling:</strong> Efficient processing of thousands of data points</li>
+                                <li><strong>Flexible Input Formats:</strong> Accept comma, space, or mixed separators</li>
+                                <li><strong>Error Recovery:</strong> Graceful handling of invalid inputs with helpful messages</li>
+                                <li><strong>Statistical Insights:</strong> Additional metrics beyond basic averaging</li>
+                                <li><strong>Data Export Ready:</strong> Results formatted for easy copying and analysis</li>
+                                <li><strong>Cross-Platform Compatibility:</strong> Works consistently across all modern browsers</li>
+                                <li><strong>Performance Optimized:</strong> Fast calculations even with large datasets</li>
+                                <li><strong>Educational Resources:</strong> Built-in explanations and practical examples</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Privacy and Data Security
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                Your privacy and data security are our top priorities. All average calculations, whether simple, weighted, or moving averages, are performed entirely within your web browser using JavaScript. Your numerical data, statistical results, and calculation parameters never leave your device or get transmitted to any external servers. This ensures complete confidentiality for sensitive data analysis, academic research, financial calculations, and professional statistical work.
+                            </p>
+
+                            <p class="text-gray-700 mb-4">
+                                The calculator works offline once loaded, making it suitable for secure environments, confidential research, and situations where internet connectivity is limited or unavailable. No tracking, analytics, or data collection occurs—your statistical analysis remains completely private and secure.
+                            </p>
+
+                            <p class="text-gray-700">
+                                Whether you're a student learning statistics, a business analyst evaluating performance metrics, a researcher analyzing experimental data, or a financial professional calculating investment returns, our comprehensive average calculator provides the precision, features, and reliability you need. Start calculating averages with confidence and unlock deeper insights from your data today!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="mt-8">
+                        <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+                        <div
+                            class="bg-white rounded-2xl border border-gray-200 p-6"
+                        >
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What is the difference between mean and average?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>In common usage, mean and average are often used interchangeably. Technically, average refers to the arithmetic mean, but there are other types of averages like median and mode. Our calculator focuses on the arithmetic mean, which is calculated by summing all values and dividing by the number of values.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>When should I use a weighted average?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Use weighted averages when different values have different levels of importance. For example, when calculating GPA where courses have different credit hours, or when averaging test scores with different weightings. The weighted average gives more influence to values with higher weights.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What is a moving average and why is it useful?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>A moving average smooths out data fluctuations by calculating averages over a sliding window of data points. It's useful for identifying trends in time series data, reducing noise, and making forecasts in finance, weather analysis, and signal processing.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>How accurate are the calculations?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Our calculator uses precise mathematical formulas and JavaScript's built-in number handling for maximum accuracy. Results are typically accurate to 15 decimal places, though display is rounded to 4 decimal places for readability.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>Can I calculate averages for very large datasets?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes, our calculator can handle large datasets efficiently. However, for extremely large datasets (over 10,000 values), consider using statistical software for better performance and more advanced analysis capabilities.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What happens if I enter invalid data?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>The calculator includes input validation and will show error messages for invalid data. Only numeric values separated by commas or spaces are accepted. Non-numeric characters are automatically filtered out during processing.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>Is my data secure when using this calculator?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes, all calculations are performed locally in your browser. Your data never leaves your device or gets transmitted to any servers. This ensures complete privacy and security for your statistical data.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>Can I use this calculator on mobile devices?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Absolutely! Our calculator is fully responsive and works perfectly on smartphones, tablets, and all mobile devices. The interface adapts to smaller screens while maintaining full functionality.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>How do I calculate the average of percentages?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Enter the percentage values as decimals (e.g., 85% as 0.85) or as whole numbers (85). The calculator will treat them as regular numbers. For weighted percentages, use the weighted average mode with appropriate weights.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What if my data contains outliers?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Outliers can significantly affect the mean. Consider using median instead of mean for datasets with outliers, or remove extreme values if they're errors. Our calculator shows min/max values to help identify potential outliers.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>Can I save or export my calculation results?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Currently, results are displayed in your browser. You can copy the results manually or take a screenshot. Future updates may include export functionality for CSV or PDF formats.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>Is there a limit to how many numbers I can enter?</span>
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>There's no strict limit, but very large datasets (over 10,000 values) may cause performance issues in your browser. For such cases, consider using statistical software or breaking the data into smaller batches.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Similar Tools -->
+                    <div
+                        class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20"
+                    >
+                        <h3 class="text-lg font-semibold mb-4">Similar Tools</h3>
+                        <div class="space-y-3">
+
+                            <a href="percentage-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">%</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">Percentage Calculator</div>
+                                        <div class="mt-1 text-xs text-gray-500">Quick percent calculations</div>
+                                    </div>
+                                    <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+                                </div>
+                            </a>
+
+                            <a href="compound-interest-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">📈</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">Compound Interest Calculator</div>
+                                        <div class="mt-1 text-xs text-gray-500">Investment growth calculations</div>
+                                    </div>
+                                    <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+                                </div>
+                            </a>
+
+                            <a href="simple-interest-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">💰</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">Simple Interest Calculator</div>
+                                        <div class="mt-1 text-xs text-gray-500">Basic interest calculations</div>
+                                    </div>
+                                    <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+                                </div>
+                            </a>
+
+                            <a href="gpa-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">🎓</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">GPA Calculator</div>
+                                        <div class="mt-1 text-xs text-gray-500">Grade point average calculator</div>
+                                    </div>
+                                    <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+                                </div>
+                            </a>
+
+                            <a href="grade-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">📊</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">Grade Calculator</div>
+                                        <div class="mt-1 text-xs text-gray-500">Weighted grade calculations</div>
+                                    </div>
+                                    <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <a href="../../categories.html#calculators" class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium">
+                            View all Calculators →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <div id="footer-placeholder"></div>
+
+        <!-- SCRIPTS -->
+        <script src="../../assets/js/common.js"></script>
+        <script>
+            let currentMode = 'simple';
+
+            function switchMode(mode) {
+                // Hide all modes
+                document.getElementById('simple-mode').classList.add('hidden');
+                document.getElementById('weighted-mode').classList.add('hidden');
+                document.getElementById('moving-mode').classList.add('hidden');
+
+                // Remove active tab styling
+                document.getElementById('simple-tab').classList.remove('border-indigo-500', 'text-indigo-600');
+                document.getElementById('simple-tab').classList.add('border-transparent', 'text-gray-500');
+                document.getElementById('weighted-tab').classList.remove('border-indigo-500', 'text-indigo-600');
+                document.getElementById('weighted-tab').classList.add('border-transparent', 'text-gray-500');
+                document.getElementById('moving-tab').classList.remove('border-indigo-500', 'text-indigo-600');
+                document.getElementById('moving-tab').classList.add('border-transparent', 'text-gray-500');
+
+                // Show selected mode and activate tab
+                document.getElementById(mode + '-mode').classList.remove('hidden');
+                document.getElementById(mode + '-tab').classList.add('border-indigo-500', 'text-indigo-600');
+                document.getElementById(mode + '-tab').classList.remove('border-transparent', 'text-gray-500');
+
+                currentMode = mode;
+                document.getElementById('result').classList.add('hidden');
+            }
+
+            function parseNumbers(input) {
+                return input.split(/[,\s]+/).map(n => parseFloat(n.trim())).filter(n => !isNaN(n));
+            }
+
+            function calculateSimpleAverage() {
+                const input = document.getElementById('simple-input').value;
+                const numbers = parseNumbers(input);
+
+                if (numbers.length === 0) {
+                    showToast('Please enter valid numbers');
+                    return;
+                }
+
+                const sum = numbers.reduce((a, b) => a + b, 0);
+                const average = sum / numbers.length;
+                const min = Math.min(...numbers);
+                const max = Math.max(...numbers);
+                const range = max - min;
+
+                displayResults({
+                    average: average.toFixed(4),
+                    count: numbers.length,
+                    sum: sum.toFixed(4),
+                    min: min.toFixed(4),
+                    max: max.toFixed(4),
+                    range: range.toFixed(4)
+                });
+            }
+
+            function calculateWeightedAverage() {
+                const valuesInput = document.getElementById('weighted-values').value;
+                const weightsInput = document.getElementById('weighted-weights').value;
+
+                const values = parseNumbers(valuesInput);
+                const weights = parseNumbers(weightsInput);
+
+                if (values.length === 0 || weights.length === 0) {
+                    showToast('Please enter valid values and weights');
+                    return;
+                }
+
+                if (values.length !== weights.length) {
+                    showToast('Number of values must match number of weights');
+                    return;
+                }
+
+                const weightedSum = values.reduce((sum, value, i) => sum + (value * weights[i]), 0);
+                const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+                const weightedAverage = weightedSum / totalWeight;
+
+                displayResults({
+                    'Weighted Average': weightedAverage.toFixed(4),
+                    'Total Weight': totalWeight.toFixed(4),
+                    'Weighted Sum': weightedSum.toFixed(4),
+                    'Number of Items': values.length
+                });
+            }
+
+            function calculateMovingAverage() {
+                const dataInput = document.getElementById('moving-data').value;
+                const windowSize = parseInt(document.getElementById('moving-window').value);
+
+                const data = parseNumbers(dataInput);
+
+                if (data.length === 0) {
+                    showToast('Please enter valid data series');
+                    return;
+                }
+
+                if (isNaN(windowSize) || windowSize < 2 || windowSize > data.length) {
+                    showToast('Please enter a valid window size (2 to ' + data.length + ')');
+                    return;
+                }
+
+                const movingAverages = [];
+                for (let i = windowSize - 1; i < data.length; i++) {
+                    const window = data.slice(i - windowSize + 1, i + 1);
+                    const average = window.reduce((a, b) => a + b, 0) / windowSize;
+                    movingAverages.push(average.toFixed(4));
+                }
+
+                displayResults({
+                    'Moving Averages': movingAverages.join(', '),
+                    'Window Size': windowSize,
+                    'Data Points': data.length,
+                    'Moving Average Points': movingAverages.length
+                });
+            }
+
+            function displayResults(results) {
+                const resultDiv = document.getElementById('result-content');
+                resultDiv.innerHTML = '';
+
+                for (const [key, value] of Object.entries(results)) {
+                    const div = document.createElement('div');
+                    div.className = 'flex justify-between py-2 border-b border-gray-200 last:border-b-0';
+                    div.innerHTML = `
+                        <span class="font-medium text-gray-700">${key}:</span>
+                        <span class="text-indigo-600 font-semibold">${value}</span>
+                    `;
+                    resultDiv.appendChild(div);
+                }
+
+                document.getElementById('result').classList.remove('hidden');
+            }
+
+            // Initialize FAQ functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const faqQuestions = document.querySelectorAll('.faq-question');
+                faqQuestions.forEach(question => {
+                    question.addEventListener('click', function() {
+                        const answer = this.nextElementSibling;
+                        const icon = this.querySelector('.faq-icon');
+
+                        if (answer.classList.contains('hidden')) {
+                            answer.classList.remove('hidden');
+                            icon.textContent = '−';
+                        } else {
+                            answer.classList.add('hidden');
+                            icon.textContent = '+';
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

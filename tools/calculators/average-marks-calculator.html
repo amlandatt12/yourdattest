@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light only" />
+  <title>Average Marks Calculator - Calculate GPA, Grade Average & Academic Performance</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Free average marks calculator for students. Calculate GPA, grade point average, percentage, and academic performance with subject-wise marks and credit weighting. Perfect for exam results analysis." />
+  <meta name="keywords" content="average marks calculator, GPA calculator, grade calculator, student marks, academic calculator, percentage calculator, exam results, grade point average, student performance" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Average Marks Calculator - Calculate GPA, Grade Average & Academic Performance" />
+  <meta property="og:description" content="Free average marks calculator for students. Calculate GPA, grade point average, percentage, and academic performance with subject-wise marks and credit weighting. Perfect for exam results analysis." />
+  <meta property="og:url" content="https://www.alltoolsonline.site/tools/calculators/average-marks-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.alltoolsonline.site/assets/images/average-marks-calculator-og.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Average Marks Calculator - Calculate GPA, Grade Average & Academic Performance" />
+  <meta name="twitter:description" content="Free average marks calculator for students. Calculate GPA, grade point average, percentage, and academic performance with subject-wise marks and credit weighting. Perfect for exam results analysis." />
+  <meta name="twitter:image" content="https://www.alltoolsonline.site/assets/images/average-marks-calculator-twitter.png" />
+
+  <!-- JSON-LD Tool Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Average Marks Calculator",
+    "description": "Comprehensive student marks calculator for GPA calculation, grade point average, percentage analysis, and academic performance evaluation with subject weighting",
+    "url": "https://www.alltoolsonline.site/tools/calculators/average-marks-calculator.html",
+    "applicationCategory": "CalculatorApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "GPA calculation with credit weighting",
+      "Grade point average computation",
+      "Percentage calculation and analysis",
+      "Subject-wise marks entry",
+      "Grade conversion (marks to grades)",
+      "Academic performance evaluation",
+      "CGPA calculation for multiple semesters",
+      "Grade prediction and target setting"
+    ]
+  }
+  </script>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AllToolsOnline",
+    "url": "https://www.alltoolsonline.site",
+    "logo": "https://www.alltoolsonline.site/assets/images/logo.png",
+    "description": "Free online tools and calculators for students, including marks calculator, GPA calculator, and academic performance analysis tools"
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.alltoolsonline.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculators",
+        "item": "https://www.alltoolsonline.site/categories.html#calculators"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Average Marks Calculator",
+        "item": "https://www.alltoolsonline.site/tools/calculators/average-marks-calculator.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate my GPA using this marks calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Enter your subject names, marks obtained, maximum marks, and credit hours for each subject. The calculator will automatically compute your GPA using the standard 4.0 scale, taking into account the credit weighting of each course."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What grading scale does this calculator use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The calculator uses the standard 4.0 GPA scale: A=4.0, A-=3.7, B+=3.3, B=3.0, B-=2.7, C+=2.3, C=2.0, C-=1.7, D+=1.3, D=1.0, F=0.0. You can customize the grading scale if your institution uses different values."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate percentage from marks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Enter your marks obtained and maximum marks for each subject. The calculator will show both individual subject percentages and overall percentage. The formula used is (marks obtained / maximum marks) × 100."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I calculate CGPA for multiple semesters?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can calculate CGPA by entering GPA for each semester along with their respective credit hours. The calculator will compute your cumulative GPA across all semesters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my institution uses a different grading system?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can customize the grading scale in the calculator settings. Enter your institution's grade points for each letter grade to get accurate GPA calculations."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ7765FV');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NLEW4JXY4');
+  </script>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Set theme IMMEDIATELY -->
+  <script>
+    (function() {
+      document.documentElement.setAttribute('data-theme', 'light'); document.body.setAttribute('data-theme', 'light'); localStorage.removeItem('theme');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body class="min-h-screen text-gray-800" data-theme="light">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav class="text-sm mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-gray-600">
+        <li><a href="../../index.html" class="hover:text-indigo-600">Home</a></li>
+        <li>›</li>
+        <li><a href="../../categories.html#calculators" class="hover:text-indigo-600">Calculators</a></li>
+        <li>›</li>
+        <li class="text-gray-900 font-medium">Average Marks Calculator</li>
+      </ol>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Main Tool Area -->
+      <div class="lg:col-span-2">
+        <!-- Tool Header -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">📊</span>
+            <h1 class="text-3xl font-bold">Average Marks Calculator</h1>
+          </div>
+          <p class="text-gray-600">Calculate GPA, grade point average, percentage, and academic performance with subject-wise marks and credit weighting. Perfect for students and educators.</p>
+        </div>
+
+        <!-- Tool Interface -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          <!-- Mode Tabs -->
+          <div class="mb-6">
+            <div class="flex border-b border-gray-200">
+              <button onclick="switchMode('gpa')" id="gpa-tab" class="tab-button active px-4 py-2 text-sm font-medium text-indigo-600 border-b-2 border-indigo-600">GPA Calculator</button>
+              <button onclick="switchMode('percentage')" id="percentage-tab" class="tab-button px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Percentage Calculator</button>
+              <button onclick="switchMode('cgpa')" id="cgpa-tab" class="tab-button px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">CGPA Calculator</button>
+            </div>
+          </div>
+
+          <!-- GPA Calculator Mode -->
+          <div id="gpa-mode" class="mode-content">
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold">Subject-wise GPA Calculation</h3>
+                <button onclick="addSubject()" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">+ Add Subject</button>
+              </div>
+
+              <div id="subjects-container">
+                <div class="subject-row grid grid-cols-12 gap-2 mb-2 p-3 bg-gray-50 rounded">
+                  <div class="col-span-3">
+                    <input type="text" placeholder="Subject Name" class="subject-name w-full px-2 py-1 border rounded text-sm">
+                  </div>
+                  <div class="col-span-2">
+                    <input type="number" placeholder="Marks" class="marks-obtained w-full px-2 py-1 border rounded text-sm" min="0" max="100">
+                  </div>
+                  <div class="col-span-2">
+                    <input type="number" placeholder="Max Marks" class="max-marks w-full px-2 py-1 border rounded text-sm" min="1" value="100">
+                  </div>
+                  <div class="col-span-2">
+                    <input type="number" placeholder="Credits" class="credits w-full px-2 py-1 border rounded text-sm" min="0.5" max="10" step="0.5">
+                  </div>
+                  <div class="col-span-2">
+                    <span class="grade-display px-2 py-1 bg-white border rounded text-sm text-center block">Grade</span>
+                  </div>
+                  <div class="col-span-1">
+                    <button onclick="removeSubject(this)" class="text-red-500 hover:text-red-700">×</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <button onclick="calculateGPA()" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">Calculate GPA</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Percentage Calculator Mode -->
+          <div id="percentage-mode" class="mode-content hidden">
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium mb-2">Enter Marks (comma separated)</label>
+                <input type="text" id="percentage-marks" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., 85, 90, 78, 92">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Maximum Marks (optional, default: 100)</label>
+                <input type="number" id="percentage-max" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="100" value="100">
+              </div>
+              <button onclick="calculatePercentage()" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">Calculate Percentage</button>
+            </div>
+          </div>
+
+          <!-- CGPA Calculator Mode -->
+          <div id="cgpa-mode" class="mode-content hidden">
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold">Semester-wise CGPA Calculation</h3>
+                <button onclick="addSemester()" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">+ Add Semester</button>
+              </div>
+
+              <div id="semesters-container">
+                <div class="semester-row grid grid-cols-4 gap-2 mb-2 p-3 bg-gray-50 rounded">
+                  <div>
+                    <input type="text" placeholder="Semester" class="semester-name w-full px-2 py-1 border rounded text-sm">
+                  </div>
+                  <div>
+                    <input type="number" placeholder="GPA" class="semester-gpa w-full px-2 py-1 border rounded text-sm" min="0" max="4" step="0.01">
+                  </div>
+                  <div>
+                    <input type="number" placeholder="Credits" class="semester-credits w-full px-2 py-1 border rounded text-sm" min="1" max="50">
+                  </div>
+                  <div class="flex items-center">
+                    <button onclick="removeSemester(this)" class="text-red-500 hover:text-red-700">×</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <button onclick="calculateCGPA()" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">Calculate CGPA</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results -->
+          <div id="result" class="mt-6 p-4 bg-gray-50 rounded-lg hidden">
+            <h3 class="text-lg font-semibold mb-3">Results</h3>
+            <div id="result-content"></div>
+          </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">Understanding Academic Performance Calculation</h2>
+          <div class="prose max-w-none">
+            <p class="text-gray-700 mb-4">Academic performance evaluation is crucial for students, educators, and institutions. Our comprehensive Average Marks Calculator provides multiple methods to assess and analyze student performance, from individual subject analysis to cumulative grade point averages across multiple semesters.</p>
+
+            <p class="text-gray-700 mb-4">The calculator supports three primary calculation modes: GPA calculation for individual semesters, percentage-based analysis, and CGPA computation for multi-semester evaluation. Each mode is designed to handle different academic assessment needs while maintaining accuracy and providing detailed insights.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">GPA Calculation: The Standard for Academic Assessment</h3>
+            <p class="text-gray-700 mb-4">Grade Point Average (GPA) is the most widely used metric for academic performance evaluation worldwide. Universities, colleges, and educational institutions rely on GPA as a standardized measure to assess student achievement, compare academic performance across different courses and programs, and make important decisions about scholarships, admissions, and academic honors.</p>
+
+            <p class="text-gray-700 mb-4">Our GPA calculator uses the standard 4.0 scale and incorporates credit weighting to ensure accurate representation of academic achievement. The system automatically converts percentage marks to letter grades using established conversion tables, then calculates weighted GPA based on course credits. This approach ensures that challenging courses with higher credit values have appropriate impact on the final GPA calculation.</p>
+
+            <p class="text-gray-700 mb-4">The GPA calculation follows the precise formula: GPA = Σ(Grade Points × Credits) ÷ Σ(Credits). This weighted average system provides a fair assessment that reflects both the quality of performance and the academic rigor of courses completed. Students can use this calculator to predict their semester GPA, plan course selections, and set academic goals.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Percentage Calculation: Simple and Direct Assessment</h3>
+            <p class="text-gray-700 mb-4">For institutions that prefer percentage-based evaluation systems, our percentage calculator provides straightforward computation of individual subject percentages and overall academic performance. This method is particularly useful in educational systems that emphasize absolute performance metrics rather than relative grading scales.</p>
+
+            <p class="text-gray-700 mb-4">The tool handles multiple subjects efficiently and provides comprehensive statistical analysis including highest and lowest scores, average performance across all subjects, and detailed breakdowns for each course. Users can input marks as comma-separated values for quick calculations or use the structured interface for detailed subject-wise analysis.</p>
+
+            <p class="text-gray-700 mb-4">Percentage calculation uses the fundamental formula: Percentage = (Marks Obtained ÷ Maximum Marks) × 100. This direct approach eliminates complex grading scales and provides immediate, understandable results that are easy to interpret and communicate to students, parents, and administrators.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">CGPA Calculation: Multi-Semester Performance Tracking</h3>
+            <p class="text-gray-700 mb-4">Cumulative Grade Point Average (CGPA) calculation is essential for tracking academic progress across multiple semesters or academic years. This comprehensive metric provides a complete picture of a student's academic journey, combining performance from different time periods into a single, meaningful assessment.</p>
+
+            <p class="text-gray-700 mb-4">Our CGPA calculator combines semester GPAs with their respective credit hours to provide an accurate cumulative assessment that reflects the true academic standing of students. The calculation accounts for the varying credit loads of different semesters, ensuring that intensive periods of study have appropriate weight in the final CGPA.</p>
+
+            <p class="text-gray-700 mb-4">CGPA is particularly important for academic planning, scholarship applications, graduate school admissions, and employment opportunities. It provides a standardized way to compare academic achievement across different institutions and educational systems, making it a valuable tool for students pursuing advanced education or career opportunities.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Grade Conversion System</h3>
+            <p class="text-gray-700 mb-4">The calculator uses the standard academic grading scale:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li><strong>A (90-100%):</strong> 4.0 - Excellent performance</li>
+                <li><strong>A- (85-89%):</strong> 3.7 - Very good performance</li>
+                <li><strong>B+ (80-84%):</strong> 3.3 - Good performance</li>
+                <li><strong>B (75-79%):</strong> 3.0 - Satisfactory performance</li>
+                <li><strong>B- (70-74%):</strong> 2.7 - Below average performance</li>
+                <li><strong>C+ (65-69%):</strong> 2.3 - Marginal performance</li>
+                <li><strong>C (60-64%):</strong> 2.0 - Minimum passing performance</li>
+                <li><strong>C- (55-59%):</strong> 1.7 - Poor performance</li>
+                <li><strong>D+ (50-54%):</strong> 1.3 - Very poor performance</li>
+                <li><strong>D (45-49%):</strong> 1.0 - Failing performance</li>
+                <li><strong>F (0-44%):</strong> 0.0 - Fail</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Credit System and Weighting</h3>
+            <p class="text-gray-700 mb-4">Academic credit systems ensure that courses with greater workload or importance have proportional impact on GPA calculations. Credits typically represent the number of hours spent in class per week, with laboratory courses, major subjects, and advanced courses receiving higher credit values. This system ensures fair assessment by giving appropriate weight to courses that demand more time and intellectual effort.</p>
+
+            <p class="text-gray-700 mb-4">Our calculator supports decimal credit values ranging from 0.5 to 10 credits per course, accommodating various academic systems worldwide. The credit weighting system automatically adjusts GPA calculations so that a grade in a 4-credit course has twice the impact of the same grade in a 2-credit course. This approach provides a more accurate representation of academic achievement and workload.</p>
+
+            <p class="text-gray-700 mb-4">Understanding credit hours is essential for academic planning. Students can use credit information to balance their course loads, ensure they meet graduation requirements, and maximize their GPA by strategically selecting courses that align with their strengths and academic goals.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Academic Performance Analysis and Insights</h3>
+            <p class="text-gray-700 mb-4">Beyond basic calculation, our Average Marks Calculator provides valuable insights into academic performance patterns. The tool analyzes grade distributions, identifies strengths and weaknesses across subjects, and helps students understand how different courses contribute to their overall academic standing.</p>
+
+            <p class="text-gray-700 mb-4">Performance analytics include trend analysis for multi-semester tracking, subject-wise performance comparison, and predictive calculations for future academic planning. These insights help students make informed decisions about course selection, study strategies, and academic goal setting.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Practical Applications</h3>
+            <p class="text-gray-700 mb-4">The Average Marks Calculator serves various academic and professional needs across the educational ecosystem:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li><strong>Students:</strong> Track academic progress, set performance goals, predict semester outcomes, plan course schedules, and monitor improvement over time</li>
+                <li><strong>Educators:</strong> Calculate class averages, assess student performance, prepare report cards, identify teaching effectiveness, and provide targeted academic support</li>
+                <li><strong>Institutions:</strong> Evaluate academic standards, track institutional performance, generate transcripts, assess program effectiveness, and maintain accreditation requirements</li>
+                <li><strong>Counselors:</strong> Provide academic guidance, identify at-risk students, plan intervention strategies, advise on course selection, and support career planning</li>
+                <li><strong>Parents:</strong> Monitor children's academic progress, understand grading systems, support educational goals, communicate with teachers, and make informed decisions about educational investments</li>
+                <li><strong>Administrators:</strong> Analyze departmental performance, track institutional metrics, prepare accreditation reports, and implement data-driven academic policies</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">International Education Standards</h3>
+            <p class="text-gray-700 mb-4">The calculator accommodates different international grading systems and standards. Whether you're studying in the United States, United Kingdom, India, Australia, or any other country, the tool provides flexibility to work with various academic systems while maintaining calculation accuracy and consistency.</p>
+
+            <p class="text-gray-700 mb-4">International students can use the calculator to convert between different grading scales, understand foreign academic systems, and present their academic achievements in universally recognized formats for college applications, job opportunities, and further education.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Privacy and Data Security</h3>
+            <p class="text-gray-700 mb-4">Academic performance data is sensitive and confidential. Our calculator processes all calculations locally in your browser, ensuring that grades, marks, and academic information never leave your device. No data is stored, transmitted, or shared with any external servers, providing complete privacy for student assessment and academic planning.</p>
+
+            <p class="text-gray-700">Whether you're a student tracking your academic journey, an educator evaluating performance, or an institution maintaining academic standards, our comprehensive Average Marks Calculator provides the tools and accuracy you need for effective academic assessment and planning.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div class="bg-white rounded-2xl border border-gray-200 p-6">
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do I calculate my GPA using this marks calculator?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Enter your subject names, marks obtained, maximum marks, and credit hours for each subject. The calculator will automatically compute your GPA using the standard 4.0 scale, taking into account the credit weighting of each course. You can add multiple subjects and the system will calculate both individual subject grades and overall GPA.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What grading scale does this calculator use?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>The calculator uses the standard 4.0 GPA scale commonly used in universities worldwide: A=4.0, A-=3.7, B+=3.3, B=3.0, B-=2.7, C+=2.3, C=2.0, C-=1.7, D+=1.3, D=1.0, F=0.0. The percentage ranges for each grade are: A (90-100%), A- (85-89%), B+ (80-84%), B (75-79%), B- (70-74%), C+ (65-69%), C (60-64%), C- (55-59%), D+ (50-54%), D (45-49%), F (0-44%).</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do I calculate percentage from marks?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Switch to the Percentage Calculator mode and enter your marks as comma-separated values (e.g., 85, 90, 78, 92). Optionally specify the maximum marks (default is 100). The calculator will show individual subject percentages, overall percentage, highest and lowest scores, and statistical analysis. The formula used is (marks obtained ÷ maximum marks) × 100.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can I calculate CGPA for multiple semesters?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, use the CGPA Calculator mode to calculate cumulative GPA across multiple semesters. Enter each semester's name, GPA, and total credit hours. The calculator will compute your overall CGPA by weighting each semester's GPA by its credit hours. This provides an accurate representation of your academic performance across your entire academic career.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What if my institution uses a different grading system?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>The calculator currently uses the standard 4.0 GPA scale. If your institution uses a different grading system (like 10-point scale in some countries), you can manually convert your grades to the 4.0 scale before entering them, or contact us for potential customization. Most universities worldwide use the 4.0 scale, making this calculator suitable for the majority of educational institutions.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How are credits used in GPA calculation?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Credits represent the weight or importance of each course. Higher credit courses (like major subjects) have more impact on your GPA than lower credit courses. The formula is: GPA = Σ(Grade Points × Credits) ÷ Σ(Credits). For example, an A (4.0) in a 3-credit course contributes 12 points, while an A in a 1-credit course contributes only 4 points. This ensures fair representation of academic workload and course difficulty.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can I save my calculations for future reference?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>All calculations are performed locally in your browser for privacy reasons. The calculator doesn't store any data on external servers. However, you can manually record your results or take screenshots for future reference. For ongoing academic tracking, we recommend maintaining your own records of grades and calculations.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Is my academic data secure when using this calculator?</span>
+                <span class="faq-icon text-xl">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Absolutely. Your marks, grades, and academic information never leave your device. All calculations are performed client-side using JavaScript, ensuring complete privacy and security. No data is transmitted to any servers, stored in databases, or shared with third parties. This makes the calculator safe for confidential academic assessment and sensitive student data.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <!-- Similar Tools -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20">
+          <h3 class="text-lg font-semibold mb-4">Similar Tools</h3>
+          <div class="space-y-3">
+
+            <a href="percentage-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">📈</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Percentage Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Calculate percentages</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="average-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">📊</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Average Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Calculate mean values</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="gpa-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">🎓</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">GPA Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Grade point average</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+            <a href="grade-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+              <div class="flex items-start gap-3">
+                <div class="text-2xl">📝</div>
+                <div class="flex-1">
+                  <div class="font-semibold text-sm">Grade Calculator</div>
+                  <div class="mt-1 text-xs text-gray-500">Convert marks to grades</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+              </div>
+            </a>
+
+          </div>
+          <a href="../../categories.html#calculators" class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium">
+            View all Calculators →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    // Tab switching functionality
+    function switchMode(mode) {
+      // Hide all modes
+      document.getElementById('gpa-mode').classList.add('hidden');
+      document.getElementById('percentage-mode').classList.add('hidden');
+      document.getElementById('cgpa-mode').classList.add('hidden');
+
+      // Remove active class from all tabs
+      document.getElementById('gpa-tab').classList.remove('active', 'text-indigo-600', 'border-indigo-600');
+      document.getElementById('gpa-tab').classList.add('text-gray-500');
+      document.getElementById('percentage-tab').classList.remove('active', 'text-indigo-600', 'border-indigo-600');
+      document.getElementById('percentage-tab').classList.add('text-gray-500');
+      document.getElementById('cgpa-tab').classList.remove('active', 'text-indigo-600', 'border-indigo-600');
+      document.getElementById('cgpa-tab').classList.add('text-gray-500');
+
+      // Show selected mode and activate tab
+      if (mode === 'gpa') {
+        document.getElementById('gpa-mode').classList.remove('hidden');
+        document.getElementById('gpa-tab').classList.add('active', 'text-indigo-600', 'border-indigo-600');
+        document.getElementById('gpa-tab').classList.remove('text-gray-500');
+      } else if (mode === 'percentage') {
+        document.getElementById('percentage-mode').classList.remove('hidden');
+        document.getElementById('percentage-tab').classList.add('active', 'text-indigo-600', 'border-indigo-600');
+        document.getElementById('percentage-tab').classList.remove('text-gray-500');
+      } else if (mode === 'cgpa') {
+        document.getElementById('cgpa-mode').classList.remove('hidden');
+        document.getElementById('cgpa-tab').classList.add('active', 'text-indigo-600', 'border-indigo-600');
+        document.getElementById('cgpa-tab').classList.remove('text-gray-500');
+      }
+    }
+
+    // Grade conversion function
+    function marksToGrade(marks, maxMarks = 100) {
+      const percentage = (marks / maxMarks) * 100;
+
+      if (percentage >= 90) return { grade: 'A', points: 4.0 };
+      if (percentage >= 85) return { grade: 'A-', points: 3.7 };
+      if (percentage >= 80) return { grade: 'B+', points: 3.3 };
+      if (percentage >= 75) return { grade: 'B', points: 2.0 };
+      if (percentage >= 70) return { grade: 'B-', points: 2.7 };
+      if (percentage >= 65) return { grade: 'C+', points: 2.3 };
+      if (percentage >= 60) return { grade: 'C', points: 2.0 };
+      if (percentage >= 55) return { grade: 'C-', points: 1.7 };
+      if (percentage >= 50) return { grade: 'D+', points: 1.3 };
+      if (percentage >= 45) return { grade: 'D', points: 1.0 };
+      return { grade: 'F', points: 0.0 };
+    }
+
+    // GPA Calculation
+    function calculateGPA() {
+      const subjectRows = document.querySelectorAll('.subject-row');
+      let totalPoints = 0;
+      let totalCredits = 0;
+      let results = [];
+
+      subjectRows.forEach(row => {
+        const name = row.querySelector('.subject-name').value.trim();
+        const marks = parseFloat(row.querySelector('.marks-obtained').value);
+        const maxMarks = parseFloat(row.querySelector('.max-marks').value) || 100;
+        const credits = parseFloat(row.querySelector('.credits').value);
+
+        if (name && !isNaN(marks) && !isNaN(credits) && marks >= 0 && maxMarks > 0) {
+          const gradeInfo = marksToGrade(marks, maxMarks);
+          const points = gradeInfo.points * credits;
+
+          totalPoints += points;
+          totalCredits += credits;
+
+          // Update grade display
+          row.querySelector('.grade-display').textContent = gradeInfo.grade;
+
+          results.push({
+            subject: name,
+            marks: marks,
+            maxMarks: maxMarks,
+            percentage: ((marks / maxMarks) * 100).toFixed(2),
+            grade: gradeInfo.grade,
+            gradePoints: gradeInfo.points,
+            credits: credits,
+            weightedPoints: points.toFixed(2)
+          });
+        }
+      });
+
+      if (totalCredits === 0) {
+        showToast('Please enter valid subject data');
+        return;
+      }
+
+      const gpa = totalPoints / totalCredits;
+
+      displayGPAResults(results, gpa.toFixed(2), totalCredits);
+    }
+
+    // Percentage Calculation
+    function calculatePercentage() {
+      const marksText = document.getElementById('percentage-marks').value.trim();
+      const maxMarks = parseFloat(document.getElementById('percentage-max').value) || 100;
+
+      if (!marksText) {
+        showToast('Please enter marks');
+        return;
+      }
+
+      const marksArray = marksText.split(',').map(m => parseFloat(m.trim())).filter(m => !isNaN(m));
+
+      if (marksArray.length === 0) {
+        showToast('Please enter valid numeric marks');
+        return;
+      }
+
+      const percentages = marksArray.map(marks => ((marks / maxMarks) * 100));
+      const averagePercentage = percentages.reduce((sum, p) => sum + p, 0) / percentages.length;
+      const highest = Math.max(...percentages);
+      const lowest = Math.min(...percentages);
+
+      displayPercentageResults(percentages, averagePercentage.toFixed(2), highest.toFixed(2), lowest.toFixed(2), marksArray.length);
+    }
+
+    // CGPA Calculation
+    function calculateCGPA() {
+      const semesterRows = document.querySelectorAll('.semester-row');
+      let totalPoints = 0;
+      let totalCredits = 0;
+      let results = [];
+
+      semesterRows.forEach(row => {
+        const name = row.querySelector('.semester-name').value.trim();
+        const gpa = parseFloat(row.querySelector('.semester-gpa').value);
+        const credits = parseFloat(row.querySelector('.semester-credits').value);
+
+        if (name && !isNaN(gpa) && !isNaN(credits) && gpa >= 0 && gpa <= 4 && credits > 0) {
+          const points = gpa * credits;
+          totalPoints += points;
+          totalCredits += credits;
+
+          results.push({
+            semester: name,
+            gpa: gpa,
+            credits: credits,
+            weightedPoints: points.toFixed(2)
+          });
+        }
+      });
+
+      if (totalCredits === 0) {
+        showToast('Please enter valid semester data');
+        return;
+      }
+
+      const cgpa = totalPoints / totalCredits;
+
+      displayCGPAResults(results, cgpa.toFixed(2), totalCredits);
+    }
+
+    // Display functions
+    function displayGPAResults(results, gpa, totalCredits) {
+      let html = `
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div class="bg-indigo-50 p-3 rounded-lg">
+            <div class="text-2xl font-bold text-indigo-600">${gpa}</div>
+            <div class="text-sm text-gray-600">Overall GPA</div>
+          </div>
+          <div class="bg-green-50 p-3 rounded-lg">
+            <div class="text-2xl font-bold text-green-600">${totalCredits}</div>
+            <div class="text-sm text-gray-600">Total Credits</div>
+          </div>
+        </div>
+
+        <h4 class="font-semibold mb-2">Subject-wise Breakdown:</h4>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="p-2 text-left">Subject</th>
+                <th class="p-2 text-center">Marks</th>
+                <th class="p-2 text-center">Percentage</th>
+                <th class="p-2 text-center">Grade</th>
+                <th class="p-2 text-center">Grade Points</th>
+                <th class="p-2 text-center">Credits</th>
+                <th class="p-2 text-center">Weighted Points</th>
+              </tr>
+            </thead>
+            <tbody>
+      `;
+
+      results.forEach(result => {
+        html += `
+          <tr class="border-b">
+            <td class="p-2">${result.subject}</td>
+            <td class="p-2 text-center">${result.marks}/${result.maxMarks}</td>
+            <td class="p-2 text-center">${result.percentage}%</td>
+            <td class="p-2 text-center font-semibold">${result.grade}</td>
+            <td class="p-2 text-center">${result.gradePoints}</td>
+            <td class="p-2 text-center">${result.credits}</td>
+            <td class="p-2 text-center">${result.weightedPoints}</td>
+          </tr>
+        `;
+      });
+
+      html += `
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      document.getElementById('result-content').innerHTML = html;
+      document.getElementById('result').classList.remove('hidden');
+      showToast('GPA calculated successfully!');
+    }
+
+    function displayPercentageResults(percentages, average, highest, lowest, count) {
+      let html = `
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div class="bg-blue-50 p-3 rounded-lg">
+            <div class="text-2xl font-bold text-blue-600">${average}%</div>
+            <div class="text-sm text-gray-600">Average Percentage</div>
+          </div>
+          <div class="bg-purple-50 p-3 rounded-lg">
+            <div class="text-2xl font-bold text-purple-600">${count}</div>
+            <div class="text-sm text-gray-600">Total Subjects</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div class="bg-green-50 p-3 rounded-lg">
+            <div class="text-2xl font-bold text-green-600">${highest}%</div>
+            <div class="text-sm text-gray-600">Highest Score</div>
+          </div>
+          <div class="bg-red-50 p-3 rounded-lg">
+            <div class="text-2xl font-bold text-red-600">${lowest}%</div>
+            <div class="text-sm text-gray-600">Lowest Score</div>
+          </div>
+        </div>
+
+        <h4 class="font-semibold mb-2">Individual Percentages:</h4>
+        <div class="flex flex-wrap gap-2">
+      `;
+
+      percentages.forEach((percentage, index) => {
+        const color = percentage >= 90 ? 'bg-green-100 text-green-800' :
+                     percentage >= 75 ? 'bg-blue-100 text-blue-800' :
+                     percentage >= 60 ? 'bg-yellow-100 text-yellow-800' :
+                     'bg-red-100 text-red-800';
+        html += `<span class="px-3 py-1 rounded-full text-sm ${color}">Subject ${index + 1}: ${percentage.toFixed(2)}%</span>`;
+      });
+
+      html += `</div>`;
+
+      document.getElementById('result-content').innerHTML = html;
+      document.getElementById('result').classList.remove('hidden');
+      showToast('Percentage calculated successfully!');
+    }
+
+    function displayCGPAResults(results, cgpa, totalCredits) {
+      let html = `
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div class="bg-indigo-50 p-3 rounded-lg">
+            <div class="text-2xl font-bold text-indigo-600">${cgpa}</div>
+            <div class="text-sm text-gray-600">Cumulative GPA</div>
+          </div>
+          <div class="bg-green-50 p-3 rounded-lg">
+            <div class="text-2xl font-bold text-green-600">${totalCredits}</div>
+            <div class="text-sm text-gray-600">Total Credits</div>
+          </div>
+        </div>
+
+        <h4 class="font-semibold mb-2">Semester-wise Breakdown:</h4>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="p-2 text-left">Semester</th>
+                <th class="p-2 text-center">GPA</th>
+                <th class="p-2 text-center">Credits</th>
+                <th class="p-2 text-center">Weighted Points</th>
+              </tr>
+            </thead>
+            <tbody>
+      `;
+
+      results.forEach(result => {
+        html += `
+          <tr class="border-b">
+            <td class="p-2">${result.semester}</td>
+            <td class="p-2 text-center">${result.gpa}</td>
+            <td class="p-2 text-center">${result.credits}</td>
+            <td class="p-2 text-center">${result.weightedPoints}</td>
+          </tr>
+        `;
+      });
+
+      html += `
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      document.getElementById('result-content').innerHTML = html;
+      document.getElementById('result').classList.remove('hidden');
+      showToast('CGPA calculated successfully!');
+    }
+
+    // Add/Remove functions
+    function addSubject() {
+      const container = document.getElementById('subjects-container');
+      const newRow = document.createElement('div');
+      newRow.className = 'subject-row grid grid-cols-12 gap-2 mb-2 p-3 bg-gray-50 rounded';
+      newRow.innerHTML = `
+        <div class="col-span-3">
+          <input type="text" placeholder="Subject Name" class="subject-name w-full px-2 py-1 border rounded text-sm">
+        </div>
+        <div class="col-span-2">
+          <input type="number" placeholder="Marks" class="marks-obtained w-full px-2 py-1 border rounded text-sm" min="0" max="100">
+        </div>
+        <div class="col-span-2">
+          <input type="number" placeholder="Max Marks" class="max-marks w-full px-2 py-1 border rounded text-sm" min="1" value="100">
+        </div>
+        <div class="col-span-2">
+          <input type="number" placeholder="Credits" class="credits w-full px-2 py-1 border rounded text-sm" min="0.5" max="10" step="0.5">
+        </div>
+        <div class="col-span-2">
+          <span class="grade-display px-2 py-1 bg-white border rounded text-sm text-center block">Grade</span>
+        </div>
+        <div class="col-span-1">
+          <button onclick="removeSubject(this)" class="text-red-500 hover:text-red-700">×</button>
+        </div>
+      `;
+      container.appendChild(newRow);
+    }
+
+    function removeSubject(button) {
+      button.closest('.subject-row').remove();
+    }
+
+    function addSemester() {
+      const container = document.getElementById('semesters-container');
+      const newRow = document.createElement('div');
+      newRow.className = 'semester-row grid grid-cols-4 gap-2 mb-2 p-3 bg-gray-50 rounded';
+      newRow.innerHTML = `
+        <div>
+          <input type="text" placeholder="Semester" class="semester-name w-full px-2 py-1 border rounded text-sm">
+        </div>
+        <div>
+          <input type="number" placeholder="GPA" class="semester-gpa w-full px-2 py-1 border rounded text-sm" min="0" max="4" step="0.01">
+        </div>
+        <div>
+          <input type="number" placeholder="Credits" class="semester-credits w-full px-2 py-1 border rounded text-sm" min="1" max="50">
+        </div>
+        <div class="flex items-center">
+          <button onclick="removeSemester(this)" class="text-red-500 hover:text-red-700">×</button>
+        </div>
+      `;
+      container.appendChild(newRow);
+    }
+
+    function removeSemester(button) {
+      button.closest('.semester-row').remove();
+    }
+
+    // Initialize - already has subject and semester rows in HTML
+    document.addEventListener('DOMContentLoaded', function() {
+      // No additional initialization needed
+    });
+  </script>
+</body>
+</html>

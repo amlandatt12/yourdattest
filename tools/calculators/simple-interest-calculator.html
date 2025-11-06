@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light only" />
+  <title>Free Simple Interest Calculator: Calculate Interest on Loans | AllToolsOnline</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Calculate simple interest on loans and investments with our free online calculator. Enter principal, rate, and time to get instant results." />
+  <meta name="keywords" content="simple interest calculator, interest calculator, loan calculator, investment calculator, finance calculator" />
+  <meta name="author" content="AllToolsOnline" />
+  <link rel="canonical" href="https://alltoolsonline.site/tools/calculators/simple-interest-calculator.html" />
+
+  <!-- JSON-LD Tool Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Simple Interest Calculator",
+    "description": "Calculate simple interest on loans and investments with our free online calculator. Enter principal, rate, and time to get instant results.",
+    "url": "https://www.alltoolsonline.site/tools/calculators/simple-interest-calculator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ7765FV');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NLEW4JXY4');
+  </script>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- Set theme IMMEDIATELY -->
+  <script>
+    (function() {
+      document.documentElement.setAttribute('data-theme', 'light'); document.body.setAttribute('data-theme', 'light'); localStorage.removeItem('theme');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+</head>
+
+<body class="min-h-screen text-gray-800" data-theme="light">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav class="text-sm mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-gray-600">
+        <li><a href="../../index.html" class="hover:text-indigo-600">Home</a></li>
+        <li>›</li>
+        <li><a href="../../categories.html#calculators" class="hover:text-indigo-600">Calculators</a></li>
+        <li>›</li>
+        <li class="text-gray-900 font-medium">Simple Interest Calculator</li>
+      </ol>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Main Tool Area -->
+      <div class="lg:col-span-2">
+        <!-- Tool Header -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">📈</span>
+            <h1 class="text-3xl font-bold">Simple Interest Calculator</h1>
+          </div>
+          <p class="text-gray-600">Simple interest on principal</p>
+        </div>
+
+        <!-- Tool Interface -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+          
+<div class="space-y-4">
+    <div>
+        <label for="principal" class="block text-sm font-medium mb-2">Principal Amount ($)</label>
+        <input type="number" id="principal" class="tool-input" placeholder="Enter principal amount" step="0.01" min="0">
+    </div>
+    <div>
+        <label for="rate" class="block text-sm font-medium mb-2">Interest Rate (%)</label>
+        <input type="number" id="rate" class="tool-input" placeholder="Enter interest rate" step="0.01" min="0">
+    </div>
+    <div>
+        <label for="time" class="block text-sm font-medium mb-2">Time Period (years)</label>
+        <input type="number" id="time" class="tool-input" placeholder="Enter time in years" step="0.01" min="0">
+    </div>
+    <button onclick="calculateSimpleInterest()" class="tool-button w-full">Calculate Simple Interest</button>
+    <div id="result" class="result-box hidden">
+        <p id="interest-result" class="text-lg font-semibold text-green-600"></p>
+        <p id="total-result" class="text-lg text-gray-700"></p>
+    </div>
+</div>
+
+        </div>
+
+        <!-- About Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">About Simple Interest Calculator</h2>
+          <div class="prose max-w-none">
+            <p class="text-gray-700 mb-4">Simple interest is a fundamental concept in finance that calculates the interest earned or paid on a principal amount over a specified period at a fixed interest rate. Unlike compound interest, simple interest is not compounded, meaning it doesn't earn interest on previously earned interest.</p>
+
+            <p class="text-gray-700 mb-4">Our Simple Interest Calculator is a free online tool designed to help individuals, students, and professionals calculate simple interest quickly and accurately. Whether you're planning investments, managing loans, or learning financial concepts, this calculator provides instant results without the need for complex formulas or manual calculations.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">How Simple Interest Works</h3>
+            <p class="text-gray-700 mb-4">The formula for calculating simple interest is straightforward:</p>
+            <p class="text-gray-700 mb-4"><strong>Simple Interest = (Principal × Rate × Time) / 100</strong></p>
+            <p class="text-gray-700 mb-4">Where:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li>Principal (P) is the initial amount of money</li>
+              <li>Rate (R) is the annual interest rate (in percentage)</li>
+              <li>Time (T) is the time period in years</li>
+            </ul>
+            <p class="text-gray-700 mb-4">For example, if you invest $1,000 at 5% interest for 3 years, the simple interest would be:</p>
+            <p class="text-gray-700 mb-4">Simple Interest = (1000 × 5 × 3) / 100 = $150</p>
+            <p class="text-gray-700 mb-4">Total Amount = Principal + Interest = $1,000 + $150 = $1,150</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Benefits of Using Our Calculator</h3>
+            <ol class="list-decimal list-inside text-gray-700 mb-4">
+              <li><strong>Accuracy:</strong> Eliminates calculation errors that can occur with manual math</li>
+              <li><strong>Speed:</strong> Instant results in seconds</li>
+              <li><strong>Free:</strong> No cost or registration required</li>
+              <li><strong>User-friendly:</strong> Simple interface suitable for all skill levels</li>
+              <li><strong>Educational:</strong> Helps understand the concept of simple interest</li>
+            </ol>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">When to Use Simple Interest</h3>
+            <p class="text-gray-700 mb-4">Simple interest is commonly used for:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li>Short-term loans</li>
+              <li>Personal loans</li>
+              <li>Certificates of deposit</li>
+              <li>Treasury bills</li>
+              <li>Some types of bonds</li>
+              <li>Educational loans</li>
+            </ul>
+            <p class="text-gray-700 mb-4">It's less common for long-term investments where compound interest is typically used.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Difference Between Simple and Compound Interest</h3>
+            <p class="text-gray-700 mb-4">While simple interest is calculated only on the principal amount, compound interest is calculated on the principal plus any previously earned interest. This means compound interest grows faster over time, especially for longer periods.</p>
+            <p class="text-gray-700 mb-4">For instance, $1,000 at 5% simple interest for 3 years = $150 interest</p>
+            <p class="text-gray-700 mb-4">The same amount at 5% compound interest annually = $157.63 interest</p>
+            <p class="text-gray-700 mb-4">The difference becomes more significant over longer time periods.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Real-World Applications</h3>
+            <ol class="list-decimal list-inside text-gray-700 mb-4">
+              <li><strong>Loan Calculations:</strong> Determine the total interest you'll pay on a personal loan</li>
+              <li><strong>Investment Planning:</strong> Calculate potential returns on fixed deposits</li>
+              <li><strong>Savings Goals:</strong> Plan how much interest your savings will earn</li>
+              <li><strong>Business Finance:</strong> Calculate interest on business loans or investments</li>
+              <li><strong>Education:</strong> Learn financial literacy concepts</li>
+            </ol>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Tips for Using the Calculator</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li>Enter the principal amount as a positive number</li>
+              <li>Input the interest rate as a percentage (e.g., 5 for 5%)</li>
+              <li>Time can be in years or fractions of years (e.g., 0.5 for 6 months)</li>
+              <li>All fields are required for calculation</li>
+              <li>Results are displayed instantly</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Common Mistakes to Avoid</h3>
+            <ol class="list-decimal list-inside text-gray-700 mb-4">
+              <li>Confusing simple interest with compound interest</li>
+              <li>Entering the interest rate as a decimal instead of percentage</li>
+              <li>Forgetting to convert time periods correctly (months to years)</li>
+              <li>Using simple interest for long-term calculations where compounding applies</li>
+            </ol>
+            <p class="text-gray-700 mb-4">Our calculator helps you avoid these common pitfalls by providing clear input fields and instant, accurate results.</p>
+
+            <h3 class="text-xl font-semibold mb-3 mt-6">Advanced Features</h3>
+            <p class="text-gray-700 mb-4">While our calculator focuses on the basic simple interest formula, it handles various scenarios:</p>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+              <li>Fractional years for precise calculations</li>
+              <li>High-precision decimal calculations</li>
+              <li>Clear display of both interest earned and total amount</li>
+            </ul>
+
+            <p class="text-gray-700 mb-4">Whether you're a student learning finance, a professional managing investments, or someone planning their savings, our Simple Interest Calculator provides the tools you need for accurate financial planning.</p>
+
+            <p class="text-gray-700">Start calculating your simple interest today and gain better control over your financial decisions!</p>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div class="bg-white rounded-2xl border border-gray-200 p-6">
+            
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is simple interest?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Simple interest is the interest calculated only on the principal amount of a loan or investment. It does not compound, meaning you don't earn interest on previously earned interest.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How do I calculate simple interest?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Use the formula: Simple Interest = (Principal × Rate × Time) / 100. Enter your values in our calculator for instant results.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What's the difference between simple and compound interest?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Simple interest is calculated only on the principal, while compound interest is calculated on the principal plus accumulated interest. Compound interest grows faster over time.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>When should I use simple interest?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Simple interest is typically used for short-term loans, personal loans, and some fixed deposits. It's less common for long-term investments.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Can I calculate simple interest for partial years?</span>
+                <span class="faq-icon text-xl">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, enter the time period as a decimal. For example, 6 months = 0.5 years.</p>
+            </div>
+        </div>
+        
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <!-- Similar Tools -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20">
+          <h3 class="text-lg font-semibold mb-4">Similar Tools</h3>
+          <div class="space-y-3">
+            
+        <a href="percentage-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">%</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Percentage Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Quick percent calculations</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="age-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">🎂</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Age Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Calculate exact age from DOB</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="bmi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">⚖️</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">BMI Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Body Mass Index calculator</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+        <a href="loan-emi-calculator.html" class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition">
+            <div class="flex items-start gap-3">
+                <div class="text-2xl">🏦</div>
+                <div class="flex-1">
+                    <div class="font-semibold text-sm">Loan EMI Calculator</div>
+                    <div class="mt-1 text-xs text-gray-500">Monthly EMI estimates</div>
+                </div>
+                <div class="ml-3 text-gray-300 group-hover:text-indigo-500">›</div>
+            </div>
+        </a>
+        
+          </div>
+          <a href="../../categories.html#calculators" class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium">
+            View all Calculators →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    
+function calculateSimpleInterest() {
+    const principal = parseFloat(document.getElementById('principal').value);
+    const rate = parseFloat(document.getElementById('rate').value);
+    const time = parseFloat(document.getElementById('time').value);
+
+    if (isNaN(principal) || isNaN(rate) || isNaN(time) || principal <= 0 || rate < 0 || time <= 0) {
+        showToast('Please enter valid positive numbers for all fields.');
+        return;
+    }
+
+    const interest = (principal * rate * time) / 100;
+    const total = principal + interest;
+
+    document.getElementById('interest-result').textContent = `Simple Interest: $${interest.toFixed(2)}`;
+    document.getElementById('total-result').textContent = `Total Amount: $${total.toFixed(2)}`;
+
+    document.getElementById('result').classList.remove('hidden');
+}
+
+    
+    // Show result box when there's content
+    document.addEventListener('DOMContentLoaded', function() {
+      const resultBox = document.getElementById('result');
+      if (resultBox) {
+        const observer = new MutationObserver(function(mutations) {
+          if (resultBox.innerHTML.trim() !== '') {
+            resultBox.classList.remove('hidden');
+          }
+        });
+        observer.observe(resultBox, { childList: true, subtree: true });
+      }
+    });
+  </script>
+</body>
+</html>
+

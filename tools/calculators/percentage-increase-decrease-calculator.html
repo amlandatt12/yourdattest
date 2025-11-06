@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="color-scheme" content="light only" />
+        <title>
+            Percentage Increase/Decrease Calculator - Free Online Tool |
+            AllToolsOnline
+        </title>
+
+        <!-- Primary SEO -->
+        <meta
+            name="description"
+            content="Change % calculations. Free online percentage increase/decrease calculator with instant results. No sign-up required."
+        />
+        <meta
+            name="keywords"
+            content="percentage increase/decrease calculator, online percentage increase/decrease calculator, free percentage increase/decrease calculator, calculators"
+        />
+        <meta name="author" content="AllToolsOnline" />
+        <link
+            rel="canonical"
+            href="https://www.alltoolsonline.site/tools/calculators/percentage-increase-decrease-calculator.html"
+        />
+
+        <!-- JSON-LD Tool Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Percentage Increase/Decrease Calculator",
+                "description": "Change % calculations",
+                "url": "https://www.alltoolsonline.site/tools/calculators/percentage-increase-decrease-calculator.html",
+                "applicationCategory": "UtilityApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        </script>
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-WJ7765FV");
+        </script>
+        <!-- End Google Tag Manager -->
+
+        <!-- Google Analytics (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-9NLEW4JXY4"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-9NLEW4JXY4");
+        </script>
+
+        <!-- Tailwind (CDN) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Set theme IMMEDIATELY -->
+        <script>
+            (function () {
+                document.documentElement.setAttribute("data-theme", "light");
+                document.body.setAttribute("data-theme", "light");
+                localStorage.removeItem("theme");
+            })();
+        </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="../../assets/css/common.css" />
+    </head>
+
+    <body class="min-h-screen text-gray-800" data-theme="light">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7765FV"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"
+            ></iframe
+        ></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        <!-- HEADER -->
+        <div id="header-placeholder"></div>
+
+        <!-- MAIN CONTENT -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Breadcrumb -->
+            <nav class="text-sm mb-6" aria-label="Breadcrumb">
+                <ol class="flex items-center gap-2 text-gray-600">
+                    <li>
+                        <a href="../../index.html" class="hover:text-indigo-600"
+                            >Home</a
+                        >
+                    </li>
+                    <li>›</li>
+                    <li>
+                        <a
+                            href="../../categories.html#calculators"
+                            class="hover:text-indigo-600"
+                            >Calculators</a
+                        >
+                    </li>
+                    <li>›</li>
+                    <li class="text-gray-900 font-medium">
+                        Percentage Increase/Decrease Calculator
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Main Tool Area -->
+                <div class="lg:col-span-2">
+                    <!-- Tool Header -->
+                    <div class="mb-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-4xl">⬆️⬇️</span>
+                            <h1 class="text-3xl font-bold">
+                                Percentage Increase/Decrease Calculator
+                            </h1>
+                        </div>
+                        <p class="text-gray-600">
+                            Calculate percentage change between two values
+                            instantly
+                        </p>
+                    </div>
+
+                    <!-- Tool Interface -->
+                    <div
+                        class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm"
+                    >
+                        <div class="space-y-5">
+                            <!-- Calculation Type -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <button
+                                    onclick="setMode('change')"
+                                    id="btn-change"
+                                    class="py-3 px-4 rounded-lg border-2 border-indigo-600 bg-indigo-600 text-white font-medium transition"
+                                >
+                                    Calculate Change
+                                </button>
+                                <button
+                                    onclick="setMode('apply')"
+                                    id="btn-apply"
+                                    class="py-3 px-4 rounded-lg border-2 border-gray-300 text-gray-700 font-medium hover:border-indigo-300 transition"
+                                >
+                                    Apply Percentage
+                                </button>
+                            </div>
+
+                            <!-- Mode: Calculate Percentage Change -->
+                            <div id="mode-change" class="space-y-4">
+                                <div>
+                                    <label
+                                        class="block text-sm font-medium mb-2"
+                                        >Original Value</label
+                                    >
+                                    <input
+                                        type="number"
+                                        id="original"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                        placeholder="100"
+                                        step="any"
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-sm font-medium mb-2"
+                                        >New Value</label
+                                    >
+                                    <input
+                                        type="number"
+                                        id="newValue"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                        placeholder="150"
+                                        step="any"
+                                    />
+                                </div>
+                                <button
+                                    onclick="calculateChange()"
+                                    class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition font-medium"
+                                >
+                                    Calculate Percentage Change
+                                </button>
+                            </div>
+
+                            <!-- Mode: Apply Percentage -->
+                            <div id="mode-apply" class="space-y-4 hidden">
+                                <div>
+                                    <label
+                                        class="block text-sm font-medium mb-2"
+                                        >Starting Value</label
+                                    >
+                                    <input
+                                        type="number"
+                                        id="startValue"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                        placeholder="200"
+                                        step="any"
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-sm font-medium mb-2"
+                                        >Percentage Change (%)</label
+                                    >
+                                    <input
+                                        type="number"
+                                        id="percentage"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                        placeholder="25"
+                                        step="any"
+                                    />
+                                    <p class="text-xs text-gray-500 mt-1">
+                                        Use positive for increase, negative for
+                                        decrease
+                                    </p>
+                                </div>
+                                <button
+                                    onclick="applyPercentage()"
+                                    class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition font-medium"
+                                >
+                                    Calculate New Value
+                                </button>
+                            </div>
+
+                            <!-- Result Display -->
+                            <div id="result" class="hidden">
+                                <div
+                                    id="resultContent"
+                                    class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100"
+                                ></div>
+                            </div>
+
+                            <!-- Quick Examples -->
+                            <div class="border-t pt-4">
+                                <p
+                                    class="text-sm font-medium text-gray-700 mb-3"
+                                >
+                                    Quick Examples:
+                                </p>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <button
+                                        onclick="setExample(100, 120)"
+                                        class="px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition"
+                                    >
+                                        100 → 120
+                                    </button>
+                                    <button
+                                        onclick="setExample(200, 150)"
+                                        class="px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition"
+                                    >
+                                        200 → 150
+                                    </button>
+                                    <button
+                                        onclick="setExample(50, 75)"
+                                        class="px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition"
+                                    >
+                                        50 → 75
+                                    </button>
+                                    <button
+                                        onclick="setExample(1000, 850)"
+                                        class="px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition"
+                                    >
+                                        1000 → 850
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Section -->
+                    <div class="mt-8">
+                        <h2 class="text-2xl font-bold mb-4">
+                            About Percentage Increase/Decrease Calculator
+                        </h2>
+                        <div class="prose max-w-none text-gray-700 space-y-4">
+                            <p>
+                                Our Percentage Increase/Decrease Calculator is a
+                                versatile, free online tool that helps you
+                                calculate percentage changes between two values
+                                or apply percentage increases/decreases to a
+                                starting value. Whether you're analyzing sales
+                                growth, calculating discounts, comparing prices,
+                                tracking weight loss, or working with any data
+                                that involves percentage changes, this
+                                calculator provides accurate results instantly.
+                            </p>
+
+                            <p>
+                                Understanding percentage changes is essential in
+                                business, finance, education, fitness, and
+                                everyday life. From calculating salary increases
+                                to determining discount savings, percentage
+                                change calculations are fundamental to making
+                                informed decisions and understanding numerical
+                                relationships.
+                            </p>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Two Calculation Modes
+                            </h3>
+                            <p>
+                                <strong>Calculate Percentage Change:</strong>
+                                Find out what percentage increase or decrease
+                                occurred between an original value and a new
+                                value. For example, if a product price went from
+                                $100 to $120, this mode calculates the 20%
+                                increase.
+                            </p>
+
+                            <p>
+                                <strong>Apply Percentage Change:</strong> Start
+                                with a value and apply a percentage increase or
+                                decrease to find the new value. For example,
+                                increase $200 by 15% to get $230, or decrease it
+                                by 10% to get $180.
+                            </p>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                How Percentage Change Works
+                            </h3>
+                            <p>
+                                The formula for calculating percentage change
+                                is:
+                                <strong
+                                    >((New Value - Original Value) ÷ Original
+                                    Value) × 100</strong
+                                >
+                            </p>
+
+                            <p>
+                                A positive result indicates an increase, while a
+                                negative result indicates a decrease. For
+                                example:
+                            </p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>
+                                    From 100 to 150: ((150-100) ÷ 100) × 100 =
+                                    +50% increase
+                                </li>
+                                <li>
+                                    From 200 to 150: ((150-200) ÷ 200) × 100 =
+                                    -25% decrease
+                                </li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Practical Applications
+                            </h3>
+                            <p>
+                                <strong>Business & Finance:</strong> Calculate
+                                revenue growth, profit margins, investment
+                                returns, stock price changes, and financial
+                                performance metrics. Track quarterly earnings
+                                changes, year-over-year growth rates, and
+                                portfolio performance.
+                            </p>
+
+                            <p>
+                                <strong>Retail & Shopping:</strong> Compare sale
+                                prices, calculate actual discount amounts,
+                                determine markup percentages, and find the best
+                                deals. Understand the real value of "percentage
+                                off" promotions.
+                            </p>
+
+                            <p>
+                                <strong>Health & Fitness:</strong> Track weight
+                                loss or gain percentages, measure body fat
+                                reduction, calculate calorie intake changes, and
+                                monitor fitness progress over time.
+                            </p>
+
+                            <p>
+                                <strong>Education:</strong> Calculate grade
+                                improvements, test score changes, GPA
+                                variations, and academic progress. Understand
+                                performance trends across semesters.
+                            </p>
+
+                            <p>
+                                <strong>Real Estate:</strong> Analyze property
+                                value appreciation or depreciation, compare
+                                market trends, calculate price per square foot
+                                changes, and evaluate investment returns.
+                            </p>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Key Features
+                            </h3>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>
+                                    <strong>Dual Modes:</strong> Calculate
+                                    change or apply percentage - two tools in
+                                    one
+                                </li>
+                                <li>
+                                    <strong
+                                        >Positive & Negative Changes:</strong
+                                    >
+                                    Handles both increases and decreases
+                                    automatically
+                                </li>
+                                <li>
+                                    <strong>High Precision:</strong> Accurate
+                                    calculations with decimal support
+                                </li>
+                                <li>
+                                    <strong>Clear Results:</strong> Shows the
+                                    calculation method and breakdown
+                                </li>
+                                <li>
+                                    <strong>Instant Calculation:</strong>
+                                    Real-time results as you type
+                                </li>
+                                <li>
+                                    <strong>Quick Examples:</strong> Pre-loaded
+                                    examples for fast testing
+                                </li>
+                                <li>
+                                    <strong>Mobile Friendly:</strong> Works
+                                    perfectly on all devices
+                                </li>
+                                <li>
+                                    <strong>No Registration:</strong> Start
+                                    using immediately without sign-up
+                                </li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Understanding the Results
+                            </h3>
+                            <p>
+                                When you calculate percentage change, the result
+                                tells you the relative change between two
+                                values. A 50% increase means the new value is
+                                1.5 times the original (150% of original). A 50%
+                                decrease means the new value is half the
+                                original (50% of original).
+                            </p>
+
+                            <p>
+                                Important note: Percentage increases and
+                                decreases are not symmetric. If a value
+                                increases by 50% and then decreases by 50%, you
+                                don't end up with the original value. For
+                                example: $100 increased by 50% = $150, then $150
+                                decreased by 50% = $75, not $100.
+                            </p>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Common Use Cases
+                            </h3>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>
+                                    Calculate salary raise percentages or see
+                                    what a percentage raise equals in dollars
+                                </li>
+                                <li>
+                                    Determine sale discount amounts or compare
+                                    competing promotional offers
+                                </li>
+                                <li>
+                                    Track stock market gains and losses on
+                                    investments
+                                </li>
+                                <li>
+                                    Measure website traffic increases or user
+                                    growth rates
+                                </li>
+                                <li>
+                                    Calculate tax increases or decreases on
+                                    purchases
+                                </li>
+                                <li>
+                                    Analyze price changes over time for
+                                    budgeting and forecasting
+                                </li>
+                                <li>
+                                    Compare utility bill changes
+                                    month-over-month or year-over-year
+                                </li>
+                                <li>
+                                    Evaluate employee performance metrics and
+                                    KPI changes
+                                </li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Tips for Accurate Calculations
+                            </h3>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>
+                                    Always identify which value is the
+                                    "original" or baseline - this matters for
+                                    the calculation
+                                </li>
+                                <li>
+                                    For decreases, the result will be negative -
+                                    this is correct and expected
+                                </li>
+                                <li>
+                                    Round your final answer appropriately based
+                                    on your needs (2 decimal places is common)
+                                </li>
+                                <li>
+                                    When applying percentages, use positive
+                                    numbers for increases and negative for
+                                    decreases
+                                </li>
+                                <li>
+                                    Double-check your inputs - swapping original
+                                    and new values will give different results
+                                </li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold mb-3 mt-6">
+                                Why This Tool Matters
+                            </h3>
+                            <p>
+                                Percentage changes provide context that raw
+                                numbers cannot. Knowing that sales increased by
+                                $10,000 is informative, but knowing they
+                                increased by 25% tells a more complete story.
+                                This calculator helps you translate between
+                                absolute changes and relative changes, giving
+                                you both perspectives for better
+                                decision-making.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="mt-8">
+                        <h2 class="text-2xl font-bold mb-4">
+                            Frequently Asked Questions
+                        </h2>
+                        <div
+                            class="bg-white rounded-2xl border border-gray-200 p-6"
+                        >
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span
+                                        >How do you calculate percentage
+                                        increase or decrease?</span
+                                    >
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Use the formula: ((New Value - Original
+                                        Value) ÷ Original Value) × 100. For
+                                        example, if a price goes from $50 to
+                                        $65: ((65-50) ÷ 50) × 100 = 30%
+                                        increase. If it goes from $80 to $60:
+                                        ((60-80) ÷ 80) × 100 = -25% decrease.
+                                        Our calculator does this instantly.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span
+                                        >What's the difference between
+                                        percentage increase and percentage
+                                        points?</span
+                                    >
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Percentage increase is relative to the
+                                        original value, while percentage points
+                                        measure absolute change. Example: If
+                                        interest rates go from 2% to 4%, that's
+                                        a 2 percentage point increase, but a
+                                        100% percentage increase ((4-2)÷2×100).
+                                        Always specify which you mean to avoid
+                                        confusion.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span
+                                        >Why aren't percentage increases and
+                                        decreases symmetric?</span
+                                    >
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Because the base value changes. If $100
+                                        increases 50% to $150, then decreases
+                                        50%, you get $75 (not $100) because 50%
+                                        of $150 is $75. Each percentage is
+                                        calculated from a different base. To
+                                        reverse a 50% increase, you need a
+                                        33.33% decrease.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span
+                                        >Can I calculate percentage change for
+                                        negative numbers?</span
+                                    >
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        Yes, but interpret carefully. Going from
+                                        -10 to -5 is technically a 50% increase
+                                        (getting less negative). Going from -10
+                                        to -15 is a 50% decrease (getting more
+                                        negative). For financial contexts like
+                                        losses, it's often clearer to describe
+                                        the absolute change instead.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span
+                                        >How do I calculate the original value
+                                        if I know the percentage change?</span
+                                    >
+                                    <span class="faq-icon text-xl">+</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>
+                                        If you know the new value and percentage
+                                        change, divide the new value by (1 +
+                                        percentage/100) for increases, or (1 -
+                                        percentage/100) for decreases. Example:
+                                        If $120 is a 20% increase, original =
+                                        120 ÷ 1.20 = $100. Use our "Apply
+                                        Percentage" mode in reverse.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Similar Tools -->
+                    <div
+                        class="bg-white rounded-2xl border border-gray-200 p-6 sticky top-20"
+                    >
+                        <h3 class="text-lg font-semibold mb-4">
+                            Similar Tools
+                        </h3>
+                        <div class="space-y-3">
+                            <a
+                                href="percentage-calculator.html"
+                                class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition"
+                            >
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">%</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">
+                                            Percentage Calculator
+                                        </div>
+                                        <div class="mt-1 text-xs text-gray-500">
+                                            Quick percent calculations
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ml-3 text-gray-300 group-hover:text-indigo-500"
+                                    >
+                                        ›
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a
+                                href="age-calculator.html"
+                                class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition"
+                            >
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">🎂</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">
+                                            Age Calculator
+                                        </div>
+                                        <div class="mt-1 text-xs text-gray-500">
+                                            Calculate exact age from DOB
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ml-3 text-gray-300 group-hover:text-indigo-500"
+                                    >
+                                        ›
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a
+                                href="bmi-calculator.html"
+                                class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition"
+                            >
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">⚖️</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">
+                                            BMI Calculator
+                                        </div>
+                                        <div class="mt-1 text-xs text-gray-500">
+                                            Body Mass Index calculator
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ml-3 text-gray-300 group-hover:text-indigo-500"
+                                    >
+                                        ›
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a
+                                href="loan-emi-calculator.html"
+                                class="tool-card group block bg-white border border-gray-100 rounded-2xl p-4 transition"
+                            >
+                                <div class="flex items-start gap-3">
+                                    <div class="text-2xl">🏦</div>
+                                    <div class="flex-1">
+                                        <div class="font-semibold text-sm">
+                                            Loan EMI Calculator
+                                        </div>
+                                        <div class="mt-1 text-xs text-gray-500">
+                                            Monthly EMI estimates
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ml-3 text-gray-300 group-hover:text-indigo-500"
+                                    >
+                                        ›
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <a
+                            href="../../categories.html#calculators"
+                            class="block mt-4 text-center text-sm text-indigo-600 hover:text-indigo-700 font-medium"
+                        >
+                            View all Calculators →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <div id="footer-placeholder"></div>
+
+        <!-- SCRIPTS -->
+        <script src="../../assets/js/common.js"></script>
+        <script>
+            let currentMode = "change";
+
+            function setMode(mode) {
+                currentMode = mode;
+
+                // Update button styles
+                const btnChange = document.getElementById("btn-change");
+                const btnApply = document.getElementById("btn-apply");
+
+                if (mode === "change") {
+                    btnChange.className =
+                        "py-3 px-4 rounded-lg border-2 border-indigo-600 bg-indigo-600 text-white font-medium transition";
+                    btnApply.className =
+                        "py-3 px-4 rounded-lg border-2 border-gray-300 text-gray-700 font-medium hover:border-indigo-300 transition";
+                    document
+                        .getElementById("mode-change")
+                        .classList.remove("hidden");
+                    document
+                        .getElementById("mode-apply")
+                        .classList.add("hidden");
+                } else {
+                    btnChange.className =
+                        "py-3 px-4 rounded-lg border-2 border-gray-300 text-gray-700 font-medium hover:border-indigo-300 transition";
+                    btnApply.className =
+                        "py-3 px-4 rounded-lg border-2 border-indigo-600 bg-indigo-600 text-white font-medium transition";
+                    document
+                        .getElementById("mode-change")
+                        .classList.add("hidden");
+                    document
+                        .getElementById("mode-apply")
+                        .classList.remove("hidden");
+                }
+
+                // Hide result when switching modes
+                document.getElementById("result").classList.add("hidden");
+            }
+
+            function calculateChange() {
+                const original = parseFloat(
+                    document.getElementById("original").value,
+                );
+                const newValue = parseFloat(
+                    document.getElementById("newValue").value,
+                );
+
+                if (isNaN(original) || isNaN(newValue)) {
+                    showToast("Please enter valid numbers", "error");
+                    return;
+                }
+
+                if (original === 0) {
+                    showToast("Original value cannot be zero", "error");
+                    return;
+                }
+
+                // Calculate percentage change
+                const change = ((newValue - original) / original) * 100;
+                const absoluteChange = newValue - original;
+                const isIncrease = change > 0;
+                const isDecrease = change < 0;
+
+                // Display result
+                let resultHTML = '<div class="space-y-4">';
+
+                if (isIncrease) {
+                    resultHTML +=
+                        '<div class="text-center"><div class="text-sm text-gray-600 mb-1">Percentage Increase:</div>';
+                    resultHTML +=
+                        '<div class="text-4xl font-bold text-green-600">+' +
+                        change.toFixed(2) +
+                        "%</div></div>";
+                } else if (isDecrease) {
+                    resultHTML +=
+                        '<div class="text-center"><div class="text-sm text-gray-600 mb-1">Percentage Decrease:</div>';
+                    resultHTML +=
+                        '<div class="text-4xl font-bold text-red-600">' +
+                        change.toFixed(2) +
+                        "%</div></div>";
+                } else {
+                    resultHTML +=
+                        '<div class="text-center"><div class="text-sm text-gray-600 mb-1">No Change:</div>';
+                    resultHTML +=
+                        '<div class="text-4xl font-bold text-gray-600">0%</div></div>';
+                }
+
+                resultHTML +=
+                    '<div class="bg-white rounded-lg p-4 space-y-2 text-sm">';
+                resultHTML += "<p><strong>Calculation:</strong></p>";
+                resultHTML +=
+                    "<p>Original Value: " + original.toLocaleString() + "</p>";
+                resultHTML +=
+                    "<p>New Value: " + newValue.toLocaleString() + "</p>";
+                resultHTML +=
+                    "<p>Absolute Change: " +
+                    (isIncrease ? "+" : "") +
+                    absoluteChange.toLocaleString() +
+                    "</p>";
+                resultHTML +=
+                    "<p><strong>Formula:</strong> ((" +
+                    newValue +
+                    " - " +
+                    original +
+                    ") ÷ " +
+                    original +
+                    ") × 100 = " +
+                    change.toFixed(2) +
+                    "%</p>";
+                resultHTML += "</div></div>";
+
+                document.getElementById("resultContent").innerHTML = resultHTML;
+                document.getElementById("result").classList.remove("hidden");
+
+                showToast("Calculation complete!", "success");
+            }
+
+            function applyPercentage() {
+                const startValue = parseFloat(
+                    document.getElementById("startValue").value,
+                );
+                const percentage = parseFloat(
+                    document.getElementById("percentage").value,
+                );
+
+                if (isNaN(startValue) || isNaN(percentage)) {
+                    showToast("Please enter valid numbers", "error");
+                    return;
+                }
+
+                // Calculate new value
+                const change = (percentage / 100) * startValue;
+                const newValue = startValue + change;
+                const isIncrease = percentage > 0;
+                const isDecrease = percentage < 0;
+
+                // Display result
+                let resultHTML = '<div class="space-y-4">';
+                resultHTML +=
+                    '<div class="text-center"><div class="text-sm text-gray-600 mb-1">New Value:</div>';
+                resultHTML +=
+                    '<div class="text-4xl font-bold text-indigo-600">' +
+                    newValue.toLocaleString() +
+                    "</div></div>";
+
+                resultHTML +=
+                    '<div class="bg-white rounded-lg p-4 space-y-2 text-sm">';
+                resultHTML += "<p><strong>Calculation:</strong></p>";
+                resultHTML +=
+                    "<p>Starting Value: " +
+                    startValue.toLocaleString() +
+                    "</p>";
+                resultHTML +=
+                    "<p>Percentage Change: " +
+                    (isIncrease ? "+" : "") +
+                    percentage +
+                    "%</p>";
+                resultHTML +=
+                    "<p>Amount of Change: " +
+                    (isIncrease ? "+" : "") +
+                    change.toLocaleString() +
+                    "</p>";
+                resultHTML +=
+                    "<p>Final Value: " + newValue.toLocaleString() + "</p>";
+
+                if (isIncrease) {
+                    resultHTML +=
+                        '<p class="text-green-600"><strong>Result:</strong> ' +
+                        percentage +
+                        "% increase from " +
+                        startValue +
+                        "</p>";
+                } else if (isDecrease) {
+                    resultHTML +=
+                        '<p class="text-red-600"><strong>Result:</strong> ' +
+                        Math.abs(percentage) +
+                        "% decrease from " +
+                        startValue +
+                        "</p>";
+                }
+
+                resultHTML += "</div></div>";
+
+                document.getElementById("resultContent").innerHTML = resultHTML;
+                document.getElementById("result").classList.remove("hidden");
+
+                showToast("Calculation complete!", "success");
+            }
+
+            function setExample(orig, newVal) {
+                setMode("change");
+                document.getElementById("original").value = orig;
+                document.getElementById("newValue").value = newVal;
+                calculateChange();
+            }
+
+            // Handle Enter key
+            document
+                .getElementById("original")
+                .addEventListener("keypress", function (e) {
+                    if (e.key === "Enter") calculateChange();
+                });
+            document
+                .getElementById("newValue")
+                .addEventListener("keypress", function (e) {
+                    if (e.key === "Enter") calculateChange();
+                });
+            document
+                .getElementById("startValue")
+                .addEventListener("keypress", function (e) {
+                    if (e.key === "Enter") applyPercentage();
+                });
+            document
+                .getElementById("percentage")
+                .addEventListener("keypress", function (e) {
+                    if (e.key === "Enter") applyPercentage();
+                });
+        </script>
+    </body>
+</html>
