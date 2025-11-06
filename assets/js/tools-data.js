@@ -308,3 +308,97 @@ const categories = [
   window.addEventListener("resize", debounce(moveSimilarTools, 150));
   window.addEventListener("orientationchange", debounce(moveSimilarTools, 150));
 })();
+/* =========================================================
+   Move "Similar Tools" under the main tool on mobile/tablet
+   and restore to the sidebar on desktop.
+   Works across all tool pages with the same grid structure.
+   ========================================================= */
+(function () {
+  const BP = 1024; // match CSS @media (max-width: 1024px)
+
+  // Cache references once
+  function getParts() {
+    const grid = document.querySelector('main .grid.lg\\:grid-cols-3');
+    if (!grid) return {};
+
+    const mainCol = grid.querySelector('.lg\\:col-span-2');
+    const sideCol = grid.querySelector('.lg\\:col-span-1');
+    if (!mainCol || !sideCol) return {};
+
+    // The main tool "card" (first big white card in main column)
+    const toolCard = mainCol.querySelector('.bg-white.rounded-2xl.border.border-gray-200.p-6.shadow-sm');
+
+    // The Similar Tools card (first white card inside sidebar)
+    const similarCard = sideCol.querySelector('.bg-white.rounded-2xl.border.border-gray-200.p-6');
+    // Note: this selector matches your Similar Tools container
+
+    return { grid, mainCol, sideCol, toolCard, similarCard };
+  }
+
+  // Insert a placeholder so we can put the Similar Tools back on desktop
+  let placeholder = null;
+
+  function moveForMobile() {
+    const { mainCol, sideCol, toolCard, similarCard } = getParts();
+    if (!mainCol || !sideCol || !toolCard || !similarCard) return;
+
+    // already moved?
+    if (similarCard.classList.contains('ato-similar-moved')) return;
+
+    // create placeholder right before the similarCard to restore later
+    if (!placeholder) {
+      placeholder = document.createElement('div');
+      placeholder.setAttribute('data-ato-similar-placeholder', '1');
+      sideCol.insertBefore(placeholder, similarCard);
+    }
+
+    // remove sticky on small screens (safety in case CSS didn't load)
+    similarCard.classList.remove('sticky');
+    // add a flag + spacing class
+    similarCard.classList.add('ato-similar-moved');
+
+    // move it to just after the main tool card
+    toolCard.insertAdjacentElement('afterend', similarCard);
+  }
+
+  function restoreForDesktop() {
+    const { sideCol, similarCard } = getParts();
+    if (!sideCol || !similarCard) return;
+
+    // only act if it was moved before
+    if (!similarCard.classList.contains('ato-similar-moved')) return;
+
+    // restore to original place (before placeholder)
+    if (placeholder && placeholder.parentNode === sideCol) {
+      sideCol.insertBefore(similarCard, placeholder.nextSibling); // same spot
+    } else {
+      // fallback: put it at the top of the sidebar column
+      sideCol.insertBefore(similarCard, sideCol.firstChild);
+    }
+
+    // re-enable sticky behavior via class if it was present originally
+    // (your markup had "sticky top-20" on the inner card div; if needed you can add back)
+    // similarCard.classList.add('sticky'); // optional
+
+    // remove mobile-only flag
+    similarCard.classList.remove('ato-similar-moved');
+  }
+
+  function apply() {
+    if (window.innerWidth <= BP) {
+      moveForMobile();
+    } else {
+      restoreForDesktop();
+    }
+  }
+
+  // Run on load
+  document.addEventListener('DOMContentLoaded', apply);
+
+  // Run on resize/orientation change (debounced)
+  let t;
+  window.addEventListener('resize', function () {
+    clearTimeout(t);
+    t = setTimeout(apply, 150);
+  });
+})();
